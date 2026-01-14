@@ -45,14 +45,10 @@ Load parameters:
 param load /path/to/Clear-Run/simulation/sitl_configs/sitl_ugv.parm
 ```
 
-### 3. Launch Gazebo World (Gazebo Harmonic)
+### 3. Launch Gazebo World
 
 ```bash
-# Using the new Gazebo Sim (Harmonic)
-gz sim /home/gondal/Clear-Run/simulation/worlds/runway.sdf
-
-# Or with verbose output
-gz sim -v 4 /home/gondal/Clear-Run/simulation/worlds/runway.sdf
+gazebo --verbose /path/to/Clear-Run/simulation/worlds/runway.world
 ```
 
 ### 4. Launch Clear-Run System
@@ -88,20 +84,7 @@ The `runway.world` includes:
 
 ## Tips
 
-- Use `ros2 topic echo` to monitor message flow (ROS 2, not ROS 1)
-- RViz2 shows real-time visualization
-- Gazebo physics can be paused with spacebar or GUI controls
-- Use `gz sim -r` to start simulation running immediately
-- Use `gz topic -l` to list Gazebo topics
-- Increase `real_time_factor` in world file for faster simulation
-
-## Gazebo Harmonic Notes
-
-This project uses **Gazebo Harmonic** (gz-sim 8.x), not Gazebo Classic.
-
-| Old Command | New Command |
-|-------------|-------------|
-| `gazebo` | `gz sim` |
-| `gzserver` | `gz sim -s` |
-| `gzclient` | `gz sim -g` |
-| `rostopic` | `gz topic` |
+- Use `rostopic echo` to monitor message flow
+- RViz shows real-time visualization
+- Gazebo physics can be paused for debugging
+- Increase real_time_factor in world file for faster simulation

@@ -29,8 +29,8 @@ def generate_launch_description():
     
     fcu_url = DeclareLaunchArgument(
         'fcu_url',
-        default_value='udp://:14540@127.0.0.1:14557',
-        description='FCU connection URL'
+        default_value='tcp://127.0.0.1:5760',
+        description='FCU connection URL (SITL TCP port)'
     )
     
     # MAVROS node - direct launch (ROS 2 Jazzy)

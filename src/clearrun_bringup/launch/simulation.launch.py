@@ -63,7 +63,8 @@ def generate_launch_description():
     
     # =========================================================================
     # ArduPilot SITL - UAV (ArduCopter)
-    # Using native SITL mode (not gazebo-iris which requires plugin)
+    # Running in native mode with internal physics (not Gazebo-connected)
+    # The -w flag makes it wait for MAVROS connection
     # =========================================================================
     sitl_uav = ExecuteProcess(
         cmd=[
@@ -71,6 +72,8 @@ def generate_launch_description():
             '-v', 'ArduCopter',
             '-I', '0',
             '--no-mavproxy',
+            '-w',  # Wait for MAVROS connection
+            '--speedup', '1',  # Normal speed
         ],
         cwd='/home/gondal/ardupilot/ArduCopter',
         output='screen',
@@ -85,6 +88,8 @@ def generate_launch_description():
             '-v', 'Rover',
             '-I', '1',
             '--no-mavproxy',
+            '-w',  # Wait for MAVROS connection
+            '--speedup', '1',  # Normal speed
         ],
         cwd='/home/gondal/ardupilot/Rover',
         output='screen',

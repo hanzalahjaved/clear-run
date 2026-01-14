@@ -68,7 +68,7 @@ def generate_launch_description():
         namespace='ugv',
         output='screen',
         parameters=[
-            {'fcu_url': 'udp://:14550@127.0.0.1:14555'},
+            {'fcu_url': 'tcp://127.0.0.1:5770'},
             {'tgt_system': 2},
             {'tgt_component': 1},
             {'system_id': 2},

@@ -48,14 +48,14 @@ def generate_launch_description():
     
     uav_fcu_url = DeclareLaunchArgument(
         'uav_fcu_url',
-        default_value='udp://:14540@127.0.0.1:14557',
-        description='UAV FCU connection URL'
+        default_value='tcp://127.0.0.1:5760',
+        description='UAV FCU connection URL (SITL Instance 0)'
     )
     
     ugv_fcu_url = DeclareLaunchArgument(
         'ugv_fcu_url',
-        default_value='udp://:14550@127.0.0.1:14555',
-        description='UGV FCU connection URL'
+        default_value='tcp://127.0.0.1:5770',
+        description='UGV FCU connection URL (SITL Instance 1)'
     )
     
     map_file = DeclareLaunchArgument(
