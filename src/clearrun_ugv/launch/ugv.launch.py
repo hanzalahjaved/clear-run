@@ -60,19 +60,20 @@ def generate_launch_description():
         }.items()
     )
     
-    # MAVROS for UGV (ArduRover)
-    mavros_node = IncludeLaunchDescription(
-        PythonLaunchDescriptionSource([
-            PathJoinSubstitution([
-                FindPackageShare('mavros'),
-                'launch',
-                'apm.launch.py'
-            ])
-        ]),
-        launch_arguments={
-            'fcu_url': 'udp://:14550@127.0.0.1:14555',
-            'namespace': '/ugv',
-        }.items()
+    # MAVROS for UGV (ArduRover) - direct node launch
+    mavros_node = Node(
+        package='mavros',
+        executable='mavros_node',
+        name='mavros',
+        namespace='ugv',
+        output='screen',
+        parameters=[
+            {'fcu_url': 'udp://:14550@127.0.0.1:14555'},
+            {'tgt_system': 2},
+            {'tgt_component': 1},
+            {'system_id': 2},
+            {'component_id': 191},
+        ],
     )
     
     # FOD Retriever node
@@ -80,7 +81,7 @@ def generate_launch_description():
         package='clearrun_ugv',
         executable='fod_retriever',
         name='fod_retriever_node',
-        namespace='/ugv',
+        namespace='ugv',
         parameters=[retriever_config],
         output='screen',
         emulate_tty=True,
@@ -91,7 +92,7 @@ def generate_launch_description():
         package='clearrun_ugv',
         executable='scoop_controller',
         name='scoop_controller',
-        namespace='/ugv',
+        namespace='ugv',
         parameters=[scoop_config],
         output='screen',
         emulate_tty=True,

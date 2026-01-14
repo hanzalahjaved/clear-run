@@ -51,35 +51,29 @@ def generate_launch_description():
     )
     
     # =========================================================================
-    # Gazebo Simulation
+    # Gazebo Harmonic Simulation
     # =========================================================================
+    # Note: Using Gazebo Harmonic (gz sim), not Gazebo Classic
+    gazebo_world_path = '/home/gondal/Clear-Run/simulation/worlds/runway.sdf'
+    
     gazebo_cmd = ExecuteProcess(
-        cmd=[
-            'gazebo', '--verbose',
-            '-s', 'libgazebo_ros_init.so',
-            '-s', 'libgazebo_ros_factory.so',
-            PathJoinSubstitution([
-                FindPackageShare('clearrun_bringup'),
-                'worlds',
-                LaunchConfiguration('world')
-            ]),
-        ],
+        cmd=['gz', 'sim', '-r', gazebo_world_path],
         output='screen'
     )
     
     # =========================================================================
     # ArduPilot SITL - UAV (ArduCopter)
+    # Using native SITL mode (not gazebo-iris which requires plugin)
     # =========================================================================
     sitl_uav = ExecuteProcess(
         cmd=[
             'sim_vehicle.py',
             '-v', 'ArduCopter',
-            '--model', 'gazebo-iris',
             '-I', '0',
-            '--out', 'udp:127.0.0.1:14540',
+            '--no-mavproxy',
         ],
+        cwd='/home/gondal/ardupilot/ArduCopter',
         output='screen',
-        shell=True
     )
     
     # =========================================================================
@@ -89,12 +83,11 @@ def generate_launch_description():
         cmd=[
             'sim_vehicle.py',
             '-v', 'Rover',
-            '--model', 'gazebo-rover',
             '-I', '1',
-            '--out', 'udp:127.0.0.1:14550',
+            '--no-mavproxy',
         ],
+        cwd='/home/gondal/ardupilot/Rover',
         output='screen',
-        shell=True
     )
     
     # =========================================================================

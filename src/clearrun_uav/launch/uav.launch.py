@@ -6,9 +6,8 @@ Launches all UAV nodes: detection, visual servo, and MAVROS interface.
 """
 
 from launch import LaunchDescription
-from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription
+from launch.actions import DeclareLaunchArgument
 from launch.substitutions import LaunchConfiguration, PathJoinSubstitution
-from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch_ros.actions import Node
 from launch_ros.substitutions import FindPackageShare
 
@@ -34,19 +33,20 @@ def generate_launch_description():
         description='FCU connection URL'
     )
     
-    # MAVROS node (from mavros package)
-    mavros_node = IncludeLaunchDescription(
-        PythonLaunchDescriptionSource([
-            PathJoinSubstitution([
-                FindPackageShare('mavros'),
-                'launch',
-                'apm.launch.py'
-            ])
-        ]),
-        launch_arguments={
-            'fcu_url': LaunchConfiguration('fcu_url'),
-            'namespace': '/uav',
-        }.items()
+    # MAVROS node - direct launch (ROS 2 Jazzy)
+    mavros_node = Node(
+        package='mavros',
+        executable='mavros_node',
+        name='mavros',
+        namespace='uav',
+        output='screen',
+        parameters=[
+            {'fcu_url': LaunchConfiguration('fcu_url')},
+            {'tgt_system': 1},
+            {'tgt_component': 1},
+            {'system_id': 1},
+            {'component_id': 191},
+        ],
     )
     
     # Detection node
@@ -54,7 +54,7 @@ def generate_launch_description():
         package='clearrun_uav',
         executable='detection_node',
         name='detection_node',
-        namespace='/uav',
+        namespace='uav',
         parameters=[detection_config],
         output='screen',
         emulate_tty=True,
@@ -65,7 +65,7 @@ def generate_launch_description():
         package='clearrun_uav',
         executable='visual_servo',
         name='visual_servo_node',
-        namespace='/uav',
+        namespace='uav',
         parameters=[servo_config],
         output='screen',
         emulate_tty=True,
