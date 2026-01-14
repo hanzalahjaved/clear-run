@@ -1,1 +1,0 @@
-/home/gondal/Clear-Run/build/clearrun_msgs/rosidl_generator_cpp/clearrun_msgs/msg/detail/scoop_command__struct.hpp

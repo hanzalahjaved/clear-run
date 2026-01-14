@@ -1,1 +1,33 @@
+# Colcon build artifacts
 build/
+install/
+log/
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Editors
+.vscode/
+*.swp
+*.swo
+*~
+
+# ROS 2
+*.bag
+*.db3
+
+# Environment
+.env
+.venv
+venv/
+
+# IDE
+.idea/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db

@@ -1,1 +1,0 @@
-/home/gondal/Clear-Run/build/clearrun_msgs/rosidl_typesupport_fastrtps_c/clearrun_msgs/msg/detail/scoop_command__rosidl_typesupport_fastrtps_c.h
