@@ -1,0 +1,80 @@
+#!/usr/bin/env python3
+"""
+Clear-Run UAV Launch File
+
+Launches all UAV nodes: detection, visual servo, and MAVROS interface.
+"""
+
+from launch import LaunchDescription
+from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription
+from launch.substitutions import LaunchConfiguration, PathJoinSubstitution
+from launch.launch_description_sources import PythonLaunchDescriptionSource
+from launch_ros.actions import Node
+from launch_ros.substitutions import FindPackageShare
+
+
+def generate_launch_description():
+    # Package share directory
+    pkg_share = FindPackageShare('clearrun_uav')
+    
+    # Config files
+    detection_config = PathJoinSubstitution([pkg_share, 'config', 'detection.yaml'])
+    servo_config = PathJoinSubstitution([pkg_share, 'config', 'visual_servo.yaml'])
+    
+    # Launch arguments
+    use_sim = DeclareLaunchArgument(
+        'use_sim',
+        default_value='false',
+        description='Use simulation mode'
+    )
+    
+    fcu_url = DeclareLaunchArgument(
+        'fcu_url',
+        default_value='udp://:14540@127.0.0.1:14557',
+        description='FCU connection URL'
+    )
+    
+    # MAVROS node (from mavros package)
+    mavros_node = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource([
+            PathJoinSubstitution([
+                FindPackageShare('mavros'),
+                'launch',
+                'apm.launch.py'
+            ])
+        ]),
+        launch_arguments={
+            'fcu_url': LaunchConfiguration('fcu_url'),
+            'namespace': '/uav',
+        }.items()
+    )
+    
+    # Detection node
+    detection_node = Node(
+        package='clearrun_uav',
+        executable='detection_node',
+        name='detection_node',
+        namespace='/uav',
+        parameters=[detection_config],
+        output='screen',
+        emulate_tty=True,
+    )
+    
+    # Visual servo node
+    visual_servo_node = Node(
+        package='clearrun_uav',
+        executable='visual_servo',
+        name='visual_servo_node',
+        namespace='/uav',
+        parameters=[servo_config],
+        output='screen',
+        emulate_tty=True,
+    )
+    
+    return LaunchDescription([
+        use_sim,
+        fcu_url,
+        mavros_node,
+        detection_node,
+        visual_servo_node,
+    ])

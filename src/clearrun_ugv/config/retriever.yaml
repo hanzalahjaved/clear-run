@@ -1,0 +1,20 @@
+# =============================================================================
+# Clear-Run UGV Retriever Configuration
+# =============================================================================
+
+fod_retriever_node:
+  ros__parameters:
+    # Home position (base station GPS)
+    home_latitude: 0.0
+    home_longitude: 0.0
+    
+    # Navigation parameters
+    approach_distance: 0.5     # meters from target before final approach
+    collection_timeout: 30.0   # seconds max for collection attempt
+    
+    # Queue management
+    max_queue_size: 50         # max FOD targets in queue
+    
+    # Behavior
+    auto_start: true           # automatically start when targets received
+    return_to_home: false      # return to base when queue empty

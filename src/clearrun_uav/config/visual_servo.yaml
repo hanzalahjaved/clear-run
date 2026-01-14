@@ -1,0 +1,33 @@
+# =============================================================================
+# Clear-Run Visual Servo Configuration
+# =============================================================================
+
+visual_servo_node:
+  ros__parameters:
+    # Camera frame parameters
+    image_width: 1920
+    image_height: 1080
+    centering_threshold: 20  # pixels from center to consider "centered"
+    
+    # PID gains for X (lateral/roll) control
+    pid_x_kp: 0.5
+    pid_x_ki: 0.01
+    pid_x_kd: 0.1
+    
+    # PID gains for Y (longitudinal/pitch) control  
+    pid_y_kp: 0.5
+    pid_y_ki: 0.01
+    pid_y_kd: 0.1
+    
+    # Velocity limits (m/s)
+    max_velocity: 1.0
+    min_velocity: 0.05
+    
+    # Timing parameters
+    hold_duration: 2.0        # seconds to hold for GPS averaging
+    gps_average_samples: 10   # number of GPS samples to average
+    control_rate: 20.0        # Hz
+    detection_timeout: 3.0    # seconds without detection before abort
+    
+    # Altitude
+    servo_altitude: 15.0      # meters AGL for servoing operations

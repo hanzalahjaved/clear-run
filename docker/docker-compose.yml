@@ -1,0 +1,83 @@
+# =============================================================================
+# Clear-Run Docker Compose
+# For development and testing
+# =============================================================================
+
+version: '3.8'
+
+services:
+  # ============================================================================
+  # UAV - Detection and Visual Servoing
+  # ============================================================================
+  clearrun-uav:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.uav
+    container_name: clearrun-uav
+    privileged: true
+    network_mode: host
+    runtime: nvidia
+    environment:
+      - DISPLAY=${DISPLAY}
+      - ROS_DOMAIN_ID=0
+      - NVIDIA_VISIBLE_DEVICES=all
+      - NVIDIA_DRIVER_CAPABILITIES=all
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+      - ../models:/clearrun_ws/models:ro
+      - /dev:/dev
+    devices:
+      - /dev/video0:/dev/video0  # Camera
+    command: ros2 launch clearrun_uav uav.launch.py
+    restart: unless-stopped
+
+  # ============================================================================
+  # UGV - Navigation and Retrieval
+  # ============================================================================
+  clearrun-ugv:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.ugv
+    container_name: clearrun-ugv
+    privileged: true
+    network_mode: host
+    environment:
+      - DISPLAY=${DISPLAY}
+      - ROS_DOMAIN_ID=0
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+      - ../src/clearrun_ugv/maps:/clearrun_ws/maps:ro
+      - /dev:/dev
+    devices:
+      - /dev/ttyUSB0:/dev/ttyUSB0  # LiDAR
+      - /dev/ttyACM0:/dev/ttyACM0  # Pixhawk
+    command: ros2 launch clearrun_ugv ugv.launch.py
+    restart: unless-stopped
+    depends_on:
+      - clearrun-uav
+
+  # ============================================================================
+  # RViz Visualization (Optional)
+  # ============================================================================
+  rviz:
+    image: osrf/ros:humble-desktop
+    container_name: clearrun-rviz
+    network_mode: host
+    environment:
+      - DISPLAY=${DISPLAY}
+      - ROS_DOMAIN_ID=0
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+      - ../src/clearrun_bringup/rviz:/rviz:ro
+    command: >
+      bash -c "source /opt/ros/humble/setup.bash && 
+               rviz2 -d /rviz/clearrun.rviz"
+    profiles:
+      - visualization
+
+# =============================================================================
+# Networks
+# =============================================================================
+networks:
+  default:
+    driver: bridge

@@ -1,0 +1,110 @@
+# =============================================================================
+# Clear-Run ArduPilot SITL Configuration
+# UGV (ArduRover) Parameters
+# =============================================================================
+# Load these parameters in SITL using: param load sitl_ugv.parm
+# =============================================================================
+
+# Vehicle type - Rover
+FRAME_TYPE,0
+
+# Steering configuration
+SERVO1_FUNCTION,26
+SERVO3_FUNCTION,70
+
+# Speed settings
+CRUISE_SPEED,2.0
+CRUISE_THROTTLE,50
+ATC_SPEED_MAX,4.0
+ATC_ACCEL_MAX,2.0
+ATC_BRAKE,1
+
+# Steering tuning
+ATC_STR_RAT_P,0.5
+ATC_STR_RAT_I,0.5
+ATC_STR_RAT_D,0.01
+ATC_STR_RAT_FF,0.2
+
+# Speed tuning
+ATC_SPEED_P,0.5
+ATC_SPEED_I,0.1
+ATC_SPEED_D,0
+
+# Navigation
+NAVL1_PERIOD,8
+NAVL1_DAMPING,0.75
+WP_RADIUS,2.0
+WP_OVERSHOOT,2.0
+WP_SPEED,2.0
+
+# Turn parameters
+TURN_RADIUS,0.9
+TURN_MAX_G,0.6
+
+# GPS configuration
+GPS_TYPE,1
+GPS_NAVFILTER,8
+
+# EKF settings
+EK2_ENABLE,0
+EK3_ENABLE,1
+EK3_IMU_MASK,3
+AHRS_EKF_TYPE,3
+
+# Compass
+COMPASS_USE,1
+COMPASS_USE2,1
+COMPASS_USE3,0
+
+# Serial ports
+SERIAL0_PROTOCOL,2
+SERIAL0_BAUD,921600
+
+# Failsafes (disabled for simulation)
+FS_ACTION,0
+FS_TIMEOUT,0
+BATT_FS_LOW_ACT,0
+BATT_FS_CRT_ACT,0
+
+# Fence (disabled for simulation)
+FENCE_ENABLE,0
+
+# Arming checks (relaxed for simulation)
+ARMING_CHECK,0
+
+# RC configuration
+RC1_MIN,1000
+RC1_MAX,2000
+RC1_TRIM,1500
+RC3_MIN,1000
+RC3_MAX,2000
+RC3_TRIM,1500
+
+# Mode settings
+MODE1,0
+MODE2,10
+MODE3,4
+MODE4,11
+MODE5,3
+MODE6,1
+
+# Simple mode settings
+SIMPLE_TYPE,0
+
+# Wheel encoder (if using)
+WENC_TYPE,0
+
+# Obstacle avoidance
+AVOID_ENABLE,7
+AVOID_MARGIN,2.0
+AVOID_BEHAVE,1
+
+# PRX (Proximity sensor for lidar)
+PRX1_TYPE,4
+PRX1_ORIENT,0
+PRX1_YAW_CORR,0
+PRX1_IGN_ANG1,0
+PRX1_IGN_WID1,0
+
+# RNGFND (Rangefinder)
+RNGFND1_TYPE,0

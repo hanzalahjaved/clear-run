@@ -1,0 +1,15 @@
+# =============================================================================
+# Clear-Run Scoop Controller Configuration
+# =============================================================================
+
+scoop_controller:
+  ros__parameters:
+    # Timing parameters
+    deploy_time: 2.0           # seconds to fully deploy scoop
+    retract_time: 2.0          # seconds to fully retract scoop
+    brush_startup_time: 0.5    # seconds for brushes to reach speed
+    collection_duration: 5.0   # seconds to run collection sequence
+    
+    # Brush motor parameters
+    brush_speed_default: 0.8   # default speed (0.0 to 1.0)
+    current_threshold: 5.0     # amps - stall detection threshold

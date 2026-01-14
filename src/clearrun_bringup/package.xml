@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>clearrun_bringup</name>
+  <version>1.0.0</version>
+  <description>Launch files and system configuration for Clear-Run FOD detection and removal system</description>
+  
+  <maintainer email="hanzalah@example.com">Muhammad Hanzalah Javed</maintainer>
+  <maintainer email="aneeq@example.com">Aneeq</maintainer>
+  
+  <license>MIT</license>
+  
+  <author email="hanzalah@example.com">Muhammad Hanzalah Javed</author>
+  <author email="aneeq@example.com">Aneeq</author>
+
+  <buildtool_depend>ament_python</buildtool_depend>
+  
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>launch</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+  <exec_depend>clearrun_msgs</exec_depend>
+  <exec_depend>clearrun_uav</exec_depend>
+  <exec_depend>clearrun_ugv</exec_depend>
+  <exec_depend>mavros</exec_depend>
+  <exec_depend>nav2_bringup</exec_depend>
+  
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>

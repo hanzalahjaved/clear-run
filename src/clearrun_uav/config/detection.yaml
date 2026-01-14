@@ -1,0 +1,22 @@
+# =============================================================================
+# Clear-Run UAV Detection Configuration
+# =============================================================================
+
+detection_node:
+  ros__parameters:
+    # Model configuration
+    model_path: "models/yolov11/fod_detector.pt"
+    confidence_threshold: 0.5
+    nms_threshold: 0.45
+    image_size: 640
+    
+    # Device (cuda:0 for Jetson GPU, cpu for testing)
+    device: "cuda:0"
+    
+    # Sensor fusion mode
+    # Options: 'early', 'late', 'rgb_only', 'thermal_only'
+    use_thermal: true
+    fusion_mode: "late"
+    
+    # Output
+    publish_annotated: true
