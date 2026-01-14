@@ -95,7 +95,7 @@ class ScoopController(Node):
         # =====================================================================
         self.command_sub = self.create_subscription(
             ScoopCommand,
-            '/ugv/scoop/command',
+            'scoop/command',
             self.command_callback,
             10
         )
@@ -103,14 +103,14 @@ class ScoopController(Node):
         # Simulated sensor inputs (replace with actual hardware interfaces)
         self.proximity_sub = self.create_subscription(
             Bool,
-            '/ugv/scoop/proximity_sensor',
+            'scoop/proximity_sensor',
             self.proximity_callback,
             10
         )
         
         self.current_sub = self.create_subscription(
             Float32,
-            '/ugv/scoop/motor_current',
+            'scoop/motor_current',
             self.current_callback,
             10
         )
@@ -120,20 +120,20 @@ class ScoopController(Node):
         # =====================================================================
         self.status_pub = self.create_publisher(
             ScoopStatus,
-            '/ugv/scoop/status',
+            'scoop/status',
             10
         )
         
         # Hardware output publishers (for simulation/actual hardware)
         self.actuator_pub = self.create_publisher(
             Float32,
-            '/ugv/scoop/actuator_cmd',  # 0.0 = up, 1.0 = down
+            'scoop/actuator_cmd',  # 0.0 = up, 1.0 = down
             10
         )
         
         self.brush_pub = self.create_publisher(
             Float32,
-            '/ugv/scoop/brush_cmd',  # -1.0 to 1.0 (negative = inward)
+            'scoop/brush_cmd',  # -1.0 to 1.0 (negative = inward)
             10
         )
         

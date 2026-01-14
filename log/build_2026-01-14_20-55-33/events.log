@@ -1,0 +1,811 @@
+[0.000000] (-) TimerEvent: {}
+[0.001128] (clearrun_msgs) JobQueued: {'identifier': 'clearrun_msgs', 'dependencies': OrderedDict()}
+[0.001421] (clearrun_uav) JobQueued: {'identifier': 'clearrun_uav', 'dependencies': OrderedDict({'clearrun_msgs': '/home/gondal/Clear-Run/install/clearrun_msgs'})}
+[0.001513] (clearrun_ugv) JobQueued: {'identifier': 'clearrun_ugv', 'dependencies': OrderedDict({'clearrun_msgs': '/home/gondal/Clear-Run/install/clearrun_msgs'})}
+[0.001607] (clearrun_bringup) JobQueued: {'identifier': 'clearrun_bringup', 'dependencies': OrderedDict({'clearrun_msgs': '/home/gondal/Clear-Run/install/clearrun_msgs', 'clearrun_uav': '/home/gondal/Clear-Run/install/clearrun_uav', 'clearrun_ugv': '/home/gondal/Clear-Run/install/clearrun_ugv'})}
+[0.001786] (clearrun_msgs) JobStarted: {'identifier': 'clearrun_msgs'}
+[0.019313] (clearrun_msgs) JobProgress: {'identifier': 'clearrun_msgs', 'progress': 'cmake'}
+[0.020395] (clearrun_msgs) Command: {'cmd': ['/usr/bin/cmake', '/home/gondal/Clear-Run/src/clearrun_msgs', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/gondal/Clear-Run/install/clearrun_msgs'], 'cwd': '/home/gondal/Clear-Run/build/clearrun_msgs', 'env': OrderedDict({'PYTHON_BASIC_REPL': '1', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'KDE_FULL_SESSION': 'true', 'PLASMA_USE_QT_SCALING': '1', 'USER': 'gondal', 'PAM_KWALLET5_LOGIN': '/run/user/1000/kwallet5.socket', 'LC_TIME': 'ur_PK', 'FONTCONFIG_PATH': '/etc/fonts', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SEAT': 'seat0', 'GIO_MODULE_DIR': '/home/gondal/snap/code/common/.cache/gio-modules', 'XDG_SESSION_TYPE': 'wayland', 'GIT_ASKPASS': '/snap/code/218/usr/share/code/resources/app/extensions/git/dist/askpass.sh', 'GTK_EXE_PREFIX_VSCODE_SNAP_ORIG': '', 'GDK_BACKEND_VSCODE_SNAP_ORIG': '', 'XCURSOR_SIZE': '24', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/gondal', 'CHROME_DESKTOP': 'code.desktop', 'KDE_APPLICATIONS_AS_SCOPE': '1', 'LOCPATH_VSCODE_SNAP_ORIG': '', 'TERM_PROGRAM_VERSION': '1.108.0', 'DESKTOP_SESSION': 'plasmawayland', 'GTK_PATH': '/snap/code/218/usr/lib/x86_64-linux-gnu/gtk-3.0', 'NVM_BIN': '/home/gondal/.nvm/versions/node/v22.21.1/bin', 'NVM_INC': '/home/gondal/.nvm/versions/node/v22.21.1/include/node', 'XDG_DATA_HOME_VSCODE_SNAP_ORIG': '', 'GTK_IM_MODULE_FILE': '/home/gondal/snap/code/common/.cache/immodules/immodules.cache', 'ROS_PYTHON_VERSION': '3', 'GTK_RC_FILES': '/etc/gtk/gtkrc:/home/gondal/.gtkrc:/home/gondal/.config/gtkrc', 'XDG_SEAT_PATH': '/org/freedesktop/DisplayManager/Seat0', 'SDL_IM_MODULE': 'fcitx', 'GSETTINGS_SCHEMA_DIR_VSCODE_SNAP_ORIG': '', 'KDE_SESSION_VERSION': '5', 'VSCODE_GIT_ASKPASS_MAIN': '/snap/code/218/usr/share/code/resources/app/extensions/git/dist/askpass-main.js', 'PS1': '\\[\x1b]633;A\x07\\]\\[\\e]0;\\u@\\h: \\w\\a\\]${debian_chroot:+($debian_chroot)}\\[\\033[01;32m\\]\\u@\\h\\[\\033[00m\\]:\\[\\033[01;34m\\]\\w\\[\\033[00m\\]\\$ \\[\x1b]633;B\x07\\]', 'LC_MONETARY': 'ur_PK', 'VSCODE_GIT_ASKPASS_NODE': '/snap/code/218/usr/share/code/code', 'MANAGERPID': '1410', 'PYDEVD_DISABLE_FILE_VALIDATION': '1', 'SYSTEMD_EXEC_PID': '1645', 'BUNDLED_DEBUGPY_PATH': '/home/gondal/.vscode/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/libs/debugpy', 'IM_CONFIG_CHECK_ENV': '1', 'SSH_ASKPASS': '/usr/bin/ksshaskpass', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'NVM_DIR': '/home/gondal/.nvm', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'XKB_DEFAULT_LAYOUT': 'gb', 'ROS_DISTRO': 'jazzy', 'GTK_IM_MODULE': 'fcitx', 'LOGNAME': 'gondal', 'QT_WAYLAND_FORCE_DPI': '96', 'QT_AUTO_SCREEN_SCALE_FACTOR': '0', 'JOURNAL_STREAM': '9:20132', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_CONFIG_DIRS_VSCODE_SNAP_ORIG': '/home/gondal/.config/kdedefaults:/etc/xdg:/usr/share/kubuntu-default-settings/kf5-settings', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/plasma-plasmashell.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'XDG_DATA_DIRS_VSCODE_SNAP_ORIG': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '3', 'FC_FONTATIONS': '1', 'HISTCONTROL': 'ignorespace', 'GTK2_RC_FILES': '/etc/gtk-2.0/gtkrc:/home/gondal/.gtkrc-2.0:/home/gondal/.config/gtkrc-2.0', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/home/gondal/ardupilot/Tools/autotest:/home/gondal/.config/Code/User/globalStorage/github.copilot-chat/debugCommand:/home/gondal/.config/Code/User/globalStorage/github.copilot-chat/copilotCli:/usr/lib/ccache:/home/gondal/ardupilot/Tools/autotest:/opt/gcc-arm-none-eabi-10-2020-q4-major/bin:/home/gondal/venv-ardupilot/bin:/home/gondal/.local/bin:/home/gondal/ardupilot/Tools/autotest:/home/gondal/.nvm/versions/node/v22.21.1/bin:/usr/lib/ccache:/home/gondal/ardupilot/Tools/autotest:/opt/gcc-arm-none-eabi-10-2020-q4-major/bin:/home/gondal/venv-ardupilot/bin:/home/gondal/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/gondal/.vscode/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/scripts/noConfigScripts', 'SESSION_MANAGER': 'local/elitebook:@/tmp/.ICE-unix/1604,unix/elitebook:/tmp/.ICE-unix/1604', 'GTK_EXE_PREFIX': '/snap/code/218/usr', 'INVOCATION_ID': '6ea4c6a0c92d4c609ae11dc75364fb91', 'XDG_SESSION_PATH': '/org/freedesktop/DisplayManager/Session1', 'LC_ADDRESS': 'ur_PK', 'XKB_DEFAULT_MODEL': 'pc105', 'XDG_RUNTIME_DIR': '/run/user/1000', 'XCURSOR_THEME': 'breeze_cursors', 'GDK_BACKEND': 'x11', 'ICEAUTHORITY': '/run/user/1000/iceauth_fQPybT', 'DISPLAY': ':1', 'LOCPATH': '/snap/code/218/usr/lib/locale', 'VSCODE_DEBUGPY_ADAPTER_ENDPOINTS': '/home/gondal/.vscode/extensions/ms-python.debugpy-2025.18.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-9ffa61130925152a.txt', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'KDE', 'PYTHONSTARTUP': '/home/gondal/.config/Code/User/workspaceStorage/2f68e1887a15fb53a3e31c6012b23597/ms-python.python/pythonrc.py', 'LC_TELEPHONE': 'ur_PK', 'VIRTUAL_ENV_PROMPT': '(venv-ardupilot)', 'GIO_MODULE_DIR_VSCODE_SNAP_ORIG': '', 'XDG_DATA_HOME': '/home/gondal/snap/code/218/.local/share', 'XMODIFIERS': '@im=fcitx', 'XDG_SESSION_DESKTOP': 'KDE', 'XAUTHORITY': '/run/user/1000/xauth_XofASZ', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-bc811538e9.sock', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/run/user/1000/gnupg/S.gpg-agent.ssh', 'GSETTINGS_SCHEMA_DIR': '/home/gondal/snap/code/218/.local/share/glib-2.0/schemas', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LC_NAME': 'ur_PK', 'QT_ACCESSIBILITY': '1', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GTK_PATH_VSCODE_SNAP_ORIG': '', 'FONTCONFIG_FILE': '/etc/fonts/fonts.conf', 'GTK_IM_MODULE_FILE_VSCODE_SNAP_ORIG': '', 'LC_MEASUREMENT': 'ur_PK', 'LC_IDENTIFICATION': 'ur_PK', 'VIRTUAL_ENV': '/home/gondal/venv-ardupilot', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'GIT_PAGER': 'cat', 'QT_IM_MODULE': 'fcitx', 'XDG_VTNR': '1', 'PWD': '/home/gondal/Clear-Run/build/clearrun_msgs', 'XDG_CONFIG_DIRS': '/home/gondal/.config/kdedefaults:/etc/xdg:/usr/share/kubuntu-default-settings/kf5-settings', 'CLUTTER_IM_MODULE': 'xim', 'NVM_CD_FLAGS': '', 'XDG_DATA_DIRS': '/home/gondal/snap/code/218/.local/share:/home/gondal/snap/code/218:/snap/code/218/usr/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'QTWEBENGINE_DICTIONARIES_PATH': '/usr/share/hunspell-bdic/', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'LC_NUMERIC': 'ur_PK', 'LC_PAPER': 'ur_PK', 'KDE_SESSION_UID': '1000', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[0.075413] (clearrun_msgs) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[0.099566] (-) TimerEvent: {}
+[0.200251] (-) TimerEvent: {}
+[0.302316] (-) TimerEvent: {}
+[0.405686] (-) TimerEvent: {}
+[0.507939] (-) TimerEvent: {}
+[0.608412] (-) TimerEvent: {}
+[0.640706] (clearrun_msgs) StdoutLine: {'line': b'-- Found Python3: /home/gondal/venv-ardupilot/bin/python3 (found version "3.12.3") found components: Interpreter \n'}
+[0.708627] (-) TimerEvent: {}
+[0.809426] (-) TimerEvent: {}
+[0.909946] (-) TimerEvent: {}
+[0.993453] (clearrun_msgs) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[1.010150] (-) TimerEvent: {}
+[1.110730] (-) TimerEvent: {}
+[1.211473] (-) TimerEvent: {}
+[1.312271] (-) TimerEvent: {}
+[1.369474] (clearrun_msgs) StdoutLine: {'line': b'-- Found std_msgs: 5.3.6 (/opt/ros/jazzy/share/std_msgs/cmake)\n'}
+[1.412484] (-) TimerEvent: {}
+[1.513092] (-) TimerEvent: {}
+[1.613809] (-) TimerEvent: {}
+[1.685343] (clearrun_msgs) StdoutLine: {'line': b'-- Found rosidl_generator_c: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)\n'}
+[1.714032] (-) TimerEvent: {}
+[1.777178] (clearrun_msgs) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)\n'}
+[1.814149] (-) TimerEvent: {}
+[1.842161] (clearrun_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.914280] (-) TimerEvent: {}
+[1.914709] (clearrun_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[2.014429] (-) TimerEvent: {}
+[2.014783] (clearrun_msgs) StdoutLine: {'line': b'-- Found geometry_msgs: 5.3.6 (/opt/ros/jazzy/share/geometry_msgs/cmake)\n'}
+[2.069875] (clearrun_msgs) StdoutLine: {'line': b'-- Found sensor_msgs: 5.3.6 (/opt/ros/jazzy/share/sensor_msgs/cmake)\n'}
+[2.114607] (-) TimerEvent: {}
+[2.215038] (-) TimerEvent: {}
+[2.223881] (clearrun_msgs) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.6.0 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)\n'}
+[2.312360] (clearrun_msgs) StdoutLine: {'line': b'-- Found rosidl_adapter: 4.6.6 (/opt/ros/jazzy/share/rosidl_adapter/cmake)\n'}
+[2.315129] (-) TimerEvent: {}
+[2.415513] (-) TimerEvent: {}
+[2.515862] (-) TimerEvent: {}
+[2.616237] (-) TimerEvent: {}
+[2.716724] (-) TimerEvent: {}
+[2.817076] (-) TimerEvent: {}
+[2.917573] (-) TimerEvent: {}
+[3.018112] (-) TimerEvent: {}
+[3.118545] (-) TimerEvent: {}
+[3.218840] (-) TimerEvent: {}
+[3.319202] (-) TimerEvent: {}
+[3.419551] (-) TimerEvent: {}
+[3.520131] (-) TimerEvent: {}
+[3.620632] (-) TimerEvent: {}
+[3.721063] (-) TimerEvent: {}
+[3.821407] (-) TimerEvent: {}
+[3.921763] (-) TimerEvent: {}
+[3.966518] (clearrun_msgs) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.12.0 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)\n'}
+[4.021934] (-) TimerEvent: {}
+[4.122404] (-) TimerEvent: {}
+[4.222854] (-) TimerEvent: {}
+[4.323389] (-) TimerEvent: {}
+[4.423754] (-) TimerEvent: {}
+[4.524135] (-) TimerEvent: {}
+[4.624503] (-) TimerEvent: {}
+[4.724914] (-) TimerEvent: {}
+[4.825343] (-) TimerEvent: {}
+[4.925764] (-) TimerEvent: {}
+[5.026198] (-) TimerEvent: {}
+[5.126632] (-) TimerEvent: {}
+[5.227042] (-) TimerEvent: {}
+[5.327583] (-) TimerEvent: {}
+[5.428165] (-) TimerEvent: {}
+[5.528572] (-) TimerEvent: {}
+[5.629011] (-) TimerEvent: {}
+[5.729410] (-) TimerEvent: {}
+[5.829764] (-) TimerEvent: {}
+[5.930101] (-) TimerEvent: {}
+[6.030428] (-) TimerEvent: {}
+[6.130868] (-) TimerEvent: {}
+[6.194176] (clearrun_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[6.231384] (-) TimerEvent: {}
+[6.331831] (-) TimerEvent: {}
+[6.432171] (-) TimerEvent: {}
+[6.532601] (-) TimerEvent: {}
+[6.633075] (-) TimerEvent: {}
+[6.733478] (-) TimerEvent: {}
+[6.834019] (-) TimerEvent: {}
+[6.934486] (-) TimerEvent: {}
+[7.034840] (-) TimerEvent: {}
+[7.077266] (clearrun_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[7.095218] (clearrun_msgs) StdoutLine: {'line': b'-- Found python_cmake_module: 0.11.1 (/opt/ros/jazzy/share/python_cmake_module/cmake)\n'}
+[7.135023] (-) TimerEvent: {}
+[7.235369] (-) TimerEvent: {}
+[7.336024] (-) TimerEvent: {}
+[7.436465] (-) TimerEvent: {}
+[7.475061] (clearrun_msgs) StdoutLine: {'line': b'-- Found PythonExtra: /home/gondal/venv-ardupilot/bin/python3  \n'}
+[7.536627] (-) TimerEvent: {}
+[7.637072] (-) TimerEvent: {}
+[7.737657] (-) TimerEvent: {}
+[7.838275] (-) TimerEvent: {}
+[7.938792] (-) TimerEvent: {}
+[8.039140] (-) TimerEvent: {}
+[8.139517] (-) TimerEvent: {}
+[8.241127] (-) TimerEvent: {}
+[8.341694] (-) TimerEvent: {}
+[8.442037] (-) TimerEvent: {}
+[8.543241] (-) TimerEvent: {}
+[8.644463] (-) TimerEvent: {}
+[8.703162] (clearrun_msgs) StdoutLine: {'line': b'-- Found Python3: /home/gondal/venv-ardupilot/bin/python3 (found version "3.12.3") found components: Interpreter Development NumPy Development.Module Development.Embed \n'}
+[8.744709] (-) TimerEvent: {}
+[8.845194] (-) TimerEvent: {}
+[8.945791] (-) TimerEvent: {}
+[8.979326] (clearrun_msgs) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.17.3 (/opt/ros/jazzy/share/ament_lint_auto/cmake)\n'}
+[9.046133] (-) TimerEvent: {}
+[9.130058] (clearrun_msgs) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[9.134929] (clearrun_msgs) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[9.137893] (clearrun_msgs) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[9.146122] (-) TimerEvent: {}
+[9.146712] (clearrun_msgs) StdoutLine: {'line': b'-- Configuring done (9.1s)\n'}
+[9.246233] (-) TimerEvent: {}
+[9.253256] (clearrun_msgs) StdoutLine: {'line': b'-- Generating done (0.1s)\n'}
+[9.285859] (clearrun_msgs) StdoutLine: {'line': b'-- Build files have been written to: /home/gondal/Clear-Run/build/clearrun_msgs\n'}
+[9.302994] (clearrun_msgs) CommandEnded: {'returncode': 0}
+[9.304150] (clearrun_msgs) JobProgress: {'identifier': 'clearrun_msgs', 'progress': 'build'}
+[9.305813] (clearrun_msgs) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/gondal/Clear-Run/build/clearrun_msgs', '--', '-j8', '-l8'], 'cwd': '/home/gondal/Clear-Run/build/clearrun_msgs', 'env': OrderedDict({'PYTHON_BASIC_REPL': '1', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'KDE_FULL_SESSION': 'true', 'PLASMA_USE_QT_SCALING': '1', 'USER': 'gondal', 'PAM_KWALLET5_LOGIN': '/run/user/1000/kwallet5.socket', 'LC_TIME': 'ur_PK', 'FONTCONFIG_PATH': '/etc/fonts', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SEAT': 'seat0', 'GIO_MODULE_DIR': '/home/gondal/snap/code/common/.cache/gio-modules', 'XDG_SESSION_TYPE': 'wayland', 'GIT_ASKPASS': '/snap/code/218/usr/share/code/resources/app/extensions/git/dist/askpass.sh', 'GTK_EXE_PREFIX_VSCODE_SNAP_ORIG': '', 'GDK_BACKEND_VSCODE_SNAP_ORIG': '', 'XCURSOR_SIZE': '24', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/gondal', 'CHROME_DESKTOP': 'code.desktop', 'KDE_APPLICATIONS_AS_SCOPE': '1', 'LOCPATH_VSCODE_SNAP_ORIG': '', 'TERM_PROGRAM_VERSION': '1.108.0', 'DESKTOP_SESSION': 'plasmawayland', 'GTK_PATH': '/snap/code/218/usr/lib/x86_64-linux-gnu/gtk-3.0', 'NVM_BIN': '/home/gondal/.nvm/versions/node/v22.21.1/bin', 'NVM_INC': '/home/gondal/.nvm/versions/node/v22.21.1/include/node', 'XDG_DATA_HOME_VSCODE_SNAP_ORIG': '', 'GTK_IM_MODULE_FILE': '/home/gondal/snap/code/common/.cache/immodules/immodules.cache', 'ROS_PYTHON_VERSION': '3', 'GTK_RC_FILES': '/etc/gtk/gtkrc:/home/gondal/.gtkrc:/home/gondal/.config/gtkrc', 'XDG_SEAT_PATH': '/org/freedesktop/DisplayManager/Seat0', 'SDL_IM_MODULE': 'fcitx', 'GSETTINGS_SCHEMA_DIR_VSCODE_SNAP_ORIG': '', 'KDE_SESSION_VERSION': '5', 'VSCODE_GIT_ASKPASS_MAIN': '/snap/code/218/usr/share/code/resources/app/extensions/git/dist/askpass-main.js', 'PS1': '\\[\x1b]633;A\x07\\]\\[\\e]0;\\u@\\h: \\w\\a\\]${debian_chroot:+($debian_chroot)}\\[\\033[01;32m\\]\\u@\\h\\[\\033[00m\\]:\\[\\033[01;34m\\]\\w\\[\\033[00m\\]\\$ \\[\x1b]633;B\x07\\]', 'LC_MONETARY': 'ur_PK', 'VSCODE_GIT_ASKPASS_NODE': '/snap/code/218/usr/share/code/code', 'MANAGERPID': '1410', 'PYDEVD_DISABLE_FILE_VALIDATION': '1', 'SYSTEMD_EXEC_PID': '1645', 'BUNDLED_DEBUGPY_PATH': '/home/gondal/.vscode/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/libs/debugpy', 'IM_CONFIG_CHECK_ENV': '1', 'SSH_ASKPASS': '/usr/bin/ksshaskpass', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'NVM_DIR': '/home/gondal/.nvm', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'XKB_DEFAULT_LAYOUT': 'gb', 'ROS_DISTRO': 'jazzy', 'GTK_IM_MODULE': 'fcitx', 'LOGNAME': 'gondal', 'QT_WAYLAND_FORCE_DPI': '96', 'QT_AUTO_SCREEN_SCALE_FACTOR': '0', 'JOURNAL_STREAM': '9:20132', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_CONFIG_DIRS_VSCODE_SNAP_ORIG': '/home/gondal/.config/kdedefaults:/etc/xdg:/usr/share/kubuntu-default-settings/kf5-settings', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/plasma-plasmashell.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'XDG_DATA_DIRS_VSCODE_SNAP_ORIG': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '3', 'FC_FONTATIONS': '1', 'HISTCONTROL': 'ignorespace', 'GTK2_RC_FILES': '/etc/gtk-2.0/gtkrc:/home/gondal/.gtkrc-2.0:/home/gondal/.config/gtkrc-2.0', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/home/gondal/ardupilot/Tools/autotest:/home/gondal/.config/Code/User/globalStorage/github.copilot-chat/debugCommand:/home/gondal/.config/Code/User/globalStorage/github.copilot-chat/copilotCli:/usr/lib/ccache:/home/gondal/ardupilot/Tools/autotest:/opt/gcc-arm-none-eabi-10-2020-q4-major/bin:/home/gondal/venv-ardupilot/bin:/home/gondal/.local/bin:/home/gondal/ardupilot/Tools/autotest:/home/gondal/.nvm/versions/node/v22.21.1/bin:/usr/lib/ccache:/home/gondal/ardupilot/Tools/autotest:/opt/gcc-arm-none-eabi-10-2020-q4-major/bin:/home/gondal/venv-ardupilot/bin:/home/gondal/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/gondal/.vscode/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/scripts/noConfigScripts', 'SESSION_MANAGER': 'local/elitebook:@/tmp/.ICE-unix/1604,unix/elitebook:/tmp/.ICE-unix/1604', 'GTK_EXE_PREFIX': '/snap/code/218/usr', 'INVOCATION_ID': '6ea4c6a0c92d4c609ae11dc75364fb91', 'XDG_SESSION_PATH': '/org/freedesktop/DisplayManager/Session1', 'LC_ADDRESS': 'ur_PK', 'XKB_DEFAULT_MODEL': 'pc105', 'XDG_RUNTIME_DIR': '/run/user/1000', 'XCURSOR_THEME': 'breeze_cursors', 'GDK_BACKEND': 'x11', 'ICEAUTHORITY': '/run/user/1000/iceauth_fQPybT', 'DISPLAY': ':1', 'LOCPATH': '/snap/code/218/usr/lib/locale', 'VSCODE_DEBUGPY_ADAPTER_ENDPOINTS': '/home/gondal/.vscode/extensions/ms-python.debugpy-2025.18.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-9ffa61130925152a.txt', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'KDE', 'PYTHONSTARTUP': '/home/gondal/.config/Code/User/workspaceStorage/2f68e1887a15fb53a3e31c6012b23597/ms-python.python/pythonrc.py', 'LC_TELEPHONE': 'ur_PK', 'VIRTUAL_ENV_PROMPT': '(venv-ardupilot)', 'GIO_MODULE_DIR_VSCODE_SNAP_ORIG': '', 'XDG_DATA_HOME': '/home/gondal/snap/code/218/.local/share', 'XMODIFIERS': '@im=fcitx', 'XDG_SESSION_DESKTOP': 'KDE', 'XAUTHORITY': '/run/user/1000/xauth_XofASZ', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-bc811538e9.sock', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/run/user/1000/gnupg/S.gpg-agent.ssh', 'GSETTINGS_SCHEMA_DIR': '/home/gondal/snap/code/218/.local/share/glib-2.0/schemas', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LC_NAME': 'ur_PK', 'QT_ACCESSIBILITY': '1', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GTK_PATH_VSCODE_SNAP_ORIG': '', 'FONTCONFIG_FILE': '/etc/fonts/fonts.conf', 'GTK_IM_MODULE_FILE_VSCODE_SNAP_ORIG': '', 'LC_MEASUREMENT': 'ur_PK', 'LC_IDENTIFICATION': 'ur_PK', 'VIRTUAL_ENV': '/home/gondal/venv-ardupilot', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'GIT_PAGER': 'cat', 'QT_IM_MODULE': 'fcitx', 'XDG_VTNR': '1', 'PWD': '/home/gondal/Clear-Run/build/clearrun_msgs', 'XDG_CONFIG_DIRS': '/home/gondal/.config/kdedefaults:/etc/xdg:/usr/share/kubuntu-default-settings/kf5-settings', 'CLUTTER_IM_MODULE': 'xim', 'NVM_CD_FLAGS': '', 'XDG_DATA_DIRS': '/home/gondal/snap/code/218/.local/share:/home/gondal/snap/code/218:/snap/code/218/usr/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'QTWEBENGINE_DICTIONARIES_PATH': '/usr/share/hunspell-bdic/', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'LC_NUMERIC': 'ur_PK', 'LC_PAPER': 'ur_PK', 'KDE_SESSION_UID': '1000', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[9.346377] (-) TimerEvent: {}
+[9.446782] (-) TimerEvent: {}
+[9.452819] (clearrun_msgs) StdoutLine: {'line': b'[  1%] \x1b[34m\x1b[1mGenerating type hashes for ROS interfaces\x1b[0m\n'}
+[9.486743] (clearrun_msgs) StdoutLine: {'line': b'[  1%] Built target ament_cmake_python_symlink_clearrun_msgs\n'}
+[9.546932] (-) TimerEvent: {}
+[9.647530] (-) TimerEvent: {}
+[9.748096] (-) TimerEvent: {}
+[9.848453] (-) TimerEvent: {}
+[9.948796] (-) TimerEvent: {}
+[10.049215] (-) TimerEvent: {}
+[10.149688] (-) TimerEvent: {}
+[10.250199] (-) TimerEvent: {}
+[10.279049] (clearrun_msgs) StdoutLine: {'line': b'running egg_info\n'}
+[10.343108] (clearrun_msgs) StdoutLine: {'line': b'creating clearrun_msgs.egg-info\n'}
+[10.343615] (clearrun_msgs) StdoutLine: {'line': b'writing clearrun_msgs.egg-info/PKG-INFO\n'}
+[10.344101] (clearrun_msgs) StdoutLine: {'line': b'writing dependency_links to clearrun_msgs.egg-info/dependency_links.txt\n'}
+[10.344634] (clearrun_msgs) StdoutLine: {'line': b'writing top-level names to clearrun_msgs.egg-info/top_level.txt\n'}
+[10.345011] (clearrun_msgs) StdoutLine: {'line': b"writing manifest file 'clearrun_msgs.egg-info/SOURCES.txt'\n"}
+[10.350294] (-) TimerEvent: {}
+[10.450686] (-) TimerEvent: {}
+[10.551140] (-) TimerEvent: {}
+[10.616348] (clearrun_msgs) StdoutLine: {'line': b"reading manifest file 'clearrun_msgs.egg-info/SOURCES.txt'\n"}
+[10.618022] (clearrun_msgs) StdoutLine: {'line': b"writing manifest file 'clearrun_msgs.egg-info/SOURCES.txt'\n"}
+[10.651262] (-) TimerEvent: {}
+[10.711241] (clearrun_msgs) StdoutLine: {'line': b'[  1%] Built target ament_cmake_python_build_clearrun_msgs_egg\n'}
+[10.751433] (-) TimerEvent: {}
+[10.851864] (-) TimerEvent: {}
+[10.952223] (-) TimerEvent: {}
+[11.038912] (clearrun_msgs) StdoutLine: {'line': b'[  1%] Built target clearrun_msgs__rosidl_generator_type_description\n'}
+[11.052347] (-) TimerEvent: {}
+[11.061530] (clearrun_msgs) StdoutLine: {'line': b'[  3%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[11.091651] (clearrun_msgs) StdoutLine: {'line': b'[  4%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[11.152479] (-) TimerEvent: {}
+[11.252853] (-) TimerEvent: {}
+[11.353178] (-) TimerEvent: {}
+[11.453539] (-) TimerEvent: {}
+[11.553914] (-) TimerEvent: {}
+[11.654326] (-) TimerEvent: {}
+[11.754702] (-) TimerEvent: {}
+[11.855059] (-) TimerEvent: {}
+[11.955405] (-) TimerEvent: {}
+[12.055894] (-) TimerEvent: {}
+[12.156357] (-) TimerEvent: {}
+[12.256736] (-) TimerEvent: {}
+[12.357081] (-) TimerEvent: {}
+[12.457532] (-) TimerEvent: {}
+[12.557906] (-) TimerEvent: {}
+[12.658375] (-) TimerEvent: {}
+[12.759020] (-) TimerEvent: {}
+[12.860776] (-) TimerEvent: {}
+[12.963066] (-) TimerEvent: {}
+[13.064024] (-) TimerEvent: {}
+[13.092661] (clearrun_msgs) StdoutLine: {'line': b'[  4%] Built target clearrun_msgs__cpp\n'}
+[13.164458] (-) TimerEvent: {}
+[13.265585] (-) TimerEvent: {}
+[13.340286] (clearrun_msgs) StdoutLine: {'line': b'[  6%] \x1b[32mBuilding C object CMakeFiles/clearrun_msgs__rosidl_generator_c.dir/rosidl_generator_c/clearrun_msgs/msg/detail/fod_array__functions.c.o\x1b[0m\n'}
+[13.343624] (clearrun_msgs) StdoutLine: {'line': b'[  7%] \x1b[32mBuilding C object CMakeFiles/clearrun_msgs__rosidl_generator_c.dir/rosidl_generator_c/clearrun_msgs/msg/detail/fod_location__functions.c.o\x1b[0m\n'}
+[13.344478] (clearrun_msgs) StdoutLine: {'line': b'[  9%] \x1b[32mBuilding C object CMakeFiles/clearrun_msgs__rosidl_generator_c.dir/rosidl_generator_c/clearrun_msgs/msg/detail/scoop_command__description.c.o\x1b[0m\n'}
+[13.350116] (clearrun_msgs) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding C object CMakeFiles/clearrun_msgs__rosidl_generator_c.dir/rosidl_generator_c/clearrun_msgs/msg/detail/fod_array__type_support.c.o\x1b[0m\n'}
+[13.367133] (clearrun_msgs) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding C object CMakeFiles/clearrun_msgs__rosidl_generator_c.dir/rosidl_generator_c/clearrun_msgs/msg/detail/fod_location__description.c.o\x1b[0m\n'}
+[13.367798] (-) TimerEvent: {}
+[13.369890] (clearrun_msgs) StdoutLine: {'line': b'[ 14%] \x1b[32mBuilding C object CMakeFiles/clearrun_msgs__rosidl_generator_c.dir/rosidl_generator_c/clearrun_msgs/msg/detail/fod_location__type_support.c.o\x1b[0m\n'}
+[13.371160] (clearrun_msgs) StdoutLine: {'line': b'[ 15%] \x1b[32mBuilding C object CMakeFiles/clearrun_msgs__rosidl_generator_c.dir/rosidl_generator_c/clearrun_msgs/msg/detail/fod_array__description.c.o\x1b[0m\n'}
+[13.386346] (clearrun_msgs) StdoutLine: {'line': b'[ 17%] \x1b[32mBuilding C object CMakeFiles/clearrun_msgs__rosidl_generator_c.dir/rosidl_generator_c/clearrun_msgs/msg/detail/scoop_command__functions.c.o\x1b[0m\n'}
+[13.469047] (-) TimerEvent: {}
+[13.569580] (-) TimerEvent: {}
+[13.607061] (clearrun_msgs) StdoutLine: {'line': b'[ 18%] \x1b[32mBuilding C object CMakeFiles/clearrun_msgs__rosidl_generator_c.dir/rosidl_generator_c/clearrun_msgs/msg/detail/scoop_command__type_support.c.o\x1b[0m\n'}
+[13.631069] (clearrun_msgs) StdoutLine: {'line': b'[ 20%] \x1b[32mBuilding C object CMakeFiles/clearrun_msgs__rosidl_generator_c.dir/rosidl_generator_c/clearrun_msgs/msg/detail/scoop_status__description.c.o\x1b[0m\n'}
+[13.665220] (clearrun_msgs) StdoutLine: {'line': b'[ 21%] \x1b[32mBuilding C object CMakeFiles/clearrun_msgs__rosidl_generator_c.dir/rosidl_generator_c/clearrun_msgs/msg/detail/scoop_status__functions.c.o\x1b[0m\n'}
+[13.669679] (-) TimerEvent: {}
+[13.690978] (clearrun_msgs) StdoutLine: {'line': b'[ 23%] \x1b[32mBuilding C object CMakeFiles/clearrun_msgs__rosidl_generator_c.dir/rosidl_generator_c/clearrun_msgs/msg/detail/scoop_status__type_support.c.o\x1b[0m\n'}
+[13.769837] (-) TimerEvent: {}
+[13.870355] (-) TimerEvent: {}
+[13.920454] (clearrun_msgs) StdoutLine: {'line': b'[ 25%] \x1b[32m\x1b[1mLinking C shared library libclearrun_msgs__rosidl_generator_c.so\x1b[0m\n'}
+[13.970567] (-) TimerEvent: {}
+[14.071071] (-) TimerEvent: {}
+[14.094898] (clearrun_msgs) StdoutLine: {'line': b'[ 25%] Built target clearrun_msgs__rosidl_generator_c\n'}
+[14.150147] (clearrun_msgs) StdoutLine: {'line': b'[ 26%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[14.152571] (clearrun_msgs) StdoutLine: {'line': b'[ 28%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[14.157133] (clearrun_msgs) StdoutLine: {'line': b'[ 29%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[14.160315] (clearrun_msgs) StdoutLine: {'line': b'[ 31%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[14.161292] (clearrun_msgs) StdoutLine: {'line': b'[ 32%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[14.161914] (clearrun_msgs) StdoutLine: {'line': b'[ 34%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[14.171244] (-) TimerEvent: {}
+[14.277064] (-) TimerEvent: {}
+[14.377618] (-) TimerEvent: {}
+[14.477999] (-) TimerEvent: {}
+[14.578486] (-) TimerEvent: {}
+[14.678991] (-) TimerEvent: {}
+[14.779551] (-) TimerEvent: {}
+[14.880518] (-) TimerEvent: {}
+[14.982064] (-) TimerEvent: {}
+[15.082679] (-) TimerEvent: {}
+[15.184175] (-) TimerEvent: {}
+[15.284791] (-) TimerEvent: {}
+[15.388468] (-) TimerEvent: {}
+[15.489507] (-) TimerEvent: {}
+[15.590383] (-) TimerEvent: {}
+[15.692194] (-) TimerEvent: {}
+[15.794037] (-) TimerEvent: {}
+[15.897258] (-) TimerEvent: {}
+[15.997902] (-) TimerEvent: {}
+[16.101063] (-) TimerEvent: {}
+[16.201430] (-) TimerEvent: {}
+[16.301779] (-) TimerEvent: {}
+[16.402191] (-) TimerEvent: {}
+[16.504681] (-) TimerEvent: {}
+[16.605871] (-) TimerEvent: {}
+[16.709013] (-) TimerEvent: {}
+[16.809420] (-) TimerEvent: {}
+[16.911109] (-) TimerEvent: {}
+[16.921187] (clearrun_msgs) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding CXX object CMakeFiles/clearrun_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/clearrun_msgs/msg/fod_location__type_support.cpp.o\x1b[0m\n'}
+[16.972060] (clearrun_msgs) StdoutLine: {'line': b'[ 37%] \x1b[32mBuilding CXX object CMakeFiles/clearrun_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/clearrun_msgs/msg/fod_array__type_support.cpp.o\x1b[0m\n'}
+[16.972454] (clearrun_msgs) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/clearrun_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/clearrun_msgs/msg/fod_location__type_support.cpp.o\x1b[0m\n'}
+[16.972708] (clearrun_msgs) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/clearrun_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/clearrun_msgs/msg/scoop_command__type_support.cpp.o\x1b[0m\n'}
+[17.012041] (-) TimerEvent: {}
+[17.116068] (-) TimerEvent: {}
+[17.148155] (clearrun_msgs) StdoutLine: {'line': b'[ 42%] \x1b[32mBuilding CXX object CMakeFiles/clearrun_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/clearrun_msgs/msg/detail/fod_location__type_support.cpp.o\x1b[0m\n'}
+[17.173697] (clearrun_msgs) StdoutLine: {'line': b'[ 43%] \x1b[32mBuilding C object CMakeFiles/clearrun_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/clearrun_msgs/msg/detail/fod_location__type_support.c.o\x1b[0m\n'}
+[17.216217] (-) TimerEvent: {}
+[17.280157] (clearrun_msgs) StdoutLine: {'line': b'[ 48%] \x1b[32mBuilding CXX object CMakeFiles/clearrun_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/clearrun_msgs/msg/detail/fod_array__type_support.cpp.o\x1b[0m\n'}
+[17.281373] (clearrun_msgs) StdoutLine: {'line': b'[ 48%] \x1b[32mBuilding CXX object CMakeFiles/clearrun_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/clearrun_msgs/msg/scoop_status__type_support.cpp.o\x1b[0m\n'}
+[17.283268] (clearrun_msgs) StdoutLine: {'line': b'[ 48%] \x1b[32mBuilding CXX object CMakeFiles/clearrun_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/clearrun_msgs/msg/detail/scoop_command__type_support.cpp.o\x1b[0m\n'}
+[17.320039] (-) TimerEvent: {}
+[17.420489] (-) TimerEvent: {}
+[17.448509] (clearrun_msgs) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/clearrun_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/clearrun_msgs/msg/detail/fod_location__type_support_c.cpp.o\x1b[0m\n'}
+[17.474303] (clearrun_msgs) StdoutLine: {'line': b'[ 51%] \x1b[32mBuilding C object CMakeFiles/clearrun_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/clearrun_msgs/msg/detail/fod_array__type_support.c.o\x1b[0m\n'}
+[17.520735] (-) TimerEvent: {}
+[17.537881] (clearrun_msgs) StdoutLine: {'line': b'[ 53%] \x1b[32m\x1b[1mLinking CXX shared library libclearrun_msgs__rosidl_typesupport_c.so\x1b[0m\n'}
+[17.586585] (clearrun_msgs) StdoutLine: {'line': b'[ 54%] \x1b[32mBuilding CXX object CMakeFiles/clearrun_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/clearrun_msgs/msg/detail/dds_fastrtps/fod_location__type_support.cpp.o\x1b[0m\n'}
+[17.621042] (-) TimerEvent: {}
+[17.709824] (clearrun_msgs) StdoutLine: {'line': b'[ 54%] Built target clearrun_msgs__rosidl_typesupport_c\n'}
+[17.721170] (-) TimerEvent: {}
+[17.738405] (clearrun_msgs) StdoutLine: {'line': b'[ 57%] \x1b[32mBuilding CXX object CMakeFiles/clearrun_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/clearrun_msgs/msg/detail/scoop_status__type_support.cpp.o\x1b[0m\n'}
+[17.739948] (clearrun_msgs) StdoutLine: {'line': b'[ 57%] \x1b[32mBuilding C object CMakeFiles/clearrun_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/clearrun_msgs/msg/detail/scoop_command__type_support.c.o\x1b[0m\n'}
+[17.822169] (-) TimerEvent: {}
+[17.922660] (-) TimerEvent: {}
+[17.957103] (clearrun_msgs) StdoutLine: {'line': b'[ 59%] \x1b[32mBuilding C object CMakeFiles/clearrun_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/clearrun_msgs/msg/detail/scoop_status__type_support.c.o\x1b[0m\n'}
+[18.022780] (-) TimerEvent: {}
+[18.123201] (-) TimerEvent: {}
+[18.226433] (-) TimerEvent: {}
+[18.327050] (-) TimerEvent: {}
+[18.328107] (clearrun_msgs) StdoutLine: {'line': b'[ 60%] \x1b[32m\x1b[1mLinking C shared library libclearrun_msgs__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[18.430311] (-) TimerEvent: {}
+[18.530852] (-) TimerEvent: {}
+[18.546760] (clearrun_msgs) StdoutLine: {'line': b'[ 60%] Built target clearrun_msgs__rosidl_typesupport_introspection_c\n'}
+[18.608460] (clearrun_msgs) StdoutLine: {'line': b'[ 62%] \x1b[32mBuilding CXX object CMakeFiles/clearrun_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/clearrun_msgs/msg/fod_array__type_support.cpp.o\x1b[0m\n'}
+[18.631000] (-) TimerEvent: {}
+[18.736088] (-) TimerEvent: {}
+[18.745839] (clearrun_msgs) StdoutLine: {'line': b'[ 64%] \x1b[32mBuilding CXX object CMakeFiles/clearrun_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/clearrun_msgs/msg/detail/fod_array__type_support_c.cpp.o\x1b[0m\n'}
+[18.781545] (clearrun_msgs) StdoutLine: {'line': b'[ 65%] \x1b[32mBuilding CXX object CMakeFiles/clearrun_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/clearrun_msgs/msg/detail/scoop_command__type_support_c.cpp.o\x1b[0m\n'}
+[18.836226] (-) TimerEvent: {}
+[18.936764] (-) TimerEvent: {}
+[18.997544] (clearrun_msgs) StdoutLine: {'line': b'[ 67%] \x1b[32mBuilding CXX object CMakeFiles/clearrun_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/clearrun_msgs/msg/detail/dds_fastrtps/fod_array__type_support.cpp.o\x1b[0m\n'}
+[19.037066] (-) TimerEvent: {}
+[19.140496] (-) TimerEvent: {}
+[19.200316] (clearrun_msgs) StdoutLine: {'line': b'[ 68%] \x1b[32mBuilding CXX object CMakeFiles/clearrun_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/clearrun_msgs/msg/scoop_command__type_support.cpp.o\x1b[0m\n'}
+[19.240638] (-) TimerEvent: {}
+[19.295591] (clearrun_msgs) StdoutLine: {'line': b'[ 70%] \x1b[32m\x1b[1mLinking CXX shared library libclearrun_msgs__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[19.341564] (-) TimerEvent: {}
+[19.441991] (-) TimerEvent: {}
+[19.543236] (-) TimerEvent: {}
+[19.645884] (-) TimerEvent: {}
+[19.650451] (clearrun_msgs) StdoutLine: {'line': b'[ 70%] Built target clearrun_msgs__rosidl_typesupport_introspection_cpp\n'}
+[19.679408] (clearrun_msgs) StdoutLine: {'line': b'[ 71%] \x1b[32mBuilding CXX object CMakeFiles/clearrun_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/clearrun_msgs/msg/detail/scoop_status__type_support_c.cpp.o\x1b[0m\n'}
+[19.746022] (-) TimerEvent: {}
+[19.828204] (clearrun_msgs) StdoutLine: {'line': b'[ 73%] \x1b[32mBuilding CXX object CMakeFiles/clearrun_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/clearrun_msgs/msg/detail/dds_fastrtps/scoop_command__type_support.cpp.o\x1b[0m\n'}
+[19.847054] (-) TimerEvent: {}
+[19.924149] (clearrun_msgs) StdoutLine: {'line': b'[ 75%] \x1b[32mBuilding CXX object CMakeFiles/clearrun_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/clearrun_msgs/msg/detail/dds_fastrtps/scoop_status__type_support.cpp.o\x1b[0m\n'}
+[19.949043] (-) TimerEvent: {}
+[20.051329] (-) TimerEvent: {}
+[20.154186] (-) TimerEvent: {}
+[20.254688] (-) TimerEvent: {}
+[20.288045] (clearrun_msgs) StdoutLine: {'line': b'[ 76%] \x1b[32mBuilding CXX object CMakeFiles/clearrun_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/clearrun_msgs/msg/scoop_status__type_support.cpp.o\x1b[0m\n'}
+[20.358090] (-) TimerEvent: {}
+[20.458692] (-) TimerEvent: {}
+[20.559372] (-) TimerEvent: {}
+[20.661914] (-) TimerEvent: {}
+[20.766263] (-) TimerEvent: {}
+[20.866635] (-) TimerEvent: {}
+[20.967291] (-) TimerEvent: {}
+[21.070052] (-) TimerEvent: {}
+[21.170794] (-) TimerEvent: {}
+[21.274204] (-) TimerEvent: {}
+[21.374747] (-) TimerEvent: {}
+[21.475244] (-) TimerEvent: {}
+[21.575663] (-) TimerEvent: {}
+[21.676330] (-) TimerEvent: {}
+[21.777190] (-) TimerEvent: {}
+[21.877725] (-) TimerEvent: {}
+[21.882897] (clearrun_msgs) StdoutLine: {'line': b'[ 78%] \x1b[32m\x1b[1mLinking CXX shared library libclearrun_msgs__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[21.912476] (clearrun_msgs) StdoutLine: {'line': b'[ 79%] \x1b[32m\x1b[1mLinking CXX shared library libclearrun_msgs__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[21.977879] (-) TimerEvent: {}
+[22.022245] (clearrun_msgs) StdoutLine: {'line': b'[ 79%] Built target clearrun_msgs__rosidl_typesupport_cpp\n'}
+[22.078067] (-) TimerEvent: {}
+[22.159682] (clearrun_msgs) StdoutLine: {'line': b'[ 79%] Built target clearrun_msgs__rosidl_typesupport_fastrtps_c\n'}
+[22.178194] (-) TimerEvent: {}
+[22.278671] (-) TimerEvent: {}
+[22.379221] (-) TimerEvent: {}
+[22.414275] (clearrun_msgs) StdoutLine: {'line': b'[ 81%] \x1b[32m\x1b[1mLinking CXX shared library libclearrun_msgs__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[22.479424] (-) TimerEvent: {}
+[22.579990] (-) TimerEvent: {}
+[22.680589] (-) TimerEvent: {}
+[22.781163] (-) TimerEvent: {}
+[22.808260] (clearrun_msgs) StdoutLine: {'line': b'[ 81%] Built target clearrun_msgs__rosidl_typesupport_fastrtps_cpp\n'}
+[22.881339] (-) TimerEvent: {}
+[22.909308] (clearrun_msgs) StdoutLine: {'line': b'[ 81%] Built target clearrun_msgs\n'}
+[22.981488] (-) TimerEvent: {}
+[23.014177] (clearrun_msgs) StdoutLine: {'line': b'[ 82%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[23.081673] (-) TimerEvent: {}
+[23.182210] (-) TimerEvent: {}
+[23.282763] (-) TimerEvent: {}
+[23.383286] (-) TimerEvent: {}
+[23.483609] (-) TimerEvent: {}
+[23.583967] (-) TimerEvent: {}
+[23.684244] (-) TimerEvent: {}
+[23.784582] (-) TimerEvent: {}
+[23.884925] (-) TimerEvent: {}
+[23.985206] (-) TimerEvent: {}
+[24.085512] (-) TimerEvent: {}
+[24.185819] (-) TimerEvent: {}
+[24.286139] (-) TimerEvent: {}
+[24.386464] (-) TimerEvent: {}
+[24.486796] (-) TimerEvent: {}
+[24.587078] (-) TimerEvent: {}
+[24.687424] (-) TimerEvent: {}
+[24.787759] (-) TimerEvent: {}
+[24.888089] (-) TimerEvent: {}
+[24.988420] (-) TimerEvent: {}
+[25.088752] (-) TimerEvent: {}
+[25.189053] (-) TimerEvent: {}
+[25.289390] (-) TimerEvent: {}
+[25.389848] (-) TimerEvent: {}
+[25.490163] (-) TimerEvent: {}
+[25.590513] (-) TimerEvent: {}
+[25.591692] (clearrun_msgs) StdoutLine: {'line': b'[ 82%] Built target clearrun_msgs__py\n'}
+[25.647801] (clearrun_msgs) StdoutLine: {'line': b'[ 84%] \x1b[32mBuilding C object CMakeFiles/clearrun_msgs__rosidl_generator_py.dir/rosidl_generator_py/clearrun_msgs/msg/_fod_location_s.c.o\x1b[0m\n'}
+[25.648244] (clearrun_msgs) StdoutLine: {'line': b'[ 85%] \x1b[32mBuilding C object CMakeFiles/clearrun_msgs__rosidl_generator_py.dir/rosidl_generator_py/clearrun_msgs/msg/_scoop_status_s.c.o\x1b[0m\n'}
+[25.653688] (clearrun_msgs) StdoutLine: {'line': b'[ 89%] \x1b[32mBuilding C object CMakeFiles/clearrun_msgs__rosidl_generator_py.dir/rosidl_generator_py/clearrun_msgs/msg/_fod_array_s.c.o\x1b[0m\n'}
+[25.654165] (clearrun_msgs) StdoutLine: {'line': b'[ 89%] \x1b[32mBuilding C object CMakeFiles/clearrun_msgs__rosidl_generator_py.dir/rosidl_generator_py/clearrun_msgs/msg/_scoop_command_s.c.o\x1b[0m\n'}
+[25.690704] (-) TimerEvent: {}
+[25.791220] (-) TimerEvent: {}
+[25.891742] (-) TimerEvent: {}
+[25.992187] (-) TimerEvent: {}
+[26.092758] (-) TimerEvent: {}
+[26.193184] (-) TimerEvent: {}
+[26.293619] (-) TimerEvent: {}
+[26.394032] (-) TimerEvent: {}
+[26.494137] (clearrun_msgs) StdoutLine: {'line': b'[ 90%] \x1b[32m\x1b[1mLinking C shared library libclearrun_msgs__rosidl_generator_py.so\x1b[0m\n'}
+[26.494465] (-) TimerEvent: {}
+[26.594801] (-) TimerEvent: {}
+[26.641164] (clearrun_msgs) StdoutLine: {'line': b'[ 90%] Built target clearrun_msgs__rosidl_generator_py\n'}
+[26.695023] (-) TimerEvent: {}
+[26.725694] (clearrun_msgs) StdoutLine: {'line': b'[ 93%] \x1b[32mBuilding C object CMakeFiles/clearrun_msgs_s__rosidl_typesupport_introspection_c.dir/rosidl_generator_py/clearrun_msgs/_clearrun_msgs_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[26.727240] (clearrun_msgs) StdoutLine: {'line': b'[ 93%] \x1b[32mBuilding C object CMakeFiles/clearrun_msgs_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/clearrun_msgs/_clearrun_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[26.727754] (clearrun_msgs) StdoutLine: {'line': b'[ 95%] \x1b[32mBuilding C object CMakeFiles/clearrun_msgs_s__rosidl_typesupport_c.dir/rosidl_generator_py/clearrun_msgs/_clearrun_msgs_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[26.795176] (-) TimerEvent: {}
+[26.895851] (-) TimerEvent: {}
+[26.996380] (-) TimerEvent: {}
+[27.096805] (-) TimerEvent: {}
+[27.197300] (-) TimerEvent: {}
+[27.283749] (clearrun_msgs) StdoutLine: {'line': b'[ 96%] \x1b[32m\x1b[1mLinking C shared module rosidl_generator_py/clearrun_msgs/clearrun_msgs_s__rosidl_typesupport_c.so\x1b[0m\n'}
+[27.297429] (-) TimerEvent: {}
+[27.318643] (clearrun_msgs) StdoutLine: {'line': b'[ 98%] \x1b[32m\x1b[1mLinking C shared module rosidl_generator_py/clearrun_msgs/clearrun_msgs_s__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[27.326266] (clearrun_msgs) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared module rosidl_generator_py/clearrun_msgs/clearrun_msgs_s__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[27.376597] (clearrun_msgs) StdoutLine: {'line': b'[100%] Built target clearrun_msgs_s__rosidl_typesupport_c\n'}
+[27.397630] (-) TimerEvent: {}
+[27.444922] (clearrun_msgs) StdoutLine: {'line': b'[100%] Built target clearrun_msgs_s__rosidl_typesupport_introspection_c\n'}
+[27.446635] (clearrun_msgs) StdoutLine: {'line': b'[100%] Built target clearrun_msgs_s__rosidl_typesupport_fastrtps_c\n'}
+[27.497921] (-) TimerEvent: {}
+[27.499278] (clearrun_msgs) CommandEnded: {'returncode': 0}
+[27.501936] (clearrun_msgs) JobProgress: {'identifier': 'clearrun_msgs', 'progress': 'install'}
+[27.539059] (clearrun_msgs) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/gondal/Clear-Run/build/clearrun_msgs'], 'cwd': '/home/gondal/Clear-Run/build/clearrun_msgs', 'env': OrderedDict({'PYTHON_BASIC_REPL': '1', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'KDE_FULL_SESSION': 'true', 'PLASMA_USE_QT_SCALING': '1', 'USER': 'gondal', 'PAM_KWALLET5_LOGIN': '/run/user/1000/kwallet5.socket', 'LC_TIME': 'ur_PK', 'FONTCONFIG_PATH': '/etc/fonts', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SEAT': 'seat0', 'GIO_MODULE_DIR': '/home/gondal/snap/code/common/.cache/gio-modules', 'XDG_SESSION_TYPE': 'wayland', 'GIT_ASKPASS': '/snap/code/218/usr/share/code/resources/app/extensions/git/dist/askpass.sh', 'GTK_EXE_PREFIX_VSCODE_SNAP_ORIG': '', 'GDK_BACKEND_VSCODE_SNAP_ORIG': '', 'XCURSOR_SIZE': '24', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/gondal', 'CHROME_DESKTOP': 'code.desktop', 'KDE_APPLICATIONS_AS_SCOPE': '1', 'LOCPATH_VSCODE_SNAP_ORIG': '', 'TERM_PROGRAM_VERSION': '1.108.0', 'DESKTOP_SESSION': 'plasmawayland', 'GTK_PATH': '/snap/code/218/usr/lib/x86_64-linux-gnu/gtk-3.0', 'NVM_BIN': '/home/gondal/.nvm/versions/node/v22.21.1/bin', 'NVM_INC': '/home/gondal/.nvm/versions/node/v22.21.1/include/node', 'XDG_DATA_HOME_VSCODE_SNAP_ORIG': '', 'GTK_IM_MODULE_FILE': '/home/gondal/snap/code/common/.cache/immodules/immodules.cache', 'ROS_PYTHON_VERSION': '3', 'GTK_RC_FILES': '/etc/gtk/gtkrc:/home/gondal/.gtkrc:/home/gondal/.config/gtkrc', 'XDG_SEAT_PATH': '/org/freedesktop/DisplayManager/Seat0', 'SDL_IM_MODULE': 'fcitx', 'GSETTINGS_SCHEMA_DIR_VSCODE_SNAP_ORIG': '', 'KDE_SESSION_VERSION': '5', 'VSCODE_GIT_ASKPASS_MAIN': '/snap/code/218/usr/share/code/resources/app/extensions/git/dist/askpass-main.js', 'PS1': '\\[\x1b]633;A\x07\\]\\[\\e]0;\\u@\\h: \\w\\a\\]${debian_chroot:+($debian_chroot)}\\[\\033[01;32m\\]\\u@\\h\\[\\033[00m\\]:\\[\\033[01;34m\\]\\w\\[\\033[00m\\]\\$ \\[\x1b]633;B\x07\\]', 'LC_MONETARY': 'ur_PK', 'VSCODE_GIT_ASKPASS_NODE': '/snap/code/218/usr/share/code/code', 'MANAGERPID': '1410', 'PYDEVD_DISABLE_FILE_VALIDATION': '1', 'SYSTEMD_EXEC_PID': '1645', 'BUNDLED_DEBUGPY_PATH': '/home/gondal/.vscode/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/libs/debugpy', 'IM_CONFIG_CHECK_ENV': '1', 'SSH_ASKPASS': '/usr/bin/ksshaskpass', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'NVM_DIR': '/home/gondal/.nvm', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'XKB_DEFAULT_LAYOUT': 'gb', 'ROS_DISTRO': 'jazzy', 'GTK_IM_MODULE': 'fcitx', 'LOGNAME': 'gondal', 'QT_WAYLAND_FORCE_DPI': '96', 'QT_AUTO_SCREEN_SCALE_FACTOR': '0', 'JOURNAL_STREAM': '9:20132', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_CONFIG_DIRS_VSCODE_SNAP_ORIG': '/home/gondal/.config/kdedefaults:/etc/xdg:/usr/share/kubuntu-default-settings/kf5-settings', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/plasma-plasmashell.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'XDG_DATA_DIRS_VSCODE_SNAP_ORIG': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '3', 'FC_FONTATIONS': '1', 'HISTCONTROL': 'ignorespace', 'GTK2_RC_FILES': '/etc/gtk-2.0/gtkrc:/home/gondal/.gtkrc-2.0:/home/gondal/.config/gtkrc-2.0', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/home/gondal/ardupilot/Tools/autotest:/home/gondal/.config/Code/User/globalStorage/github.copilot-chat/debugCommand:/home/gondal/.config/Code/User/globalStorage/github.copilot-chat/copilotCli:/usr/lib/ccache:/home/gondal/ardupilot/Tools/autotest:/opt/gcc-arm-none-eabi-10-2020-q4-major/bin:/home/gondal/venv-ardupilot/bin:/home/gondal/.local/bin:/home/gondal/ardupilot/Tools/autotest:/home/gondal/.nvm/versions/node/v22.21.1/bin:/usr/lib/ccache:/home/gondal/ardupilot/Tools/autotest:/opt/gcc-arm-none-eabi-10-2020-q4-major/bin:/home/gondal/venv-ardupilot/bin:/home/gondal/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/gondal/.vscode/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/scripts/noConfigScripts', 'SESSION_MANAGER': 'local/elitebook:@/tmp/.ICE-unix/1604,unix/elitebook:/tmp/.ICE-unix/1604', 'GTK_EXE_PREFIX': '/snap/code/218/usr', 'INVOCATION_ID': '6ea4c6a0c92d4c609ae11dc75364fb91', 'XDG_SESSION_PATH': '/org/freedesktop/DisplayManager/Session1', 'LC_ADDRESS': 'ur_PK', 'XKB_DEFAULT_MODEL': 'pc105', 'XDG_RUNTIME_DIR': '/run/user/1000', 'XCURSOR_THEME': 'breeze_cursors', 'GDK_BACKEND': 'x11', 'ICEAUTHORITY': '/run/user/1000/iceauth_fQPybT', 'DISPLAY': ':1', 'LOCPATH': '/snap/code/218/usr/lib/locale', 'VSCODE_DEBUGPY_ADAPTER_ENDPOINTS': '/home/gondal/.vscode/extensions/ms-python.debugpy-2025.18.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-9ffa61130925152a.txt', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'KDE', 'PYTHONSTARTUP': '/home/gondal/.config/Code/User/workspaceStorage/2f68e1887a15fb53a3e31c6012b23597/ms-python.python/pythonrc.py', 'LC_TELEPHONE': 'ur_PK', 'VIRTUAL_ENV_PROMPT': '(venv-ardupilot)', 'GIO_MODULE_DIR_VSCODE_SNAP_ORIG': '', 'XDG_DATA_HOME': '/home/gondal/snap/code/218/.local/share', 'XMODIFIERS': '@im=fcitx', 'XDG_SESSION_DESKTOP': 'KDE', 'XAUTHORITY': '/run/user/1000/xauth_XofASZ', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-bc811538e9.sock', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/run/user/1000/gnupg/S.gpg-agent.ssh', 'GSETTINGS_SCHEMA_DIR': '/home/gondal/snap/code/218/.local/share/glib-2.0/schemas', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LC_NAME': 'ur_PK', 'QT_ACCESSIBILITY': '1', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GTK_PATH_VSCODE_SNAP_ORIG': '', 'FONTCONFIG_FILE': '/etc/fonts/fonts.conf', 'GTK_IM_MODULE_FILE_VSCODE_SNAP_ORIG': '', 'LC_MEASUREMENT': 'ur_PK', 'LC_IDENTIFICATION': 'ur_PK', 'VIRTUAL_ENV': '/home/gondal/venv-ardupilot', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'GIT_PAGER': 'cat', 'QT_IM_MODULE': 'fcitx', 'XDG_VTNR': '1', 'PWD': '/home/gondal/Clear-Run/build/clearrun_msgs', 'XDG_CONFIG_DIRS': '/home/gondal/.config/kdedefaults:/etc/xdg:/usr/share/kubuntu-default-settings/kf5-settings', 'CLUTTER_IM_MODULE': 'xim', 'NVM_CD_FLAGS': '', 'XDG_DATA_DIRS': '/home/gondal/snap/code/218/.local/share:/home/gondal/snap/code/218:/snap/code/218/usr/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'QTWEBENGINE_DICTIONARIES_PATH': '/usr/share/hunspell-bdic/', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'LC_NUMERIC': 'ur_PK', 'LC_PAPER': 'ur_PK', 'KDE_SESSION_UID': '1000', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[27.578874] (clearrun_msgs) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[27.580600] (clearrun_msgs) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[27.581457] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/share/ament_index/resource_index/rosidl_interfaces/clearrun_msgs\n'}
+[27.598110] (-) TimerEvent: {}
+[27.614989] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/share/clearrun_msgs/msg/FodLocation.json\n'}
+[27.658866] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/share/clearrun_msgs/msg/FodArray.json\n'}
+[27.692365] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/share/clearrun_msgs/msg/ScoopCommand.json\n'}
+[27.698219] (-) TimerEvent: {}
+[27.725214] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/share/clearrun_msgs/msg/ScoopStatus.json\n'}
+[27.769487] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/include/clearrun_msgs/clearrun_msgs/msg/detail/fod_array__functions.h\n'}
+[27.798451] (-) TimerEvent: {}
+[27.800645] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/include/clearrun_msgs/clearrun_msgs/msg/detail/fod_array__struct.h\n'}
+[27.834096] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/include/clearrun_msgs/clearrun_msgs/msg/detail/fod_array__type_support.h\n'}
+[27.877429] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/include/clearrun_msgs/clearrun_msgs/msg/detail/fod_location__functions.h\n'}
+[27.898592] (-) TimerEvent: {}
+[27.910543] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/include/clearrun_msgs/clearrun_msgs/msg/detail/fod_location__struct.h\n'}
+[27.952373] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/include/clearrun_msgs/clearrun_msgs/msg/detail/fod_location__type_support.h\n'}
+[27.986086] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/include/clearrun_msgs/clearrun_msgs/msg/detail/scoop_command__functions.h\n'}
+[27.998784] (-) TimerEvent: {}
+[28.017827] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/include/clearrun_msgs/clearrun_msgs/msg/detail/scoop_command__struct.h\n'}
+[28.058658] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/include/clearrun_msgs/clearrun_msgs/msg/detail/scoop_command__type_support.h\n'}
+[28.091481] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/include/clearrun_msgs/clearrun_msgs/msg/detail/scoop_status__functions.h\n'}
+[28.098938] (-) TimerEvent: {}
+[28.123252] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/include/clearrun_msgs/clearrun_msgs/msg/detail/scoop_status__struct.h\n'}
+[28.165677] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/include/clearrun_msgs/clearrun_msgs/msg/detail/scoop_status__type_support.h\n'}
+[28.195719] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/include/clearrun_msgs/clearrun_msgs/msg/fod_array.h\n'}
+[28.199108] (-) TimerEvent: {}
+[28.228887] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/include/clearrun_msgs/clearrun_msgs/msg/fod_location.h\n'}
+[28.262809] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/include/clearrun_msgs/clearrun_msgs/msg/rosidl_generator_c__visibility_control.h\n'}
+[28.290400] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/include/clearrun_msgs/clearrun_msgs/msg/scoop_command.h\n'}
+[28.299226] (-) TimerEvent: {}
+[28.315770] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/include/clearrun_msgs/clearrun_msgs/msg/scoop_status.h\n'}
+[28.350459] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/share/clearrun_msgs/environment/library_path.sh\n'}
+[28.383815] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/share/clearrun_msgs/environment/library_path.dsv\n'}
+[28.399418] (-) TimerEvent: {}
+[28.415424] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/include/clearrun_msgs/clearrun_msgs/msg/detail/fod_array__rosidl_typesupport_fastrtps_c.h\n'}
+[28.456050] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/include/clearrun_msgs/clearrun_msgs/msg/detail/fod_location__rosidl_typesupport_fastrtps_c.h\n'}
+[28.485730] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/include/clearrun_msgs/clearrun_msgs/msg/detail/scoop_command__rosidl_typesupport_fastrtps_c.h\n'}
+[28.499611] (-) TimerEvent: {}
+[28.514722] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/include/clearrun_msgs/clearrun_msgs/msg/detail/scoop_status__rosidl_typesupport_fastrtps_c.h\n'}
+[28.555574] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/include/clearrun_msgs/clearrun_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[28.591557] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/include/clearrun_msgs/clearrun_msgs/msg/detail/fod_array__builder.hpp\n'}
+[28.599842] (-) TimerEvent: {}
+[28.624953] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/include/clearrun_msgs/clearrun_msgs/msg/detail/fod_array__struct.hpp\n'}
+[28.665720] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/include/clearrun_msgs/clearrun_msgs/msg/detail/fod_array__traits.hpp\n'}
+[28.698738] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/include/clearrun_msgs/clearrun_msgs/msg/detail/fod_array__type_support.hpp\n'}
+[28.699993] (-) TimerEvent: {}
+[28.732709] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/include/clearrun_msgs/clearrun_msgs/msg/detail/fod_location__builder.hpp\n'}
+[28.772485] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/include/clearrun_msgs/clearrun_msgs/msg/detail/fod_location__struct.hpp\n'}
+[28.800125] (-) TimerEvent: {}
+[28.802731] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/include/clearrun_msgs/clearrun_msgs/msg/detail/fod_location__traits.hpp\n'}
+[28.840056] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/include/clearrun_msgs/clearrun_msgs/msg/detail/fod_location__type_support.hpp\n'}
+[28.880656] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/include/clearrun_msgs/clearrun_msgs/msg/detail/scoop_command__builder.hpp\n'}
+[28.900283] (-) TimerEvent: {}
+[28.913365] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/include/clearrun_msgs/clearrun_msgs/msg/detail/scoop_command__struct.hpp\n'}
+[28.958209] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/include/clearrun_msgs/clearrun_msgs/msg/detail/scoop_command__traits.hpp\n'}
+[28.993062] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/include/clearrun_msgs/clearrun_msgs/msg/detail/scoop_command__type_support.hpp\n'}
+[29.000481] (-) TimerEvent: {}
+[29.030338] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/include/clearrun_msgs/clearrun_msgs/msg/detail/scoop_status__builder.hpp\n'}
+[29.066980] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/include/clearrun_msgs/clearrun_msgs/msg/detail/scoop_status__struct.hpp\n'}
+[29.100673] (-) TimerEvent: {}
+[29.101546] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/include/clearrun_msgs/clearrun_msgs/msg/detail/scoop_status__traits.hpp\n'}
+[29.137508] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/include/clearrun_msgs/clearrun_msgs/msg/detail/scoop_status__type_support.hpp\n'}
+[29.176610] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/include/clearrun_msgs/clearrun_msgs/msg/fod_array.hpp\n'}
+[29.200903] (-) TimerEvent: {}
+[29.209544] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/include/clearrun_msgs/clearrun_msgs/msg/fod_location.hpp\n'}
+[29.246420] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/include/clearrun_msgs/clearrun_msgs/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[29.282124] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/include/clearrun_msgs/clearrun_msgs/msg/scoop_command.hpp\n'}
+[29.301106] (-) TimerEvent: {}
+[29.313341] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/include/clearrun_msgs/clearrun_msgs/msg/scoop_status.hpp\n'}
+[29.354364] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/include/clearrun_msgs/clearrun_msgs/msg/detail/fod_array__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[29.390040] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/include/clearrun_msgs/clearrun_msgs/msg/detail/fod_location__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[29.401218] (-) TimerEvent: {}
+[29.420889] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/include/clearrun_msgs/clearrun_msgs/msg/detail/scoop_command__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[29.461923] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/include/clearrun_msgs/clearrun_msgs/msg/detail/scoop_status__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[29.493034] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/include/clearrun_msgs/clearrun_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[29.501407] (-) TimerEvent: {}
+[29.525672] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/include/clearrun_msgs/clearrun_msgs/msg/detail/fod_array__rosidl_typesupport_introspection_c.h\n'}
+[29.566371] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/include/clearrun_msgs/clearrun_msgs/msg/detail/fod_location__rosidl_typesupport_introspection_c.h\n'}
+[29.599422] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/include/clearrun_msgs/clearrun_msgs/msg/detail/scoop_command__rosidl_typesupport_introspection_c.h\n'}
+[29.601552] (-) TimerEvent: {}
+[29.633173] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/include/clearrun_msgs/clearrun_msgs/msg/detail/scoop_status__rosidl_typesupport_introspection_c.h\n'}
+[29.674110] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/include/clearrun_msgs/clearrun_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[29.701734] (-) TimerEvent: {}
+[29.704392] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/include/clearrun_msgs/clearrun_msgs/msg/detail/fod_array__rosidl_typesupport_introspection_cpp.hpp\n'}
+[29.742382] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/include/clearrun_msgs/clearrun_msgs/msg/detail/fod_location__rosidl_typesupport_introspection_cpp.hpp\n'}
+[29.778761] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/include/clearrun_msgs/clearrun_msgs/msg/detail/scoop_command__rosidl_typesupport_introspection_cpp.hpp\n'}
+[29.801878] (-) TimerEvent: {}
+[29.814004] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/include/clearrun_msgs/clearrun_msgs/msg/detail/scoop_status__rosidl_typesupport_introspection_cpp.hpp\n'}
+[29.856249] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/share/clearrun_msgs/environment/pythonpath.sh\n'}
+[29.891849] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/share/clearrun_msgs/environment/pythonpath.dsv\n'}
+[29.902068] (-) TimerEvent: {}
+[29.923131] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/lib/python3.12/site-packages/clearrun_msgs-1.0.0-py3.12.egg-info/PKG-INFO\n'}
+[29.964254] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/lib/python3.12/site-packages/clearrun_msgs-1.0.0-py3.12.egg-info/SOURCES.txt\n'}
+[29.998494] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/lib/python3.12/site-packages/clearrun_msgs-1.0.0-py3.12.egg-info/dependency_links.txt\n'}
+[30.002190] (-) TimerEvent: {}
+[30.028515] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/lib/python3.12/site-packages/clearrun_msgs-1.0.0-py3.12.egg-info/top_level.txt\n'}
+[30.072526] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/lib/python3.12/site-packages/clearrun_msgs/__init__.py\n'}
+[30.102427] (-) TimerEvent: {}
+[30.103726] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/lib/python3.12/site-packages/clearrun_msgs/_clearrun_msgs_s.ep.rosidl_typesupport_c.c\n'}
+[30.150177] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/lib/python3.12/site-packages/clearrun_msgs/_clearrun_msgs_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[30.192175] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/lib/python3.12/site-packages/clearrun_msgs/_clearrun_msgs_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[30.202576] (-) TimerEvent: {}
+[30.228952] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/lib/python3.12/site-packages/clearrun_msgs/clearrun_msgs_s__rosidl_typesupport_c.so\n'}
+[30.277339] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/lib/python3.12/site-packages/clearrun_msgs/clearrun_msgs_s__rosidl_typesupport_fastrtps_c.so\n'}
+[30.302890] (-) TimerEvent: {}
+[30.317008] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/lib/python3.12/site-packages/clearrun_msgs/clearrun_msgs_s__rosidl_typesupport_introspection_c.so\n'}
+[30.362645] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/lib/python3.12/site-packages/clearrun_msgs/msg/__init__.py\n'}
+[30.402240] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/lib/python3.12/site-packages/clearrun_msgs/msg/_fod_array.py\n'}
+[30.404906] (-) TimerEvent: {}
+[30.452415] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/lib/python3.12/site-packages/clearrun_msgs/msg/_fod_array_s.c\n'}
+[30.493777] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/lib/python3.12/site-packages/clearrun_msgs/msg/_fod_location.py\n'}
+[30.505117] (-) TimerEvent: {}
+[30.543190] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/lib/python3.12/site-packages/clearrun_msgs/msg/_fod_location_s.c\n'}
+[30.588309] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/lib/python3.12/site-packages/clearrun_msgs/msg/_scoop_command.py\n'}
+[30.605319] (-) TimerEvent: {}
+[30.628924] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/lib/python3.12/site-packages/clearrun_msgs/msg/_scoop_command_s.c\n'}
+[30.674268] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/lib/python3.12/site-packages/clearrun_msgs/msg/_scoop_status.py\n'}
+[30.705580] (-) TimerEvent: {}
+[30.714121] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/lib/python3.12/site-packages/clearrun_msgs/msg/_scoop_status_s.c\n'}
+[30.760185] (clearrun_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/gondal/Clear-Run/install/clearrun_msgs/lib/python3.12/site-packages/clearrun_msgs/clearrun_msgs_s__rosidl_typesupport_fastrtps_c.so\n'}
+[30.761584] (clearrun_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/gondal/Clear-Run/install/clearrun_msgs/lib/python3.12/site-packages/clearrun_msgs/clearrun_msgs_s__rosidl_typesupport_introspection_c.so\n'}
+[30.763070] (clearrun_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/gondal/Clear-Run/install/clearrun_msgs/lib/python3.12/site-packages/clearrun_msgs/clearrun_msgs_s__rosidl_typesupport_c.so\n'}
+[30.763904] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/share/clearrun_msgs/msg/FodLocation.idl\n'}
+[30.806181] (-) TimerEvent: {}
+[30.821992] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/share/clearrun_msgs/msg/FodArray.idl\n'}
+[30.859103] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/share/clearrun_msgs/msg/ScoopCommand.idl\n'}
+[30.906326] (-) TimerEvent: {}
+[30.907334] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/share/clearrun_msgs/msg/ScoopStatus.idl\n'}
+[30.946549] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/share/clearrun_msgs/msg/FodLocation.msg\n'}
+[30.993068] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/share/clearrun_msgs/msg/FodArray.msg\n'}
+[31.006521] (-) TimerEvent: {}
+[31.032376] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/share/clearrun_msgs/msg/ScoopCommand.msg\n'}
+[31.078532] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/share/clearrun_msgs/msg/ScoopStatus.msg\n'}
+[31.106716] (-) TimerEvent: {}
+[31.127208] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/share/ament_index/resource_index/package_run_dependencies/clearrun_msgs\n'}
+[31.195187] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/share/ament_index/resource_index/parent_prefix_path/clearrun_msgs\n'}
+[31.211079] (-) TimerEvent: {}
+[31.237279] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/share/clearrun_msgs/environment/ament_prefix_path.sh\n'}
+[31.267706] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/share/clearrun_msgs/environment/ament_prefix_path.dsv\n'}
+[31.295782] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/share/clearrun_msgs/environment/path.sh\n'}
+[31.311212] (-) TimerEvent: {}
+[31.334297] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/share/clearrun_msgs/environment/path.dsv\n'}
+[31.391312] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/share/clearrun_msgs/local_setup.bash\n'}
+[31.411363] (-) TimerEvent: {}
+[31.435484] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/share/clearrun_msgs/local_setup.sh\n'}
+[31.474717] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/share/clearrun_msgs/local_setup.zsh\n'}
+[31.511555] (-) TimerEvent: {}
+[31.518077] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/share/clearrun_msgs/local_setup.dsv\n'}
+[31.570064] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/share/clearrun_msgs/package.dsv\n'}
+[31.604443] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/share/ament_index/resource_index/packages/clearrun_msgs\n'}
+[31.611729] (-) TimerEvent: {}
+[31.641201] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/share/clearrun_msgs/cmake/rosidl_cmake-extras.cmake\n'}
+[31.681739] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/share/clearrun_msgs/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[31.711226] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/share/clearrun_msgs/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[31.711832] (-) TimerEvent: {}
+[31.749599] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/share/clearrun_msgs/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[31.785735] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/share/clearrun_msgs/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[31.812057] (-) TimerEvent: {}
+[31.816847] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/share/clearrun_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[31.857947] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/share/clearrun_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[31.894025] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/share/clearrun_msgs/cmake/clearrun_msgsConfig.cmake\n'}
+[31.912197] (-) TimerEvent: {}
+[31.930167] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/share/clearrun_msgs/cmake/clearrun_msgsConfig-version.cmake\n'}
+[31.968066] (clearrun_msgs) StdoutLine: {'line': b'-- Symlinking: /home/gondal/Clear-Run/install/clearrun_msgs/share/clearrun_msgs/package.xml\n'}
+[31.999779] (clearrun_msgs) StdoutLine: {'line': b'-- Installing: /home/gondal/Clear-Run/install/clearrun_msgs/lib/libclearrun_msgs__rosidl_generator_c.so\n'}
+[32.001879] (clearrun_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/gondal/Clear-Run/install/clearrun_msgs/lib/libclearrun_msgs__rosidl_generator_c.so" to ""\n'}
+[32.002457] (clearrun_msgs) StdoutLine: {'line': b'-- Installing: /home/gondal/Clear-Run/install/clearrun_msgs/lib/libclearrun_msgs__rosidl_typesupport_fastrtps_c.so\n'}
+[32.004235] (clearrun_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/gondal/Clear-Run/install/clearrun_msgs/lib/libclearrun_msgs__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[32.004828] (clearrun_msgs) StdoutLine: {'line': b'-- Installing: /home/gondal/Clear-Run/install/clearrun_msgs/lib/libclearrun_msgs__rosidl_typesupport_fastrtps_cpp.so\n'}
+[32.006757] (clearrun_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/gondal/Clear-Run/install/clearrun_msgs/lib/libclearrun_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[32.007378] (clearrun_msgs) StdoutLine: {'line': b'-- Installing: /home/gondal/Clear-Run/install/clearrun_msgs/lib/libclearrun_msgs__rosidl_typesupport_introspection_c.so\n'}
+[32.008935] (clearrun_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/gondal/Clear-Run/install/clearrun_msgs/lib/libclearrun_msgs__rosidl_typesupport_introspection_c.so" to ""\n'}
+[32.009611] (clearrun_msgs) StdoutLine: {'line': b'-- Installing: /home/gondal/Clear-Run/install/clearrun_msgs/lib/libclearrun_msgs__rosidl_typesupport_c.so\n'}
+[32.011016] (clearrun_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/gondal/Clear-Run/install/clearrun_msgs/lib/libclearrun_msgs__rosidl_typesupport_c.so" to ""\n'}
+[32.011612] (clearrun_msgs) StdoutLine: {'line': b'-- Installing: /home/gondal/Clear-Run/install/clearrun_msgs/lib/libclearrun_msgs__rosidl_typesupport_introspection_cpp.so\n'}
+[32.012292] (-) TimerEvent: {}
+[32.013369] (clearrun_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/gondal/Clear-Run/install/clearrun_msgs/lib/libclearrun_msgs__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[32.013841] (clearrun_msgs) StdoutLine: {'line': b'-- Installing: /home/gondal/Clear-Run/install/clearrun_msgs/lib/libclearrun_msgs__rosidl_typesupport_cpp.so\n'}
+[32.015349] (clearrun_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/gondal/Clear-Run/install/clearrun_msgs/lib/libclearrun_msgs__rosidl_typesupport_cpp.so" to ""\n'}
+[32.112438] (-) TimerEvent: {}
+[32.191465] (clearrun_msgs) StdoutLine: {'line': b"Listing '/home/gondal/Clear-Run/install/clearrun_msgs/lib/python3.12/site-packages/clearrun_msgs'...\n"}
+[32.192135] (clearrun_msgs) StdoutLine: {'line': b"Compiling '/home/gondal/Clear-Run/install/clearrun_msgs/lib/python3.12/site-packages/clearrun_msgs/__init__.py'...\n"}
+[32.192597] (clearrun_msgs) StdoutLine: {'line': b"Listing '/home/gondal/Clear-Run/install/clearrun_msgs/lib/python3.12/site-packages/clearrun_msgs/msg'...\n"}
+[32.193041] (clearrun_msgs) StdoutLine: {'line': b"Compiling '/home/gondal/Clear-Run/install/clearrun_msgs/lib/python3.12/site-packages/clearrun_msgs/msg/__init__.py'...\n"}
+[32.193460] (clearrun_msgs) StdoutLine: {'line': b"Compiling '/home/gondal/Clear-Run/install/clearrun_msgs/lib/python3.12/site-packages/clearrun_msgs/msg/_fod_array.py'...\n"}
+[32.193885] (clearrun_msgs) StdoutLine: {'line': b"Compiling '/home/gondal/Clear-Run/install/clearrun_msgs/lib/python3.12/site-packages/clearrun_msgs/msg/_fod_location.py'...\n"}
+[32.194338] (clearrun_msgs) StdoutLine: {'line': b"Compiling '/home/gondal/Clear-Run/install/clearrun_msgs/lib/python3.12/site-packages/clearrun_msgs/msg/_scoop_command.py'...\n"}
+[32.194771] (clearrun_msgs) StdoutLine: {'line': b"Compiling '/home/gondal/Clear-Run/install/clearrun_msgs/lib/python3.12/site-packages/clearrun_msgs/msg/_scoop_status.py'...\n"}
+[32.209864] (clearrun_msgs) StdoutLine: {'line': b'-- Installing: /home/gondal/Clear-Run/install/clearrun_msgs/lib/libclearrun_msgs__rosidl_generator_py.so\n'}
+[32.211443] (clearrun_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/gondal/Clear-Run/install/clearrun_msgs/lib/libclearrun_msgs__rosidl_generator_py.so" to ""\n'}
+[32.211866] (clearrun_msgs) StdoutLine: {'line': b'-- Installing: /home/gondal/Clear-Run/install/clearrun_msgs/share/clearrun_msgs/cmake/export_clearrun_msgs__rosidl_generator_cExport.cmake\n'}
+[32.212456] (clearrun_msgs) StdoutLine: {'line': b'-- Installing: /home/gondal/Clear-Run/install/clearrun_msgs/share/clearrun_msgs/cmake/export_clearrun_msgs__rosidl_generator_cExport-noconfig.cmake\n'}
+[32.212774] (-) TimerEvent: {}
+[32.213177] (clearrun_msgs) StdoutLine: {'line': b'-- Installing: /home/gondal/Clear-Run/install/clearrun_msgs/share/clearrun_msgs/cmake/export_clearrun_msgs__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[32.213724] (clearrun_msgs) StdoutLine: {'line': b'-- Installing: /home/gondal/Clear-Run/install/clearrun_msgs/share/clearrun_msgs/cmake/export_clearrun_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[32.214260] (clearrun_msgs) StdoutLine: {'line': b'-- Installing: /home/gondal/Clear-Run/install/clearrun_msgs/share/clearrun_msgs/cmake/export_clearrun_msgs__rosidl_generator_cppExport.cmake\n'}
+[32.214608] (clearrun_msgs) StdoutLine: {'line': b'-- Installing: /home/gondal/Clear-Run/install/clearrun_msgs/share/clearrun_msgs/cmake/export_clearrun_msgs__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[32.214995] (clearrun_msgs) StdoutLine: {'line': b'-- Installing: /home/gondal/Clear-Run/install/clearrun_msgs/share/clearrun_msgs/cmake/export_clearrun_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[32.215620] (clearrun_msgs) StdoutLine: {'line': b'-- Installing: /home/gondal/Clear-Run/install/clearrun_msgs/share/clearrun_msgs/cmake/clearrun_msgs__rosidl_typesupport_introspection_cExport.cmake\n'}
+[32.216093] (clearrun_msgs) StdoutLine: {'line': b'-- Installing: /home/gondal/Clear-Run/install/clearrun_msgs/share/clearrun_msgs/cmake/clearrun_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[32.216697] (clearrun_msgs) StdoutLine: {'line': b'-- Installing: /home/gondal/Clear-Run/install/clearrun_msgs/share/clearrun_msgs/cmake/clearrun_msgs__rosidl_typesupport_cExport.cmake\n'}
+[32.217210] (clearrun_msgs) StdoutLine: {'line': b'-- Installing: /home/gondal/Clear-Run/install/clearrun_msgs/share/clearrun_msgs/cmake/clearrun_msgs__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[32.217786] (clearrun_msgs) StdoutLine: {'line': b'-- Installing: /home/gondal/Clear-Run/install/clearrun_msgs/share/clearrun_msgs/cmake/clearrun_msgs__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[32.218348] (clearrun_msgs) StdoutLine: {'line': b'-- Installing: /home/gondal/Clear-Run/install/clearrun_msgs/share/clearrun_msgs/cmake/clearrun_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[32.218907] (clearrun_msgs) StdoutLine: {'line': b'-- Installing: /home/gondal/Clear-Run/install/clearrun_msgs/share/clearrun_msgs/cmake/clearrun_msgs__rosidl_typesupport_cppExport.cmake\n'}
+[32.219474] (clearrun_msgs) StdoutLine: {'line': b'-- Installing: /home/gondal/Clear-Run/install/clearrun_msgs/share/clearrun_msgs/cmake/clearrun_msgs__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[32.220021] (clearrun_msgs) StdoutLine: {'line': b'-- Installing: /home/gondal/Clear-Run/install/clearrun_msgs/share/clearrun_msgs/cmake/export_clearrun_msgs__rosidl_generator_pyExport.cmake\n'}
+[32.220591] (clearrun_msgs) StdoutLine: {'line': b'-- Installing: /home/gondal/Clear-Run/install/clearrun_msgs/share/clearrun_msgs/cmake/export_clearrun_msgs__rosidl_generator_pyExport-noconfig.cmake\n'}
+[32.233278] (clearrun_msgs) CommandEnded: {'returncode': 0}
+[32.299112] (clearrun_msgs) JobEnded: {'identifier': 'clearrun_msgs', 'rc': 0}
+[32.300460] (clearrun_uav) JobStarted: {'identifier': 'clearrun_uav'}
+[32.312108] (clearrun_ugv) JobStarted: {'identifier': 'clearrun_ugv'}
+[32.313124] (-) TimerEvent: {}
+[32.413760] (-) TimerEvent: {}
+[32.514858] (-) TimerEvent: {}
+[32.615461] (-) TimerEvent: {}
+[32.715776] (-) TimerEvent: {}
+[32.816329] (-) TimerEvent: {}
+[32.916759] (-) TimerEvent: {}
+[33.017629] (-) TimerEvent: {}
+[33.118382] (-) TimerEvent: {}
+[33.218899] (-) TimerEvent: {}
+[33.319410] (-) TimerEvent: {}
+[33.419835] (-) TimerEvent: {}
+[33.520138] (-) TimerEvent: {}
+[33.620450] (-) TimerEvent: {}
+[33.720791] (-) TimerEvent: {}
+[33.821168] (-) TimerEvent: {}
+[33.921488] (-) TimerEvent: {}
+[34.021883] (-) TimerEvent: {}
+[34.122382] (-) TimerEvent: {}
+[34.222825] (-) TimerEvent: {}
+[34.323205] (-) TimerEvent: {}
+[34.423573] (-) TimerEvent: {}
+[34.524059] (-) TimerEvent: {}
+[34.624577] (-) TimerEvent: {}
+[34.725142] (-) TimerEvent: {}
+[34.825728] (-) TimerEvent: {}
+[34.926377] (-) TimerEvent: {}
+[35.026944] (-) TimerEvent: {}
+[35.127360] (-) TimerEvent: {}
+[35.227845] (-) TimerEvent: {}
+[35.329259] (-) TimerEvent: {}
+[35.430172] (-) TimerEvent: {}
+[35.530614] (-) TimerEvent: {}
+[35.631022] (-) TimerEvent: {}
+[35.731370] (-) TimerEvent: {}
+[35.831814] (-) TimerEvent: {}
+[35.859460] (clearrun_uav) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/home/gondal/Clear-Run/build/clearrun_uav/build', '--no-deps', 'symlink_data'], 'cwd': '/home/gondal/Clear-Run/build/clearrun_uav', 'env': {'PYTHON_BASIC_REPL': '1', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'KDE_FULL_SESSION': 'true', 'PLASMA_USE_QT_SCALING': '1', 'USER': 'gondal', 'PAM_KWALLET5_LOGIN': '/run/user/1000/kwallet5.socket', 'LC_TIME': 'ur_PK', 'FONTCONFIG_PATH': '/etc/fonts', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SEAT': 'seat0', 'GIO_MODULE_DIR': '/home/gondal/snap/code/common/.cache/gio-modules', 'XDG_SESSION_TYPE': 'wayland', 'GIT_ASKPASS': '/snap/code/218/usr/share/code/resources/app/extensions/git/dist/askpass.sh', 'GTK_EXE_PREFIX_VSCODE_SNAP_ORIG': '', 'GDK_BACKEND_VSCODE_SNAP_ORIG': '', 'XCURSOR_SIZE': '24', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/gondal/Clear-Run/install/clearrun_msgs/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/gondal', 'CHROME_DESKTOP': 'code.desktop', 'KDE_APPLICATIONS_AS_SCOPE': '1', 'LOCPATH_VSCODE_SNAP_ORIG': '', 'TERM_PROGRAM_VERSION': '1.108.0', 'DESKTOP_SESSION': 'plasmawayland', 'GTK_PATH': '/snap/code/218/usr/lib/x86_64-linux-gnu/gtk-3.0', 'NVM_BIN': '/home/gondal/.nvm/versions/node/v22.21.1/bin', 'NVM_INC': '/home/gondal/.nvm/versions/node/v22.21.1/include/node', 'XDG_DATA_HOME_VSCODE_SNAP_ORIG': '', 'GTK_IM_MODULE_FILE': '/home/gondal/snap/code/common/.cache/immodules/immodules.cache', 'ROS_PYTHON_VERSION': '3', 'GTK_RC_FILES': '/etc/gtk/gtkrc:/home/gondal/.gtkrc:/home/gondal/.config/gtkrc', 'XDG_SEAT_PATH': '/org/freedesktop/DisplayManager/Seat0', 'SDL_IM_MODULE': 'fcitx', 'GSETTINGS_SCHEMA_DIR_VSCODE_SNAP_ORIG': '', 'KDE_SESSION_VERSION': '5', 'VSCODE_GIT_ASKPASS_MAIN': '/snap/code/218/usr/share/code/resources/app/extensions/git/dist/askpass-main.js', 'PS1': '\\[\x1b]633;A\x07\\]\\[\\e]0;\\u@\\h: \\w\\a\\]${debian_chroot:+($debian_chroot)}\\[\\033[01;32m\\]\\u@\\h\\[\\033[00m\\]:\\[\\033[01;34m\\]\\w\\[\\033[00m\\]\\$ \\[\x1b]633;B\x07\\]', 'LC_MONETARY': 'ur_PK', 'VSCODE_GIT_ASKPASS_NODE': '/snap/code/218/usr/share/code/code', 'MANAGERPID': '1410', 'PYDEVD_DISABLE_FILE_VALIDATION': '1', 'SYSTEMD_EXEC_PID': '1645', 'BUNDLED_DEBUGPY_PATH': '/home/gondal/.vscode/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/libs/debugpy', 'IM_CONFIG_CHECK_ENV': '1', 'SSH_ASKPASS': '/usr/bin/ksshaskpass', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'NVM_DIR': '/home/gondal/.nvm', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'XKB_DEFAULT_LAYOUT': 'gb', 'ROS_DISTRO': 'jazzy', 'GTK_IM_MODULE': 'fcitx', 'LOGNAME': 'gondal', 'QT_WAYLAND_FORCE_DPI': '96', 'QT_AUTO_SCREEN_SCALE_FACTOR': '0', 'JOURNAL_STREAM': '9:20132', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_CONFIG_DIRS_VSCODE_SNAP_ORIG': '/home/gondal/.config/kdedefaults:/etc/xdg:/usr/share/kubuntu-default-settings/kf5-settings', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/plasma-plasmashell.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'XDG_DATA_DIRS_VSCODE_SNAP_ORIG': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '3', 'FC_FONTATIONS': '1', 'HISTCONTROL': 'ignorespace', 'GTK2_RC_FILES': '/etc/gtk-2.0/gtkrc:/home/gondal/.gtkrc-2.0:/home/gondal/.config/gtkrc-2.0', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/home/gondal/ardupilot/Tools/autotest:/home/gondal/.config/Code/User/globalStorage/github.copilot-chat/debugCommand:/home/gondal/.config/Code/User/globalStorage/github.copilot-chat/copilotCli:/usr/lib/ccache:/home/gondal/ardupilot/Tools/autotest:/opt/gcc-arm-none-eabi-10-2020-q4-major/bin:/home/gondal/venv-ardupilot/bin:/home/gondal/.local/bin:/home/gondal/ardupilot/Tools/autotest:/home/gondal/.nvm/versions/node/v22.21.1/bin:/usr/lib/ccache:/home/gondal/ardupilot/Tools/autotest:/opt/gcc-arm-none-eabi-10-2020-q4-major/bin:/home/gondal/venv-ardupilot/bin:/home/gondal/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/gondal/.vscode/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/scripts/noConfigScripts', 'SESSION_MANAGER': 'local/elitebook:@/tmp/.ICE-unix/1604,unix/elitebook:/tmp/.ICE-unix/1604', 'GTK_EXE_PREFIX': '/snap/code/218/usr', 'INVOCATION_ID': '6ea4c6a0c92d4c609ae11dc75364fb91', 'XDG_SESSION_PATH': '/org/freedesktop/DisplayManager/Session1', 'LC_ADDRESS': 'ur_PK', 'XKB_DEFAULT_MODEL': 'pc105', 'XDG_RUNTIME_DIR': '/run/user/1000', 'XCURSOR_THEME': 'breeze_cursors', 'GDK_BACKEND': 'x11', 'ICEAUTHORITY': '/run/user/1000/iceauth_fQPybT', 'DISPLAY': ':1', 'LOCPATH': '/snap/code/218/usr/lib/locale', 'VSCODE_DEBUGPY_ADAPTER_ENDPOINTS': '/home/gondal/.vscode/extensions/ms-python.debugpy-2025.18.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-9ffa61130925152a.txt', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'KDE', 'PYTHONSTARTUP': '/home/gondal/.config/Code/User/workspaceStorage/2f68e1887a15fb53a3e31c6012b23597/ms-python.python/pythonrc.py', 'LC_TELEPHONE': 'ur_PK', 'VIRTUAL_ENV_PROMPT': '(venv-ardupilot)', 'GIO_MODULE_DIR_VSCODE_SNAP_ORIG': '', 'XDG_DATA_HOME': '/home/gondal/snap/code/218/.local/share', 'XMODIFIERS': '@im=fcitx', 'XDG_SESSION_DESKTOP': 'KDE', 'XAUTHORITY': '/run/user/1000/xauth_XofASZ', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-bc811538e9.sock', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/run/user/1000/gnupg/S.gpg-agent.ssh', 'GSETTINGS_SCHEMA_DIR': '/home/gondal/snap/code/218/.local/share/glib-2.0/schemas', 'AMENT_PREFIX_PATH': '/home/gondal/Clear-Run/install/clearrun_msgs:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LC_NAME': 'ur_PK', 'QT_ACCESSIBILITY': '1', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GTK_PATH_VSCODE_SNAP_ORIG': '', 'FONTCONFIG_FILE': '/etc/fonts/fonts.conf', 'GTK_IM_MODULE_FILE_VSCODE_SNAP_ORIG': '', 'LC_MEASUREMENT': 'ur_PK', 'LC_IDENTIFICATION': 'ur_PK', 'VIRTUAL_ENV': '/home/gondal/venv-ardupilot', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'GIT_PAGER': 'cat', 'QT_IM_MODULE': 'fcitx', 'XDG_VTNR': '1', 'PWD': '/home/gondal/Clear-Run/build/clearrun_uav', 'XDG_CONFIG_DIRS': '/home/gondal/.config/kdedefaults:/etc/xdg:/usr/share/kubuntu-default-settings/kf5-settings', 'CLUTTER_IM_MODULE': 'xim', 'NVM_CD_FLAGS': '', 'XDG_DATA_DIRS': '/home/gondal/snap/code/218/.local/share:/home/gondal/snap/code/218:/snap/code/218/usr/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'QTWEBENGINE_DICTIONARIES_PATH': '/usr/share/hunspell-bdic/', 'PYTHONPATH': '/home/gondal/Clear-Run/build/clearrun_uav/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gondal/Clear-Run/install/clearrun_uav/lib/python3.12/site-packages:/home/gondal/Clear-Run/install/clearrun_msgs/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'LC_NUMERIC': 'ur_PK', 'LC_PAPER': 'ur_PK', 'KDE_SESSION_UID': '1000', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'CMAKE_PREFIX_PATH': '/home/gondal/Clear-Run/install/clearrun_msgs:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}, 'shell': False}
+[35.868840] (clearrun_ugv) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/home/gondal/Clear-Run/build/clearrun_ugv/build', '--no-deps', 'symlink_data'], 'cwd': '/home/gondal/Clear-Run/build/clearrun_ugv', 'env': {'PYTHON_BASIC_REPL': '1', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'KDE_FULL_SESSION': 'true', 'PLASMA_USE_QT_SCALING': '1', 'USER': 'gondal', 'PAM_KWALLET5_LOGIN': '/run/user/1000/kwallet5.socket', 'LC_TIME': 'ur_PK', 'FONTCONFIG_PATH': '/etc/fonts', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SEAT': 'seat0', 'GIO_MODULE_DIR': '/home/gondal/snap/code/common/.cache/gio-modules', 'XDG_SESSION_TYPE': 'wayland', 'GIT_ASKPASS': '/snap/code/218/usr/share/code/resources/app/extensions/git/dist/askpass.sh', 'GTK_EXE_PREFIX_VSCODE_SNAP_ORIG': '', 'GDK_BACKEND_VSCODE_SNAP_ORIG': '', 'XCURSOR_SIZE': '24', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/gondal/Clear-Run/install/clearrun_msgs/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/gondal', 'CHROME_DESKTOP': 'code.desktop', 'KDE_APPLICATIONS_AS_SCOPE': '1', 'LOCPATH_VSCODE_SNAP_ORIG': '', 'TERM_PROGRAM_VERSION': '1.108.0', 'DESKTOP_SESSION': 'plasmawayland', 'GTK_PATH': '/snap/code/218/usr/lib/x86_64-linux-gnu/gtk-3.0', 'NVM_BIN': '/home/gondal/.nvm/versions/node/v22.21.1/bin', 'NVM_INC': '/home/gondal/.nvm/versions/node/v22.21.1/include/node', 'XDG_DATA_HOME_VSCODE_SNAP_ORIG': '', 'GTK_IM_MODULE_FILE': '/home/gondal/snap/code/common/.cache/immodules/immodules.cache', 'ROS_PYTHON_VERSION': '3', 'GTK_RC_FILES': '/etc/gtk/gtkrc:/home/gondal/.gtkrc:/home/gondal/.config/gtkrc', 'XDG_SEAT_PATH': '/org/freedesktop/DisplayManager/Seat0', 'SDL_IM_MODULE': 'fcitx', 'GSETTINGS_SCHEMA_DIR_VSCODE_SNAP_ORIG': '', 'KDE_SESSION_VERSION': '5', 'VSCODE_GIT_ASKPASS_MAIN': '/snap/code/218/usr/share/code/resources/app/extensions/git/dist/askpass-main.js', 'PS1': '\\[\x1b]633;A\x07\\]\\[\\e]0;\\u@\\h: \\w\\a\\]${debian_chroot:+($debian_chroot)}\\[\\033[01;32m\\]\\u@\\h\\[\\033[00m\\]:\\[\\033[01;34m\\]\\w\\[\\033[00m\\]\\$ \\[\x1b]633;B\x07\\]', 'LC_MONETARY': 'ur_PK', 'VSCODE_GIT_ASKPASS_NODE': '/snap/code/218/usr/share/code/code', 'MANAGERPID': '1410', 'PYDEVD_DISABLE_FILE_VALIDATION': '1', 'SYSTEMD_EXEC_PID': '1645', 'BUNDLED_DEBUGPY_PATH': '/home/gondal/.vscode/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/libs/debugpy', 'IM_CONFIG_CHECK_ENV': '1', 'SSH_ASKPASS': '/usr/bin/ksshaskpass', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'NVM_DIR': '/home/gondal/.nvm', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'XKB_DEFAULT_LAYOUT': 'gb', 'ROS_DISTRO': 'jazzy', 'GTK_IM_MODULE': 'fcitx', 'LOGNAME': 'gondal', 'QT_WAYLAND_FORCE_DPI': '96', 'QT_AUTO_SCREEN_SCALE_FACTOR': '0', 'JOURNAL_STREAM': '9:20132', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_CONFIG_DIRS_VSCODE_SNAP_ORIG': '/home/gondal/.config/kdedefaults:/etc/xdg:/usr/share/kubuntu-default-settings/kf5-settings', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/plasma-plasmashell.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'XDG_DATA_DIRS_VSCODE_SNAP_ORIG': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '3', 'FC_FONTATIONS': '1', 'HISTCONTROL': 'ignorespace', 'GTK2_RC_FILES': '/etc/gtk-2.0/gtkrc:/home/gondal/.gtkrc-2.0:/home/gondal/.config/gtkrc-2.0', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/home/gondal/ardupilot/Tools/autotest:/home/gondal/.config/Code/User/globalStorage/github.copilot-chat/debugCommand:/home/gondal/.config/Code/User/globalStorage/github.copilot-chat/copilotCli:/usr/lib/ccache:/home/gondal/ardupilot/Tools/autotest:/opt/gcc-arm-none-eabi-10-2020-q4-major/bin:/home/gondal/venv-ardupilot/bin:/home/gondal/.local/bin:/home/gondal/ardupilot/Tools/autotest:/home/gondal/.nvm/versions/node/v22.21.1/bin:/usr/lib/ccache:/home/gondal/ardupilot/Tools/autotest:/opt/gcc-arm-none-eabi-10-2020-q4-major/bin:/home/gondal/venv-ardupilot/bin:/home/gondal/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/gondal/.vscode/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/scripts/noConfigScripts', 'SESSION_MANAGER': 'local/elitebook:@/tmp/.ICE-unix/1604,unix/elitebook:/tmp/.ICE-unix/1604', 'GTK_EXE_PREFIX': '/snap/code/218/usr', 'INVOCATION_ID': '6ea4c6a0c92d4c609ae11dc75364fb91', 'XDG_SESSION_PATH': '/org/freedesktop/DisplayManager/Session1', 'LC_ADDRESS': 'ur_PK', 'XKB_DEFAULT_MODEL': 'pc105', 'XDG_RUNTIME_DIR': '/run/user/1000', 'XCURSOR_THEME': 'breeze_cursors', 'GDK_BACKEND': 'x11', 'ICEAUTHORITY': '/run/user/1000/iceauth_fQPybT', 'DISPLAY': ':1', 'LOCPATH': '/snap/code/218/usr/lib/locale', 'VSCODE_DEBUGPY_ADAPTER_ENDPOINTS': '/home/gondal/.vscode/extensions/ms-python.debugpy-2025.18.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-9ffa61130925152a.txt', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'KDE', 'PYTHONSTARTUP': '/home/gondal/.config/Code/User/workspaceStorage/2f68e1887a15fb53a3e31c6012b23597/ms-python.python/pythonrc.py', 'LC_TELEPHONE': 'ur_PK', 'VIRTUAL_ENV_PROMPT': '(venv-ardupilot)', 'GIO_MODULE_DIR_VSCODE_SNAP_ORIG': '', 'XDG_DATA_HOME': '/home/gondal/snap/code/218/.local/share', 'XMODIFIERS': '@im=fcitx', 'XDG_SESSION_DESKTOP': 'KDE', 'XAUTHORITY': '/run/user/1000/xauth_XofASZ', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-bc811538e9.sock', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/run/user/1000/gnupg/S.gpg-agent.ssh', 'GSETTINGS_SCHEMA_DIR': '/home/gondal/snap/code/218/.local/share/glib-2.0/schemas', 'AMENT_PREFIX_PATH': '/home/gondal/Clear-Run/install/clearrun_msgs:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LC_NAME': 'ur_PK', 'QT_ACCESSIBILITY': '1', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GTK_PATH_VSCODE_SNAP_ORIG': '', 'FONTCONFIG_FILE': '/etc/fonts/fonts.conf', 'GTK_IM_MODULE_FILE_VSCODE_SNAP_ORIG': '', 'LC_MEASUREMENT': 'ur_PK', 'LC_IDENTIFICATION': 'ur_PK', 'VIRTUAL_ENV': '/home/gondal/venv-ardupilot', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'GIT_PAGER': 'cat', 'QT_IM_MODULE': 'fcitx', 'XDG_VTNR': '1', 'PWD': '/home/gondal/Clear-Run/build/clearrun_ugv', 'XDG_CONFIG_DIRS': '/home/gondal/.config/kdedefaults:/etc/xdg:/usr/share/kubuntu-default-settings/kf5-settings', 'CLUTTER_IM_MODULE': 'xim', 'NVM_CD_FLAGS': '', 'XDG_DATA_DIRS': '/home/gondal/snap/code/218/.local/share:/home/gondal/snap/code/218:/snap/code/218/usr/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'QTWEBENGINE_DICTIONARIES_PATH': '/usr/share/hunspell-bdic/', 'PYTHONPATH': '/home/gondal/Clear-Run/build/clearrun_ugv/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gondal/Clear-Run/install/clearrun_ugv/lib/python3.12/site-packages:/home/gondal/Clear-Run/install/clearrun_msgs/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'LC_NUMERIC': 'ur_PK', 'LC_PAPER': 'ur_PK', 'KDE_SESSION_UID': '1000', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'CMAKE_PREFIX_PATH': '/home/gondal/Clear-Run/install/clearrun_msgs:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}, 'shell': False}
+[35.931921] (-) TimerEvent: {}
+[36.032325] (-) TimerEvent: {}
+[36.132710] (-) TimerEvent: {}
+[36.233167] (-) TimerEvent: {}
+[36.333563] (-) TimerEvent: {}
+[36.433929] (-) TimerEvent: {}
+[36.534412] (-) TimerEvent: {}
+[36.634843] (-) TimerEvent: {}
+[36.730895] (clearrun_uav) StdoutLine: {'line': b'running develop\n'}
+[36.734979] (-) TimerEvent: {}
+[36.760349] (clearrun_ugv) StdoutLine: {'line': b'running develop\n'}
+[36.835125] (-) TimerEvent: {}
+[36.935616] (-) TimerEvent: {}
+[37.035981] (-) TimerEvent: {}
+[37.136428] (-) TimerEvent: {}
+[37.236845] (-) TimerEvent: {}
+[37.337325] (-) TimerEvent: {}
+[37.344221] (clearrun_uav) StdoutLine: {'line': b'running egg_info\n'}
+[37.344824] (clearrun_uav) StdoutLine: {'line': b'creating clearrun_uav.egg-info\n'}
+[37.392003] (clearrun_ugv) StdoutLine: {'line': b'running egg_info\n'}
+[37.392481] (clearrun_ugv) StdoutLine: {'line': b'creating clearrun_ugv.egg-info\n'}
+[37.405100] (clearrun_uav) StdoutLine: {'line': b'writing clearrun_uav.egg-info/PKG-INFO\n'}
+[37.405522] (clearrun_uav) StdoutLine: {'line': b'writing dependency_links to clearrun_uav.egg-info/dependency_links.txt\n'}
+[37.405858] (clearrun_uav) StdoutLine: {'line': b'writing entry points to clearrun_uav.egg-info/entry_points.txt\n'}
+[37.406246] (clearrun_uav) StdoutLine: {'line': b'writing requirements to clearrun_uav.egg-info/requires.txt\n'}
+[37.406549] (clearrun_uav) StdoutLine: {'line': b'writing top-level names to clearrun_uav.egg-info/top_level.txt\n'}
+[37.406813] (clearrun_uav) StdoutLine: {'line': b"writing manifest file 'clearrun_uav.egg-info/SOURCES.txt'\n"}
+[37.437459] (-) TimerEvent: {}
+[37.462351] (clearrun_ugv) StdoutLine: {'line': b'writing clearrun_ugv.egg-info/PKG-INFO\n'}
+[37.466276] (clearrun_ugv) StdoutLine: {'line': b'writing dependency_links to clearrun_ugv.egg-info/dependency_links.txt\n'}
+[37.466581] (clearrun_ugv) StdoutLine: {'line': b'writing entry points to clearrun_ugv.egg-info/entry_points.txt\n'}
+[37.466828] (clearrun_ugv) StdoutLine: {'line': b'writing requirements to clearrun_ugv.egg-info/requires.txt\n'}
+[37.467092] (clearrun_ugv) StdoutLine: {'line': b'writing top-level names to clearrun_ugv.egg-info/top_level.txt\n'}
+[37.467336] (clearrun_ugv) StdoutLine: {'line': b"writing manifest file 'clearrun_ugv.egg-info/SOURCES.txt'\n"}
+[37.535992] (clearrun_uav) StdoutLine: {'line': b"reading manifest file 'clearrun_uav.egg-info/SOURCES.txt'\n"}
+[37.537521] (clearrun_uav) StdoutLine: {'line': b"writing manifest file 'clearrun_uav.egg-info/SOURCES.txt'\n"}
+[37.537935] (-) TimerEvent: {}
+[37.605563] (clearrun_ugv) StdoutLine: {'line': b"reading manifest file 'clearrun_ugv.egg-info/SOURCES.txt'\n"}
+[37.608001] (clearrun_ugv) StdoutLine: {'line': b"writing manifest file 'clearrun_ugv.egg-info/SOURCES.txt'\n"}
+[37.625426] (clearrun_uav) StdoutLine: {'line': b'running build_ext\n'}
+[37.625920] (clearrun_uav) StdoutLine: {'line': b'Creating /home/gondal/Clear-Run/install/clearrun_uav/lib/python3.12/site-packages/clearrun-uav.egg-link (link to .)\n'}
+[37.627478] (clearrun_uav) StdoutLine: {'line': b'Installing detection_node script to /home/gondal/Clear-Run/install/clearrun_uav/lib/clearrun_uav\n'}
+[37.627923] (clearrun_uav) StdoutLine: {'line': b'Installing mavros_interface script to /home/gondal/Clear-Run/install/clearrun_uav/lib/clearrun_uav\n'}
+[37.628386] (clearrun_uav) StdoutLine: {'line': b'Installing visual_servo script to /home/gondal/Clear-Run/install/clearrun_uav/lib/clearrun_uav\n'}
+[37.628949] (clearrun_uav) StdoutLine: {'line': b'\n'}
+[37.629391] (clearrun_uav) StdoutLine: {'line': b'Installed /home/gondal/Clear-Run/build/clearrun_uav\n'}
+[37.629877] (clearrun_uav) StdoutLine: {'line': b'running symlink_data\n'}
+[37.630355] (clearrun_uav) StdoutLine: {'line': b'creating /home/gondal/Clear-Run/install/clearrun_uav/share/ament_index\n'}
+[37.630781] (clearrun_uav) StdoutLine: {'line': b'creating /home/gondal/Clear-Run/install/clearrun_uav/share/ament_index/resource_index\n'}
+[37.631163] (clearrun_uav) StdoutLine: {'line': b'creating /home/gondal/Clear-Run/install/clearrun_uav/share/ament_index/resource_index/packages\n'}
+[37.631651] (clearrun_uav) StdoutLine: {'line': b'symbolically linking /home/gondal/Clear-Run/build/clearrun_uav/resource/clearrun_uav -> /home/gondal/Clear-Run/install/clearrun_uav/share/ament_index/resource_index/packages\n'}
+[37.632103] (clearrun_uav) StdoutLine: {'line': b'symbolically linking /home/gondal/Clear-Run/build/clearrun_uav/package.xml -> /home/gondal/Clear-Run/install/clearrun_uav/share/clearrun_uav\n'}
+[37.632427] (clearrun_uav) StdoutLine: {'line': b'creating /home/gondal/Clear-Run/install/clearrun_uav/share/clearrun_uav/launch\n'}
+[37.632701] (clearrun_uav) StdoutLine: {'line': b'symbolically linking /home/gondal/Clear-Run/build/clearrun_uav/launch/uav.launch.py -> /home/gondal/Clear-Run/install/clearrun_uav/share/clearrun_uav/launch\n'}
+[37.632921] (clearrun_uav) StdoutLine: {'line': b'creating /home/gondal/Clear-Run/install/clearrun_uav/share/clearrun_uav/config\n'}
+[37.633135] (clearrun_uav) StdoutLine: {'line': b'symbolically linking /home/gondal/Clear-Run/build/clearrun_uav/config/visual_servo.yaml -> /home/gondal/Clear-Run/install/clearrun_uav/share/clearrun_uav/config\n'}
+[37.633334] (clearrun_uav) StdoutLine: {'line': b'symbolically linking /home/gondal/Clear-Run/build/clearrun_uav/config/detection.yaml -> /home/gondal/Clear-Run/install/clearrun_uav/share/clearrun_uav/config\n'}
+[37.638027] (-) TimerEvent: {}
+[37.675351] (clearrun_ugv) StdoutLine: {'line': b'running build_ext\n'}
+[37.676062] (clearrun_ugv) StdoutLine: {'line': b'Creating /home/gondal/Clear-Run/install/clearrun_ugv/lib/python3.12/site-packages/clearrun-ugv.egg-link (link to .)\n'}
+[37.677709] (clearrun_ugv) StdoutLine: {'line': b'Installing fod_retriever script to /home/gondal/Clear-Run/install/clearrun_ugv/lib/clearrun_ugv\n'}
+[37.678756] (clearrun_ugv) StdoutLine: {'line': b'Installing navigation_client script to /home/gondal/Clear-Run/install/clearrun_ugv/lib/clearrun_ugv\n'}
+[37.679710] (clearrun_ugv) StdoutLine: {'line': b'Installing scoop_controller script to /home/gondal/Clear-Run/install/clearrun_ugv/lib/clearrun_ugv\n'}
+[37.680013] (clearrun_ugv) StdoutLine: {'line': b'\n'}
+[37.680294] (clearrun_ugv) StdoutLine: {'line': b'Installed /home/gondal/Clear-Run/build/clearrun_ugv\n'}
+[37.680559] (clearrun_ugv) StdoutLine: {'line': b'running symlink_data\n'}
+[37.680816] (clearrun_ugv) StdoutLine: {'line': b'creating /home/gondal/Clear-Run/install/clearrun_ugv/share/ament_index\n'}
+[37.681102] (clearrun_ugv) StdoutLine: {'line': b'creating /home/gondal/Clear-Run/install/clearrun_ugv/share/ament_index/resource_index\n'}
+[37.681544] (clearrun_ugv) StdoutLine: {'line': b'creating /home/gondal/Clear-Run/install/clearrun_ugv/share/ament_index/resource_index/packages\n'}
+[37.681970] (clearrun_ugv) StdoutLine: {'line': b'symbolically linking /home/gondal/Clear-Run/build/clearrun_ugv/resource/clearrun_ugv -> /home/gondal/Clear-Run/install/clearrun_ugv/share/ament_index/resource_index/packages\n'}
+[37.682232] (clearrun_ugv) StdoutLine: {'line': b'symbolically linking /home/gondal/Clear-Run/build/clearrun_ugv/package.xml -> /home/gondal/Clear-Run/install/clearrun_ugv/share/clearrun_ugv\n'}
+[37.682501] (clearrun_ugv) StdoutLine: {'line': b'creating /home/gondal/Clear-Run/install/clearrun_ugv/share/clearrun_ugv/launch\n'}
+[37.682838] (clearrun_ugv) StdoutLine: {'line': b'symbolically linking /home/gondal/Clear-Run/build/clearrun_ugv/launch/ugv.launch.py -> /home/gondal/Clear-Run/install/clearrun_ugv/share/clearrun_ugv/launch\n'}
+[37.683140] (clearrun_ugv) StdoutLine: {'line': b'creating /home/gondal/Clear-Run/install/clearrun_ugv/share/clearrun_ugv/config\n'}
+[37.683437] (clearrun_ugv) StdoutLine: {'line': b'symbolically linking /home/gondal/Clear-Run/build/clearrun_ugv/config/scoop.yaml -> /home/gondal/Clear-Run/install/clearrun_ugv/share/clearrun_ugv/config\n'}
+[37.683727] (clearrun_ugv) StdoutLine: {'line': b'symbolically linking /home/gondal/Clear-Run/build/clearrun_ugv/config/retriever.yaml -> /home/gondal/Clear-Run/install/clearrun_ugv/share/clearrun_ugv/config\n'}
+[37.683990] (clearrun_ugv) StdoutLine: {'line': b'symbolically linking /home/gondal/Clear-Run/build/clearrun_ugv/config/nav2_params.yaml -> /home/gondal/Clear-Run/install/clearrun_ugv/share/clearrun_ugv/config\n'}
+[37.684233] (clearrun_ugv) StdoutLine: {'line': b'creating /home/gondal/Clear-Run/install/clearrun_ugv/share/clearrun_ugv/maps\n'}
+[37.702841] (clearrun_uav) CommandEnded: {'returncode': 0}
+[37.725883] (clearrun_uav) JobEnded: {'identifier': 'clearrun_uav', 'rc': 0}
+[37.738149] (-) TimerEvent: {}
+[37.769060] (clearrun_ugv) CommandEnded: {'returncode': 0}
+[37.787828] (clearrun_ugv) JobEnded: {'identifier': 'clearrun_ugv', 'rc': 0}
+[37.788826] (clearrun_bringup) JobStarted: {'identifier': 'clearrun_bringup'}
+[37.838308] (-) TimerEvent: {}
+[37.940690] (-) TimerEvent: {}
+[38.041713] (-) TimerEvent: {}
+[38.143290] (-) TimerEvent: {}
+[38.243864] (-) TimerEvent: {}
+[38.344586] (-) TimerEvent: {}
+[38.445327] (-) TimerEvent: {}
+[38.546102] (-) TimerEvent: {}
+[38.647006] (-) TimerEvent: {}
+[38.747527] (-) TimerEvent: {}
+[38.847998] (-) TimerEvent: {}
+[38.948465] (-) TimerEvent: {}
+[39.049056] (-) TimerEvent: {}
+[39.149506] (-) TimerEvent: {}
+[39.249946] (-) TimerEvent: {}
+[39.350436] (-) TimerEvent: {}
+[39.451033] (-) TimerEvent: {}
+[39.551547] (-) TimerEvent: {}
+[39.651987] (-) TimerEvent: {}
+[39.752363] (-) TimerEvent: {}
+[39.852743] (-) TimerEvent: {}
+[39.953063] (-) TimerEvent: {}
+[40.053460] (-) TimerEvent: {}
+[40.153831] (-) TimerEvent: {}
+[40.254210] (-) TimerEvent: {}
+[40.354600] (-) TimerEvent: {}
+[40.454998] (-) TimerEvent: {}
+[40.555378] (-) TimerEvent: {}
+[40.645121] (clearrun_bringup) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/home/gondal/Clear-Run/build/clearrun_bringup/build', '--no-deps', 'symlink_data'], 'cwd': '/home/gondal/Clear-Run/build/clearrun_bringup', 'env': {'PYTHON_BASIC_REPL': '1', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'KDE_FULL_SESSION': 'true', 'PLASMA_USE_QT_SCALING': '1', 'USER': 'gondal', 'PAM_KWALLET5_LOGIN': '/run/user/1000/kwallet5.socket', 'LC_TIME': 'ur_PK', 'FONTCONFIG_PATH': '/etc/fonts', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SEAT': 'seat0', 'GIO_MODULE_DIR': '/home/gondal/snap/code/common/.cache/gio-modules', 'XDG_SESSION_TYPE': 'wayland', 'GIT_ASKPASS': '/snap/code/218/usr/share/code/resources/app/extensions/git/dist/askpass.sh', 'GTK_EXE_PREFIX_VSCODE_SNAP_ORIG': '', 'GDK_BACKEND_VSCODE_SNAP_ORIG': '', 'XCURSOR_SIZE': '24', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/gondal/Clear-Run/install/clearrun_msgs/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/gondal', 'CHROME_DESKTOP': 'code.desktop', 'KDE_APPLICATIONS_AS_SCOPE': '1', 'LOCPATH_VSCODE_SNAP_ORIG': '', 'TERM_PROGRAM_VERSION': '1.108.0', 'DESKTOP_SESSION': 'plasmawayland', 'GTK_PATH': '/snap/code/218/usr/lib/x86_64-linux-gnu/gtk-3.0', 'NVM_BIN': '/home/gondal/.nvm/versions/node/v22.21.1/bin', 'NVM_INC': '/home/gondal/.nvm/versions/node/v22.21.1/include/node', 'XDG_DATA_HOME_VSCODE_SNAP_ORIG': '', 'GTK_IM_MODULE_FILE': '/home/gondal/snap/code/common/.cache/immodules/immodules.cache', 'ROS_PYTHON_VERSION': '3', 'GTK_RC_FILES': '/etc/gtk/gtkrc:/home/gondal/.gtkrc:/home/gondal/.config/gtkrc', 'XDG_SEAT_PATH': '/org/freedesktop/DisplayManager/Seat0', 'SDL_IM_MODULE': 'fcitx', 'GSETTINGS_SCHEMA_DIR_VSCODE_SNAP_ORIG': '', 'KDE_SESSION_VERSION': '5', 'VSCODE_GIT_ASKPASS_MAIN': '/snap/code/218/usr/share/code/resources/app/extensions/git/dist/askpass-main.js', 'PS1': '\\[\x1b]633;A\x07\\]\\[\\e]0;\\u@\\h: \\w\\a\\]${debian_chroot:+($debian_chroot)}\\[\\033[01;32m\\]\\u@\\h\\[\\033[00m\\]:\\[\\033[01;34m\\]\\w\\[\\033[00m\\]\\$ \\[\x1b]633;B\x07\\]', 'LC_MONETARY': 'ur_PK', 'VSCODE_GIT_ASKPASS_NODE': '/snap/code/218/usr/share/code/code', 'MANAGERPID': '1410', 'PYDEVD_DISABLE_FILE_VALIDATION': '1', 'SYSTEMD_EXEC_PID': '1645', 'BUNDLED_DEBUGPY_PATH': '/home/gondal/.vscode/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/libs/debugpy', 'IM_CONFIG_CHECK_ENV': '1', 'SSH_ASKPASS': '/usr/bin/ksshaskpass', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'NVM_DIR': '/home/gondal/.nvm', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'XKB_DEFAULT_LAYOUT': 'gb', 'ROS_DISTRO': 'jazzy', 'GTK_IM_MODULE': 'fcitx', 'LOGNAME': 'gondal', 'QT_WAYLAND_FORCE_DPI': '96', 'QT_AUTO_SCREEN_SCALE_FACTOR': '0', 'JOURNAL_STREAM': '9:20132', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_CONFIG_DIRS_VSCODE_SNAP_ORIG': '/home/gondal/.config/kdedefaults:/etc/xdg:/usr/share/kubuntu-default-settings/kf5-settings', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/plasma-plasmashell.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'XDG_DATA_DIRS_VSCODE_SNAP_ORIG': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '3', 'FC_FONTATIONS': '1', 'HISTCONTROL': 'ignorespace', 'GTK2_RC_FILES': '/etc/gtk-2.0/gtkrc:/home/gondal/.gtkrc-2.0:/home/gondal/.config/gtkrc-2.0', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/home/gondal/ardupilot/Tools/autotest:/home/gondal/.config/Code/User/globalStorage/github.copilot-chat/debugCommand:/home/gondal/.config/Code/User/globalStorage/github.copilot-chat/copilotCli:/usr/lib/ccache:/home/gondal/ardupilot/Tools/autotest:/opt/gcc-arm-none-eabi-10-2020-q4-major/bin:/home/gondal/venv-ardupilot/bin:/home/gondal/.local/bin:/home/gondal/ardupilot/Tools/autotest:/home/gondal/.nvm/versions/node/v22.21.1/bin:/usr/lib/ccache:/home/gondal/ardupilot/Tools/autotest:/opt/gcc-arm-none-eabi-10-2020-q4-major/bin:/home/gondal/venv-ardupilot/bin:/home/gondal/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/gondal/.vscode/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/scripts/noConfigScripts', 'SESSION_MANAGER': 'local/elitebook:@/tmp/.ICE-unix/1604,unix/elitebook:/tmp/.ICE-unix/1604', 'GTK_EXE_PREFIX': '/snap/code/218/usr', 'INVOCATION_ID': '6ea4c6a0c92d4c609ae11dc75364fb91', 'XDG_SESSION_PATH': '/org/freedesktop/DisplayManager/Session1', 'LC_ADDRESS': 'ur_PK', 'XKB_DEFAULT_MODEL': 'pc105', 'XDG_RUNTIME_DIR': '/run/user/1000', 'XCURSOR_THEME': 'breeze_cursors', 'GDK_BACKEND': 'x11', 'ICEAUTHORITY': '/run/user/1000/iceauth_fQPybT', 'DISPLAY': ':1', 'LOCPATH': '/snap/code/218/usr/lib/locale', 'VSCODE_DEBUGPY_ADAPTER_ENDPOINTS': '/home/gondal/.vscode/extensions/ms-python.debugpy-2025.18.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-9ffa61130925152a.txt', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'KDE', 'PYTHONSTARTUP': '/home/gondal/.config/Code/User/workspaceStorage/2f68e1887a15fb53a3e31c6012b23597/ms-python.python/pythonrc.py', 'LC_TELEPHONE': 'ur_PK', 'VIRTUAL_ENV_PROMPT': '(venv-ardupilot)', 'GIO_MODULE_DIR_VSCODE_SNAP_ORIG': '', 'XDG_DATA_HOME': '/home/gondal/snap/code/218/.local/share', 'XMODIFIERS': '@im=fcitx', 'XDG_SESSION_DESKTOP': 'KDE', 'XAUTHORITY': '/run/user/1000/xauth_XofASZ', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-bc811538e9.sock', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/run/user/1000/gnupg/S.gpg-agent.ssh', 'GSETTINGS_SCHEMA_DIR': '/home/gondal/snap/code/218/.local/share/glib-2.0/schemas', 'AMENT_PREFIX_PATH': '/home/gondal/Clear-Run/install/clearrun_ugv:/home/gondal/Clear-Run/install/clearrun_uav:/home/gondal/Clear-Run/install/clearrun_msgs:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LC_NAME': 'ur_PK', 'QT_ACCESSIBILITY': '1', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GTK_PATH_VSCODE_SNAP_ORIG': '', 'FONTCONFIG_FILE': '/etc/fonts/fonts.conf', 'GTK_IM_MODULE_FILE_VSCODE_SNAP_ORIG': '', 'LC_MEASUREMENT': 'ur_PK', 'LC_IDENTIFICATION': 'ur_PK', 'VIRTUAL_ENV': '/home/gondal/venv-ardupilot', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'GIT_PAGER': 'cat', 'QT_IM_MODULE': 'fcitx', 'XDG_VTNR': '1', 'PWD': '/home/gondal/Clear-Run/build/clearrun_bringup', 'XDG_CONFIG_DIRS': '/home/gondal/.config/kdedefaults:/etc/xdg:/usr/share/kubuntu-default-settings/kf5-settings', 'CLUTTER_IM_MODULE': 'xim', 'NVM_CD_FLAGS': '', 'XDG_DATA_DIRS': '/home/gondal/snap/code/218/.local/share:/home/gondal/snap/code/218:/snap/code/218/usr/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'QTWEBENGINE_DICTIONARIES_PATH': '/usr/share/hunspell-bdic/', 'PYTHONPATH': '/home/gondal/Clear-Run/build/clearrun_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gondal/Clear-Run/install/clearrun_bringup/lib/python3.12/site-packages:/home/gondal/Clear-Run/build/clearrun_ugv:/home/gondal/Clear-Run/install/clearrun_ugv/lib/python3.12/site-packages:/home/gondal/Clear-Run/build/clearrun_uav:/home/gondal/Clear-Run/install/clearrun_uav/lib/python3.12/site-packages:/home/gondal/Clear-Run/install/clearrun_msgs/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'LC_NUMERIC': 'ur_PK', 'LC_PAPER': 'ur_PK', 'KDE_SESSION_UID': '1000', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'CMAKE_PREFIX_PATH': '/home/gondal/Clear-Run/install/clearrun_msgs:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}, 'shell': False}
+[40.655513] (-) TimerEvent: {}
+[40.755890] (-) TimerEvent: {}
+[40.856417] (-) TimerEvent: {}
+[40.956755] (-) TimerEvent: {}
+[41.057073] (-) TimerEvent: {}
+[41.157409] (-) TimerEvent: {}
+[41.257749] (-) TimerEvent: {}
+[41.358119] (-) TimerEvent: {}
+[41.458508] (-) TimerEvent: {}
+[41.503248] (clearrun_bringup) StdoutLine: {'line': b'running develop\n'}
+[41.558643] (-) TimerEvent: {}
+[41.659083] (-) TimerEvent: {}
+[41.759410] (-) TimerEvent: {}
+[41.859797] (-) TimerEvent: {}
+[41.960170] (-) TimerEvent: {}
+[42.036261] (clearrun_bringup) StdoutLine: {'line': b'running egg_info\n'}
+[42.036621] (clearrun_bringup) StdoutLine: {'line': b'creating clearrun_bringup.egg-info\n'}
+[42.060342] (-) TimerEvent: {}
+[42.084219] (clearrun_bringup) StdoutLine: {'line': b'writing clearrun_bringup.egg-info/PKG-INFO\n'}
+[42.084667] (clearrun_bringup) StdoutLine: {'line': b'writing dependency_links to clearrun_bringup.egg-info/dependency_links.txt\n'}
+[42.085673] (clearrun_bringup) StdoutLine: {'line': b'writing requirements to clearrun_bringup.egg-info/requires.txt\n'}
+[42.085966] (clearrun_bringup) StdoutLine: {'line': b'writing top-level names to clearrun_bringup.egg-info/top_level.txt\n'}
+[42.086215] (clearrun_bringup) StdoutLine: {'line': b"writing manifest file 'clearrun_bringup.egg-info/SOURCES.txt'\n"}
+[42.160476] (-) TimerEvent: {}
+[42.194796] (clearrun_bringup) StdoutLine: {'line': b"reading manifest file 'clearrun_bringup.egg-info/SOURCES.txt'\n"}
+[42.196446] (clearrun_bringup) StdoutLine: {'line': b"writing manifest file 'clearrun_bringup.egg-info/SOURCES.txt'\n"}
+[42.251051] (clearrun_bringup) StdoutLine: {'line': b'running build_ext\n'}
+[42.251545] (clearrun_bringup) StdoutLine: {'line': b'Creating /home/gondal/Clear-Run/install/clearrun_bringup/lib/python3.12/site-packages/clearrun-bringup.egg-link (link to .)\n'}
+[42.252286] (clearrun_bringup) StdoutLine: {'line': b'\n'}
+[42.252682] (clearrun_bringup) StdoutLine: {'line': b'Installed /home/gondal/Clear-Run/build/clearrun_bringup\n'}
+[42.252869] (clearrun_bringup) StdoutLine: {'line': b'running symlink_data\n'}
+[42.253165] (clearrun_bringup) StdoutLine: {'line': b'creating /home/gondal/Clear-Run/install/clearrun_bringup/share/ament_index\n'}
+[42.253385] (clearrun_bringup) StdoutLine: {'line': b'creating /home/gondal/Clear-Run/install/clearrun_bringup/share/ament_index/resource_index\n'}
+[42.253827] (clearrun_bringup) StdoutLine: {'line': b'creating /home/gondal/Clear-Run/install/clearrun_bringup/share/ament_index/resource_index/packages\n'}
+[42.254071] (clearrun_bringup) StdoutLine: {'line': b'symbolically linking /home/gondal/Clear-Run/build/clearrun_bringup/resource/clearrun_bringup -> /home/gondal/Clear-Run/install/clearrun_bringup/share/ament_index/resource_index/packages\n'}
+[42.254278] (clearrun_bringup) StdoutLine: {'line': b'symbolically linking /home/gondal/Clear-Run/build/clearrun_bringup/package.xml -> /home/gondal/Clear-Run/install/clearrun_bringup/share/clearrun_bringup\n'}
+[42.254418] (clearrun_bringup) StdoutLine: {'line': b'creating /home/gondal/Clear-Run/install/clearrun_bringup/share/clearrun_bringup/launch\n'}
+[42.254576] (clearrun_bringup) StdoutLine: {'line': b'symbolically linking /home/gondal/Clear-Run/build/clearrun_bringup/launch/clearrun_full.launch.py -> /home/gondal/Clear-Run/install/clearrun_bringup/share/clearrun_bringup/launch\n'}
+[42.254728] (clearrun_bringup) StdoutLine: {'line': b'symbolically linking /home/gondal/Clear-Run/build/clearrun_bringup/launch/simulation.launch.py -> /home/gondal/Clear-Run/install/clearrun_bringup/share/clearrun_bringup/launch\n'}
+[42.254898] (clearrun_bringup) StdoutLine: {'line': b'creating /home/gondal/Clear-Run/install/clearrun_bringup/share/clearrun_bringup/config\n'}
+[42.255159] (clearrun_bringup) StdoutLine: {'line': b'creating /home/gondal/Clear-Run/install/clearrun_bringup/share/clearrun_bringup/rviz\n'}
+[42.255333] (clearrun_bringup) StdoutLine: {'line': b'symbolically linking /home/gondal/Clear-Run/build/clearrun_bringup/rviz/clearrun.rviz -> /home/gondal/Clear-Run/install/clearrun_bringup/share/clearrun_bringup/rviz\n'}
+[42.260585] (-) TimerEvent: {}
+[42.319549] (clearrun_bringup) CommandEnded: {'returncode': 0}
+[42.332367] (clearrun_bringup) JobEnded: {'identifier': 'clearrun_bringup', 'rc': 0}
+[42.333634] (-) EventReactorShutdown: {}

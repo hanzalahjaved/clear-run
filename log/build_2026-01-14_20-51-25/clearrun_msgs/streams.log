@@ -1,0 +1,32 @@
+[0.019s] Invoking command in '/home/gondal/Clear-Run/build/clearrun_msgs': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com VIRTUAL_ENV_PROMPT=(venv-ardupilot) /usr/bin/cmake /home/gondal/Clear-Run/src/clearrun_msgs -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/gondal/Clear-Run/install/clearrun_msgs
+[0.297s] -- The C compiler identification is GNU 13.3.0
+[0.528s] -- The CXX compiler identification is GNU 13.3.0
+[0.620s] -- Detecting C compiler ABI info
+[0.862s] -- Detecting C compiler ABI info - done
+[0.882s] -- Check for working C compiler: /usr/lib/ccache/cc - skipped
+[0.883s] -- Detecting C compile features
+[0.884s] -- Detecting C compile features - done
+[0.907s] -- Detecting CXX compiler ABI info
+[1.167s] -- Detecting CXX compiler ABI info - done
+[1.194s] -- Check for working CXX compiler: /usr/lib/ccache/c++ - skipped
+[1.195s] -- Detecting CXX compile features
+[1.196s] -- Detecting CXX compile features - done
+[1.232s] [31mCMake Error at CMakeLists.txt:9 (find_package):
+[1.232s]   By not providing "Findament_cmake.cmake" in CMAKE_MODULE_PATH this project
+[1.233s]   has asked CMake to find a package configuration file provided by
+[1.233s]   "ament_cmake", but CMake did not find one.
+[1.233s] 
+[1.233s]   Could not find a package configuration file provided by "ament_cmake" with
+[1.234s]   any of the following names:
+[1.234s] 
+[1.234s]     ament_cmakeConfig.cmake
+[1.234s]     ament_cmake-config.cmake
+[1.235s] 
+[1.235s]   Add the installation prefix of "ament_cmake" to CMAKE_PREFIX_PATH or set
+[1.235s]   "ament_cmake_DIR" to a directory containing one of the above files.  If
+[1.236s]   "ament_cmake" provides a separate development package or SDK, be sure it
+[1.236s]   has been installed.
+[1.236s] 
+[1.237s] [0m
+[1.237s] -- Configuring incomplete, errors occurred!
+[1.241s] Invoked command in '/home/gondal/Clear-Run/build/clearrun_msgs' returned '1': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com VIRTUAL_ENV_PROMPT=(venv-ardupilot) /usr/bin/cmake /home/gondal/Clear-Run/src/clearrun_msgs -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/gondal/Clear-Run/install/clearrun_msgs

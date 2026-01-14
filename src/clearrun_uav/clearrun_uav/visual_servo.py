@@ -173,21 +173,21 @@ class VisualServoNode(Node):
         # =====================================================================
         self.detection_sub = self.create_subscription(
             FodLocation,
-            '/uav/detection/fod',
+            'detection/fod',
             self.detection_callback,
             10
         )
         
         self.state_sub = self.create_subscription(
             State,
-            '/uav/mavros/state',
+            'mavros/state',
             self.state_callback,
             10
         )
         
         self.gps_sub = self.create_subscription(
             NavSatFix,
-            '/uav/mavros/global_position/global',
+            'mavros/global_position/global',
             self.gps_callback,
             10
         )
@@ -198,33 +198,33 @@ class VisualServoNode(Node):
         # Velocity commands for position control
         self.vel_pub = self.create_publisher(
             TwistStamped,
-            '/uav/mavros/setpoint_velocity/cmd_vel',
+            'mavros/setpoint_velocity/cmd_vel',
             10
         )
         
         # Final FOD location (with GPS) for UGV
         self.fod_location_pub = self.create_publisher(
             FodLocation,
-            '/ugv/fod_target',
+            '/fod_target',
             10
         )
         
         # Status publisher
         self.servo_active_pub = self.create_publisher(
             Bool,
-            '/uav/visual_servo/active',
+            'visual_servo/active',
             10
         )
         
         # =====================================================================
         # Service Clients
         # =====================================================================
-        self.set_mode_client = self.create_client(SetMode, '/uav/mavros/set_mode')
-        self.arm_client = self.create_client(CommandBool, '/uav/mavros/cmd/arming')
+        self.set_mode_client = self.create_client(SetMode, 'mavros/set_mode')
+        self.arm_client = self.create_client(CommandBool, 'mavros/cmd/arming')
         
-        # Wait for services
-        while not self.set_mode_client.wait_for_service(timeout_sec=1.0):
-            self.get_logger().info('Waiting for set_mode service...')
+        # Don't block - services may take time to appear
+        self.services_ready = False
+        self.service_check_timer = self.create_timer(2.0, self.check_services)
         
         # =====================================================================
         # Control Loop Timer
@@ -238,6 +238,23 @@ class VisualServoNode(Node):
         self.get_logger().info(f'  Image size: {self.img_width}x{self.img_height}')
         self.get_logger().info(f'  Center threshold: {self.center_threshold} px')
         self.get_logger().info(f'  Control rate: {self.control_rate} Hz')
+
+    def check_services(self):
+        """Periodically check if MAVROS services are available."""
+        if self.services_ready:
+            return
+            
+        set_mode_ready = self.set_mode_client.service_is_ready()
+        arm_ready = self.arm_client.service_is_ready()
+        
+        if set_mode_ready and arm_ready:
+            self.services_ready = True
+            self.get_logger().info('MAVROS services are ready!')
+            self.service_check_timer.cancel()
+        else:
+            self.get_logger().info(
+                f'Waiting for MAVROS services... set_mode: {set_mode_ready}, arming: {arm_ready}'
+            )
     
     # =========================================================================
     # Callbacks

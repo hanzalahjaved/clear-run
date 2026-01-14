@@ -1,0 +1,29 @@
+running develop
+running egg_info
+creating clearrun_uav.egg-info
+writing clearrun_uav.egg-info/PKG-INFO
+writing dependency_links to clearrun_uav.egg-info/dependency_links.txt
+writing entry points to clearrun_uav.egg-info/entry_points.txt
+writing requirements to clearrun_uav.egg-info/requires.txt
+writing top-level names to clearrun_uav.egg-info/top_level.txt
+writing manifest file 'clearrun_uav.egg-info/SOURCES.txt'
+reading manifest file 'clearrun_uav.egg-info/SOURCES.txt'
+writing manifest file 'clearrun_uav.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/gondal/Clear-Run/install/clearrun_uav/lib/python3.12/site-packages/clearrun-uav.egg-link (link to .)
+Installing detection_node script to /home/gondal/Clear-Run/install/clearrun_uav/lib/clearrun_uav
+Installing mavros_interface script to /home/gondal/Clear-Run/install/clearrun_uav/lib/clearrun_uav
+Installing visual_servo script to /home/gondal/Clear-Run/install/clearrun_uav/lib/clearrun_uav
+
+Installed /home/gondal/Clear-Run/build/clearrun_uav
+running symlink_data
+creating /home/gondal/Clear-Run/install/clearrun_uav/share/ament_index
+creating /home/gondal/Clear-Run/install/clearrun_uav/share/ament_index/resource_index
+creating /home/gondal/Clear-Run/install/clearrun_uav/share/ament_index/resource_index/packages
+symbolically linking /home/gondal/Clear-Run/build/clearrun_uav/resource/clearrun_uav -> /home/gondal/Clear-Run/install/clearrun_uav/share/ament_index/resource_index/packages
+symbolically linking /home/gondal/Clear-Run/build/clearrun_uav/package.xml -> /home/gondal/Clear-Run/install/clearrun_uav/share/clearrun_uav
+creating /home/gondal/Clear-Run/install/clearrun_uav/share/clearrun_uav/launch
+symbolically linking /home/gondal/Clear-Run/build/clearrun_uav/launch/uav.launch.py -> /home/gondal/Clear-Run/install/clearrun_uav/share/clearrun_uav/launch
+creating /home/gondal/Clear-Run/install/clearrun_uav/share/clearrun_uav/config
+symbolically linking /home/gondal/Clear-Run/build/clearrun_uav/config/visual_servo.yaml -> /home/gondal/Clear-Run/install/clearrun_uav/share/clearrun_uav/config
+symbolically linking /home/gondal/Clear-Run/build/clearrun_uav/config/detection.yaml -> /home/gondal/Clear-Run/install/clearrun_uav/share/clearrun_uav/config

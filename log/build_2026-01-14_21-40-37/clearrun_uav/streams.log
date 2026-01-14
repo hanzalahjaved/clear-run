@@ -1,0 +1,19 @@
+[2.577s] Invoking command in '/home/gondal/Clear-Run/build/clearrun_uav': AMENT_PREFIX_PATH=/home/gondal/Clear-Run/install/clearrun_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/gondal/Clear-Run/install/clearrun_msgs:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/gondal/Clear-Run/install/clearrun_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/gondal/Clear-Run/build/clearrun_uav/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gondal/Clear-Run/install/clearrun_uav/lib/python3.12/site-packages:/home/gondal/Clear-Run/install/clearrun_msgs/lib/python3.12/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(venv-ardupilot) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/gondal/Clear-Run/build/clearrun_uav/build --no-deps symlink_data
+[3.454s] running develop
+[4.034s] running egg_info
+[4.086s] writing clearrun_uav.egg-info/PKG-INFO
+[4.086s] writing dependency_links to clearrun_uav.egg-info/dependency_links.txt
+[4.086s] writing entry points to clearrun_uav.egg-info/entry_points.txt
+[4.087s] writing requirements to clearrun_uav.egg-info/requires.txt
+[4.087s] writing top-level names to clearrun_uav.egg-info/top_level.txt
+[4.184s] reading manifest file 'clearrun_uav.egg-info/SOURCES.txt'
+[4.186s] writing manifest file 'clearrun_uav.egg-info/SOURCES.txt'
+[4.243s] running build_ext
+[4.243s] Creating /home/gondal/Clear-Run/install/clearrun_uav/lib/python3.12/site-packages/clearrun-uav.egg-link (link to .)
+[4.244s] Installing detection_node script to /home/gondal/Clear-Run/install/clearrun_uav/lib/clearrun_uav
+[4.245s] Installing mavros_interface script to /home/gondal/Clear-Run/install/clearrun_uav/lib/clearrun_uav
+[4.245s] Installing visual_servo script to /home/gondal/Clear-Run/install/clearrun_uav/lib/clearrun_uav
+[4.246s] 
+[4.246s] Installed /home/gondal/Clear-Run/build/clearrun_uav
+[4.247s] running symlink_data
+[4.342s] Invoked command in '/home/gondal/Clear-Run/build/clearrun_uav' returned '0': AMENT_PREFIX_PATH=/home/gondal/Clear-Run/install/clearrun_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/gondal/Clear-Run/install/clearrun_msgs:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/gondal/Clear-Run/install/clearrun_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/gondal/Clear-Run/build/clearrun_uav/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gondal/Clear-Run/install/clearrun_uav/lib/python3.12/site-packages:/home/gondal/Clear-Run/install/clearrun_msgs/lib/python3.12/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(venv-ardupilot) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/gondal/Clear-Run/build/clearrun_uav/build --no-deps symlink_data

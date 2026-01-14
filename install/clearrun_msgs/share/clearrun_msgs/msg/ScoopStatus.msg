@@ -1,0 +1,1 @@
+/home/gondal/Clear-Run/src/clearrun_msgs/msg/ScoopStatus.msg

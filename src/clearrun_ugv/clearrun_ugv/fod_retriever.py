@@ -111,7 +111,7 @@ class FodRetrieverNode(Node):
         # =====================================================================
         self.fod_target_sub = self.create_subscription(
             FodLocation,
-            '/ugv/fod_target',
+            '/fod_target',
             self.fod_target_callback,
             10,
             callback_group=self.cb_group
@@ -119,7 +119,7 @@ class FodRetrieverNode(Node):
         
         self.gps_sub = self.create_subscription(
             NavSatFix,
-            '/ugv/mavros/global_position/global',
+            'mavros/global_position/global',
             self.gps_callback,
             10,
             callback_group=self.cb_group
@@ -127,7 +127,7 @@ class FodRetrieverNode(Node):
         
         self.odom_sub = self.create_subscription(
             Odometry,
-            '/ugv/odom',
+            'odom',
             self.odom_callback,
             10,
             callback_group=self.cb_group
@@ -135,7 +135,7 @@ class FodRetrieverNode(Node):
         
         self.scoop_status_sub = self.create_subscription(
             ScoopStatus,
-            '/ugv/scoop/status',
+            'scoop/status',
             self.scoop_status_callback,
             10,
             callback_group=self.cb_group
@@ -146,19 +146,19 @@ class FodRetrieverNode(Node):
         # =====================================================================
         self.scoop_cmd_pub = self.create_publisher(
             ScoopCommand,
-            '/ugv/scoop/command',
+            'scoop/command',
             10
         )
         
         self.state_pub = self.create_publisher(
             String,
-            '/ugv/retriever/state',
+            'retriever/state',
             10
         )
         
         self.collected_pub = self.create_publisher(
             FodLocation,
-            '/ugv/retriever/collected',
+            'retriever/collected',
             10
         )
         
@@ -168,13 +168,12 @@ class FodRetrieverNode(Node):
         self.nav_client = ActionClient(
             self,
             NavigateToPose,
-            '/ugv/navigate_to_pose'
+            'navigate_to_pose'
         )
         
-        # Wait for Nav2
+        # Don't block on Nav2 - check in main loop
+        self.nav_ready = False
         self.get_logger().info('Waiting for Nav2 action server...')
-        self.nav_client.wait_for_server()
-        self.get_logger().info('Nav2 action server available')
         
         # =====================================================================
         # Main Loop Timer

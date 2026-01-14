@@ -1,0 +1,1 @@
+/home/gondal/Clear-Run/build/clearrun_msgs/rosidl_generator_c/clearrun_msgs/msg/scoop_status.h

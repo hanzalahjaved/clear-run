@@ -106,7 +106,7 @@ class FodDetectionNode(Node):
         # Subscribers
         self.rgb_sub = self.create_subscription(
             Image,
-            '/uav/camera/image_raw',
+            'camera/image_raw',
             self.rgb_callback,
             image_qos
         )
@@ -114,7 +114,7 @@ class FodDetectionNode(Node):
         if self.use_thermal:
             self.thermal_sub = self.create_subscription(
                 Image,
-                '/uav/camera/thermal',
+                'camera/thermal',
                 self.thermal_callback,
                 image_qos
             )
@@ -122,20 +122,20 @@ class FodDetectionNode(Node):
         # Publishers
         self.detection_pub = self.create_publisher(
             FodLocation,
-            '/uav/detection/fod',
+            'detection/fod',
             10
         )
         
         self.detection_array_pub = self.create_publisher(
             FodArray,
-            '/uav/detection/fod_array',
+            'detection/fod_array',
             10
         )
         
         if self.publish_annotated:
             self.annotated_pub = self.create_publisher(
                 Image,
-                '/uav/detection/annotated',
+                'detection/annotated',
                 image_qos
             )
         

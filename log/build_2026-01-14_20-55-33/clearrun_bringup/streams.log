@@ -1,0 +1,28 @@
+[2.858s] Invoking command in '/home/gondal/Clear-Run/build/clearrun_bringup': AMENT_PREFIX_PATH=/home/gondal/Clear-Run/install/clearrun_ugv:/home/gondal/Clear-Run/install/clearrun_uav:/home/gondal/Clear-Run/install/clearrun_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/gondal/Clear-Run/install/clearrun_msgs:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/gondal/Clear-Run/install/clearrun_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/gondal/Clear-Run/build/clearrun_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gondal/Clear-Run/install/clearrun_bringup/lib/python3.12/site-packages:/home/gondal/Clear-Run/build/clearrun_ugv:/home/gondal/Clear-Run/install/clearrun_ugv/lib/python3.12/site-packages:/home/gondal/Clear-Run/build/clearrun_uav:/home/gondal/Clear-Run/install/clearrun_uav/lib/python3.12/site-packages:/home/gondal/Clear-Run/install/clearrun_msgs/lib/python3.12/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(venv-ardupilot) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/gondal/Clear-Run/build/clearrun_bringup/build --no-deps symlink_data
+[3.715s] running develop
+[4.248s] running egg_info
+[4.248s] creating clearrun_bringup.egg-info
+[4.296s] writing clearrun_bringup.egg-info/PKG-INFO
+[4.296s] writing dependency_links to clearrun_bringup.egg-info/dependency_links.txt
+[4.297s] writing requirements to clearrun_bringup.egg-info/requires.txt
+[4.297s] writing top-level names to clearrun_bringup.egg-info/top_level.txt
+[4.298s] writing manifest file 'clearrun_bringup.egg-info/SOURCES.txt'
+[4.406s] reading manifest file 'clearrun_bringup.egg-info/SOURCES.txt'
+[4.408s] writing manifest file 'clearrun_bringup.egg-info/SOURCES.txt'
+[4.463s] running build_ext
+[4.463s] Creating /home/gondal/Clear-Run/install/clearrun_bringup/lib/python3.12/site-packages/clearrun-bringup.egg-link (link to .)
+[4.464s] 
+[4.464s] Installed /home/gondal/Clear-Run/build/clearrun_bringup
+[4.464s] running symlink_data
+[4.464s] creating /home/gondal/Clear-Run/install/clearrun_bringup/share/ament_index
+[4.465s] creating /home/gondal/Clear-Run/install/clearrun_bringup/share/ament_index/resource_index
+[4.465s] creating /home/gondal/Clear-Run/install/clearrun_bringup/share/ament_index/resource_index/packages
+[4.465s] symbolically linking /home/gondal/Clear-Run/build/clearrun_bringup/resource/clearrun_bringup -> /home/gondal/Clear-Run/install/clearrun_bringup/share/ament_index/resource_index/packages
+[4.466s] symbolically linking /home/gondal/Clear-Run/build/clearrun_bringup/package.xml -> /home/gondal/Clear-Run/install/clearrun_bringup/share/clearrun_bringup
+[4.466s] creating /home/gondal/Clear-Run/install/clearrun_bringup/share/clearrun_bringup/launch
+[4.466s] symbolically linking /home/gondal/Clear-Run/build/clearrun_bringup/launch/clearrun_full.launch.py -> /home/gondal/Clear-Run/install/clearrun_bringup/share/clearrun_bringup/launch
+[4.466s] symbolically linking /home/gondal/Clear-Run/build/clearrun_bringup/launch/simulation.launch.py -> /home/gondal/Clear-Run/install/clearrun_bringup/share/clearrun_bringup/launch
+[4.466s] creating /home/gondal/Clear-Run/install/clearrun_bringup/share/clearrun_bringup/config
+[4.466s] creating /home/gondal/Clear-Run/install/clearrun_bringup/share/clearrun_bringup/rviz
+[4.467s] symbolically linking /home/gondal/Clear-Run/build/clearrun_bringup/rviz/clearrun.rviz -> /home/gondal/Clear-Run/install/clearrun_bringup/share/clearrun_bringup/rviz
+[4.531s] Invoked command in '/home/gondal/Clear-Run/build/clearrun_bringup' returned '0': AMENT_PREFIX_PATH=/home/gondal/Clear-Run/install/clearrun_ugv:/home/gondal/Clear-Run/install/clearrun_uav:/home/gondal/Clear-Run/install/clearrun_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/gondal/Clear-Run/install/clearrun_msgs:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/gondal/Clear-Run/install/clearrun_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/gondal/Clear-Run/build/clearrun_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gondal/Clear-Run/install/clearrun_bringup/lib/python3.12/site-packages:/home/gondal/Clear-Run/build/clearrun_ugv:/home/gondal/Clear-Run/install/clearrun_ugv/lib/python3.12/site-packages:/home/gondal/Clear-Run/build/clearrun_uav:/home/gondal/Clear-Run/install/clearrun_uav/lib/python3.12/site-packages:/home/gondal/Clear-Run/install/clearrun_msgs/lib/python3.12/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(venv-ardupilot) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/gondal/Clear-Run/build/clearrun_bringup/build --no-deps symlink_data

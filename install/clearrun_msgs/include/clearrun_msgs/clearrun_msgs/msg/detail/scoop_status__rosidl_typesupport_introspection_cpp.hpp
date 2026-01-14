@@ -1,0 +1,1 @@
+/home/gondal/Clear-Run/build/clearrun_msgs/rosidl_typesupport_introspection_cpp/clearrun_msgs/msg/detail/scoop_status__rosidl_typesupport_introspection_cpp.hpp

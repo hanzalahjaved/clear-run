@@ -1,0 +1,31 @@
+[3.561s] Invoking command in '/home/gondal/Clear-Run/build/clearrun_uav': AMENT_PREFIX_PATH=/home/gondal/Clear-Run/install/clearrun_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/gondal/Clear-Run/install/clearrun_msgs:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/gondal/Clear-Run/install/clearrun_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/gondal/Clear-Run/build/clearrun_uav/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gondal/Clear-Run/install/clearrun_uav/lib/python3.12/site-packages:/home/gondal/Clear-Run/install/clearrun_msgs/lib/python3.12/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(venv-ardupilot) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/gondal/Clear-Run/build/clearrun_uav/build --no-deps symlink_data
+[4.431s] running develop
+[5.044s] running egg_info
+[5.045s] creating clearrun_uav.egg-info
+[5.105s] writing clearrun_uav.egg-info/PKG-INFO
+[5.105s] writing dependency_links to clearrun_uav.egg-info/dependency_links.txt
+[5.106s] writing entry points to clearrun_uav.egg-info/entry_points.txt
+[5.106s] writing requirements to clearrun_uav.egg-info/requires.txt
+[5.106s] writing top-level names to clearrun_uav.egg-info/top_level.txt
+[5.107s] writing manifest file 'clearrun_uav.egg-info/SOURCES.txt'
+[5.236s] reading manifest file 'clearrun_uav.egg-info/SOURCES.txt'
+[5.237s] writing manifest file 'clearrun_uav.egg-info/SOURCES.txt'
+[5.325s] running build_ext
+[5.326s] Creating /home/gondal/Clear-Run/install/clearrun_uav/lib/python3.12/site-packages/clearrun-uav.egg-link (link to .)
+[5.327s] Installing detection_node script to /home/gondal/Clear-Run/install/clearrun_uav/lib/clearrun_uav
+[5.328s] Installing mavros_interface script to /home/gondal/Clear-Run/install/clearrun_uav/lib/clearrun_uav
+[5.328s] Installing visual_servo script to /home/gondal/Clear-Run/install/clearrun_uav/lib/clearrun_uav
+[5.329s] 
+[5.329s] Installed /home/gondal/Clear-Run/build/clearrun_uav
+[5.330s] running symlink_data
+[5.330s] creating /home/gondal/Clear-Run/install/clearrun_uav/share/ament_index
+[5.331s] creating /home/gondal/Clear-Run/install/clearrun_uav/share/ament_index/resource_index
+[5.331s] creating /home/gondal/Clear-Run/install/clearrun_uav/share/ament_index/resource_index/packages
+[5.332s] symbolically linking /home/gondal/Clear-Run/build/clearrun_uav/resource/clearrun_uav -> /home/gondal/Clear-Run/install/clearrun_uav/share/ament_index/resource_index/packages
+[5.332s] symbolically linking /home/gondal/Clear-Run/build/clearrun_uav/package.xml -> /home/gondal/Clear-Run/install/clearrun_uav/share/clearrun_uav
+[5.332s] creating /home/gondal/Clear-Run/install/clearrun_uav/share/clearrun_uav/launch
+[5.332s] symbolically linking /home/gondal/Clear-Run/build/clearrun_uav/launch/uav.launch.py -> /home/gondal/Clear-Run/install/clearrun_uav/share/clearrun_uav/launch
+[5.333s] creating /home/gondal/Clear-Run/install/clearrun_uav/share/clearrun_uav/config
+[5.333s] symbolically linking /home/gondal/Clear-Run/build/clearrun_uav/config/visual_servo.yaml -> /home/gondal/Clear-Run/install/clearrun_uav/share/clearrun_uav/config
+[5.333s] symbolically linking /home/gondal/Clear-Run/build/clearrun_uav/config/detection.yaml -> /home/gondal/Clear-Run/install/clearrun_uav/share/clearrun_uav/config
+[5.403s] Invoked command in '/home/gondal/Clear-Run/build/clearrun_uav' returned '0': AMENT_PREFIX_PATH=/home/gondal/Clear-Run/install/clearrun_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/gondal/Clear-Run/install/clearrun_msgs:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/gondal/Clear-Run/install/clearrun_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/gondal/Clear-Run/build/clearrun_uav/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gondal/Clear-Run/install/clearrun_uav/lib/python3.12/site-packages:/home/gondal/Clear-Run/install/clearrun_msgs/lib/python3.12/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(venv-ardupilot) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/gondal/Clear-Run/build/clearrun_uav/build --no-deps symlink_data

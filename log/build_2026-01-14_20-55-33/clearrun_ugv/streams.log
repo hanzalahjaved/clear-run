@@ -1,0 +1,33 @@
+[3.559s] Invoking command in '/home/gondal/Clear-Run/build/clearrun_ugv': AMENT_PREFIX_PATH=/home/gondal/Clear-Run/install/clearrun_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/gondal/Clear-Run/install/clearrun_msgs:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/gondal/Clear-Run/install/clearrun_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/gondal/Clear-Run/build/clearrun_ugv/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gondal/Clear-Run/install/clearrun_ugv/lib/python3.12/site-packages:/home/gondal/Clear-Run/install/clearrun_msgs/lib/python3.12/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(venv-ardupilot) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/gondal/Clear-Run/build/clearrun_ugv/build --no-deps symlink_data
+[4.448s] running develop
+[5.079s] running egg_info
+[5.080s] creating clearrun_ugv.egg-info
+[5.150s] writing clearrun_ugv.egg-info/PKG-INFO
+[5.154s] writing dependency_links to clearrun_ugv.egg-info/dependency_links.txt
+[5.154s] writing entry points to clearrun_ugv.egg-info/entry_points.txt
+[5.154s] writing requirements to clearrun_ugv.egg-info/requires.txt
+[5.154s] writing top-level names to clearrun_ugv.egg-info/top_level.txt
+[5.155s] writing manifest file 'clearrun_ugv.egg-info/SOURCES.txt'
+[5.293s] reading manifest file 'clearrun_ugv.egg-info/SOURCES.txt'
+[5.295s] writing manifest file 'clearrun_ugv.egg-info/SOURCES.txt'
+[5.363s] running build_ext
+[5.363s] Creating /home/gondal/Clear-Run/install/clearrun_ugv/lib/python3.12/site-packages/clearrun-ugv.egg-link (link to .)
+[5.365s] Installing fod_retriever script to /home/gondal/Clear-Run/install/clearrun_ugv/lib/clearrun_ugv
+[5.367s] Installing navigation_client script to /home/gondal/Clear-Run/install/clearrun_ugv/lib/clearrun_ugv
+[5.367s] Installing scoop_controller script to /home/gondal/Clear-Run/install/clearrun_ugv/lib/clearrun_ugv
+[5.367s] 
+[5.368s] Installed /home/gondal/Clear-Run/build/clearrun_ugv
+[5.368s] running symlink_data
+[5.368s] creating /home/gondal/Clear-Run/install/clearrun_ugv/share/ament_index
+[5.368s] creating /home/gondal/Clear-Run/install/clearrun_ugv/share/ament_index/resource_index
+[5.369s] creating /home/gondal/Clear-Run/install/clearrun_ugv/share/ament_index/resource_index/packages
+[5.369s] symbolically linking /home/gondal/Clear-Run/build/clearrun_ugv/resource/clearrun_ugv -> /home/gondal/Clear-Run/install/clearrun_ugv/share/ament_index/resource_index/packages
+[5.369s] symbolically linking /home/gondal/Clear-Run/build/clearrun_ugv/package.xml -> /home/gondal/Clear-Run/install/clearrun_ugv/share/clearrun_ugv
+[5.370s] creating /home/gondal/Clear-Run/install/clearrun_ugv/share/clearrun_ugv/launch
+[5.370s] symbolically linking /home/gondal/Clear-Run/build/clearrun_ugv/launch/ugv.launch.py -> /home/gondal/Clear-Run/install/clearrun_ugv/share/clearrun_ugv/launch
+[5.370s] creating /home/gondal/Clear-Run/install/clearrun_ugv/share/clearrun_ugv/config
+[5.371s] symbolically linking /home/gondal/Clear-Run/build/clearrun_ugv/config/scoop.yaml -> /home/gondal/Clear-Run/install/clearrun_ugv/share/clearrun_ugv/config
+[5.371s] symbolically linking /home/gondal/Clear-Run/build/clearrun_ugv/config/retriever.yaml -> /home/gondal/Clear-Run/install/clearrun_ugv/share/clearrun_ugv/config
+[5.371s] symbolically linking /home/gondal/Clear-Run/build/clearrun_ugv/config/nav2_params.yaml -> /home/gondal/Clear-Run/install/clearrun_ugv/share/clearrun_ugv/config
+[5.371s] creating /home/gondal/Clear-Run/install/clearrun_ugv/share/clearrun_ugv/maps
+[5.457s] Invoked command in '/home/gondal/Clear-Run/build/clearrun_ugv' returned '0': AMENT_PREFIX_PATH=/home/gondal/Clear-Run/install/clearrun_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/gondal/Clear-Run/install/clearrun_msgs:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/gondal/Clear-Run/install/clearrun_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/gondal/Clear-Run/build/clearrun_ugv/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gondal/Clear-Run/install/clearrun_ugv/lib/python3.12/site-packages:/home/gondal/Clear-Run/install/clearrun_msgs/lib/python3.12/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(venv-ardupilot) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/gondal/Clear-Run/build/clearrun_ugv/build --no-deps symlink_data
