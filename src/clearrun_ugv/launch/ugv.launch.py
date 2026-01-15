@@ -24,6 +24,9 @@ def generate_launch_description():
     retriever_config = PathJoinSubstitution([pkg_share, 'config', 'retriever.yaml'])
     scoop_config = PathJoinSubstitution([pkg_share, 'config', 'scoop.yaml'])
     
+    # Default map file (empty map for simulation)
+    default_map = PathJoinSubstitution([pkg_share, 'maps', 'empty_map.yaml'])
+    
     # Launch arguments
     use_sim = DeclareLaunchArgument(
         'use_sim_time',
@@ -33,7 +36,7 @@ def generate_launch_description():
     
     map_file = DeclareLaunchArgument(
         'map',
-        default_value='',
+        default_value=default_map,
         description='Path to map yaml file'
     )
     
@@ -61,10 +64,10 @@ def generate_launch_description():
     )
     
     # MAVROS for UGV (ArduRover) - direct node launch
+    # Note: Don't set explicit 'name' - MAVROS internally creates sub-nodes that conflict
     mavros_node = Node(
         package='mavros',
         executable='mavros_node',
-        name='mavros',
         namespace='ugv',
         output='screen',
         parameters=[

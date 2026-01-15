@@ -55,11 +55,11 @@ Foreign Object Debris (FOD) on runways poses a significant threat to aviation sa
    └────────┘            └────────┘            └────────┘
                                                     │
                                                     ▼
-4. LOG GPS            5. DISPATCH UGV         6. COLLECT
+6. COLLECT            5. DISPATCH UGV         4. LOG GPS
    ┌────────┐            ┌────────┐            ┌────────┐
-   │  LAT:  │            │ Nav2   │            │ BRUSH  │
-   │  LON:  │  ◄──────   │ PATH   │  ──────►   │ SCOOP  │
-   │  ALT:  │            │ PLAN   │            │ SWEEP  │
+   │ BRUSH  │            │ Nav2   │            │ LAT:   │
+   │ SCOOP  │  ◄──────   │ PATH   │  ◄──────   │ LON:   │
+   │  SWEEP │            │ PLAN   │            │ ALT:   │
    └────────┘            └────────┘            └────────┘
 ```
 

@@ -24,7 +24,7 @@ from lifecycle_msgs.srv import GetState
 
 from typing import Optional, Callable, List
 from dataclasses import dataclass
-from enum import Enum
+from enum import Enum, auto
 import threading
 import time
 import math

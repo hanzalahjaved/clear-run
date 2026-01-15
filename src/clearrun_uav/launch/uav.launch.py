@@ -34,10 +34,10 @@ def generate_launch_description():
     )
     
     # MAVROS node - direct launch (ROS 2 Jazzy)
+    # Note: Don't set explicit 'name' - MAVROS internally creates sub-nodes that conflict
     mavros_node = Node(
         package='mavros',
         executable='mavros_node',
-        name='mavros',
         namespace='uav',
         output='screen',
         parameters=[
