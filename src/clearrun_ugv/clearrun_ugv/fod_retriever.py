@@ -14,6 +14,7 @@ from rclpy.node import Node
 from rclpy.action import ActionClient
 from rclpy.callback_groups import ReentrantCallbackGroup
 from rclpy.executors import MultiThreadedExecutor
+from rclpy.qos import QoSProfile, ReliabilityPolicy, DurabilityPolicy, HistoryPolicy
 
 from geometry_msgs.msg import PoseStamped, Point
 from sensor_msgs.msg import NavSatFix
@@ -117,11 +118,19 @@ class FodRetrieverNode(Node):
             callback_group=self.cb_group
         )
         
+        # QoS for MAVROS sensor data topics (uses BEST_EFFORT reliability)
+        sensor_qos = QoSProfile(
+            reliability=ReliabilityPolicy.BEST_EFFORT,
+            durability=DurabilityPolicy.VOLATILE,
+            history=HistoryPolicy.KEEP_LAST,
+            depth=10
+        )
+        
         self.gps_sub = self.create_subscription(
             NavSatFix,
-            'mavros/global_position/global',
+            'global_position/global',
             self.gps_callback,
-            10,
+            sensor_qos,
             callback_group=self.cb_group
         )
         

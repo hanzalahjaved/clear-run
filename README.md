@@ -23,23 +23,23 @@ Foreign Object Debris (FOD) on runways poses a significant threat to aviation sa
 │                         CLEAR-RUN SYSTEM                            │
 ├─────────────────────────────────────────────────────────────────────┤
 │                                                                     │
-│  ┌─────────────────────┐         ┌─────────────────────┐           │
-│  │      UAV (Drone)    │  WiFi   │      UGV (Rover)    │           │
-│  │  ┌───────────────┐  │ ──────► │  ┌───────────────┐  │           │
-│  │  │ Jetson Orin   │  │  ROS2   │  │ Jetson Nano   │  │           │
-│  │  │    Nano       │  │ Topics  │  │               │  │           │
-│  │  └───────┬───────┘  │         │  └───────┬───────┘  │           │
-│  │          │ MAVROS   │         │          │ MAVROS   │           │
-│  │  ┌───────▼───────┐  │         │  ┌───────▼───────┐  │           │
-│  │  │ Pixhawk 2.4.8 │  │         │  │ Pixhawk 2.4.8 │  │           │
-│  │  │  (ArduCopter) │  │         │  │  (ArduRover)  │  │           │
-│  │  └───────────────┘  │         │  └───────────────┘  │           │
-│  │                     │         │                     │           │
-│  │  Sensors:           │         │  Sensors:           │           │
-│  │  • 4K RGB Camera    │         │  • 2D LiDAR         │           │
-│  │  • Thermal IR       │         │  • Depth Camera     │           │
-│  │  • GPS Module       │         │  • Wheel Encoders   │           │
-│  └─────────────────────┘         └─────────────────────┘           │
+│  ┌─────────────────────┐         ┌─────────────────────┐            │
+│  │      UAV (Drone)    │  WiFi   │      UGV (Rover)    │            │
+│  │  ┌───────────────┐  │ ──────► │  ┌───────────────┐  │            │
+│  │  │ Jetson Orin   │  │  ROS2   │  │ Jetson Nano   │  │            │
+│  │  │    Nano       │  │ Topics  │  │               │  │            │
+│  │  └───────┬───────┘  │         │  └───────┬───────┘  │            │
+│  │          │ MAVROS   │         │          │ MAVROS   │            │ 
+│  │  ┌───────▼───────┐  │         │  ┌───────▼───────┐  │            │
+│  │  │ Pixhawk 2.4.8 │  │         │  │ Pixhawk 2.4.8 │  │            │
+│  │  │  (ArduCopter) │  │         │  │  (ArduRover)  │  │            │
+│  │  └───────────────┘  │         │  └───────────────┘  │            │
+│  │                     │         │                     │            │
+│  │  Sensors:           │         │  Sensors:           │            │
+│  │  • 4K RGB Camera    │         │  • 2D LiDAR         │            │
+│  │  • Thermal IR       │         │  • Depth Camera     │            │
+│  │  • GPS Module       │         │  • Wheel Encoders   │            │
+│  └─────────────────────┘         └─────────────────────┘            │
 │                                                                     │
 └─────────────────────────────────────────────────────────────────────┘
 ```

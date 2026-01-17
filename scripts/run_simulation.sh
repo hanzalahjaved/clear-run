@@ -31,7 +31,7 @@ NC='\033[0m' # No Color
 # Configuration
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_ROOT="$(dirname "$SCRIPT_DIR")"
-ARDUPILOT_DIR="${HOME}/ardupilot"
+ARDUPILOT_DIR="${HOME}/Projects/ardupilot"
 SITL_UAV_PARM="${PROJECT_ROOT}/simulation/sitl_configs/sitl_uav.parm"
 SITL_UGV_PARM="${PROJECT_ROOT}/simulation/sitl_configs/sitl_ugv.parm"
 GAZEBO_WORLD="${PROJECT_ROOT}/simulation/worlds/runway.sdf"
@@ -193,9 +193,10 @@ if [ "$LAUNCH_GAZEBO" = true ]; then
         exit 1
     fi
     
-    gz sim "$GAZEBO_WORLD" &
+    # Run headless (server only) - GUI has rendering issues
+    gz sim -s "$GAZEBO_WORLD" &
     PIDS+=($!)
-    echo -e "  ${GREEN}✓${NC} Gazebo launched (PID: ${PIDS[-1]})"
+    echo -e "  ${GREEN}✓${NC} Gazebo launched headless (PID: ${PIDS[-1]})"
     sleep 3
 else
     echo -e "${BLUE}[2/5] Skipping Gazebo launch${NC}"
@@ -207,6 +208,9 @@ echo ""
 if [ "$LAUNCH_ARDUPILOT" = true ]; then
     echo -e "${BLUE}[3/5] Launching ArduPilot SITL...${NC}"
     
+    # Add ArduPilot Tools to PATH
+    export PATH="${ARDUPILOT_DIR}/Tools/autotest:${PATH}"
+    
     # Activate ArduPilot venv if exists
     if [ -f "${ARDUPILOT_VENV}/bin/activate" ]; then
         source "${ARDUPILOT_VENV}/bin/activate"
@@ -214,11 +218,14 @@ if [ "$LAUNCH_ARDUPILOT" = true ]; then
     
     # Launch UAV SITL
     if [ "$LAUNCH_UAV" = true ]; then
-        echo -e "  Starting ArduCopter SITL (Instance 0)..."
+        echo -e "  Starting ArduCopter SITL (Instance 0) - Memory optimized..."
         cd "${ARDUPILOT_DIR}/ArduCopter"
         
-        # Start SITL - native mode without Gazebo plugin
-        sim_vehicle.py -v ArduCopter -I 0 --no-mavproxy -w &
+        # Start SITL with memory optimizations:
+        # --no-mavproxy: Don't start MAVProxy (saves memory)
+        # --no-rebuild: Skip rebuild if already built
+        # --speedup=1: Real-time (no faster than real time to save CPU/RAM)
+        "${ARDUPILOT_DIR}/Tools/autotest/sim_vehicle.py" -v ArduCopter -I 0 --no-mavproxy --no-rebuild --speedup=1 -w &
         PIDS+=($!)
         echo -e "  ${GREEN}✓${NC} ArduCopter SITL started (PID: ${PIDS[-1]})"
         sleep 8
@@ -226,10 +233,11 @@ if [ "$LAUNCH_ARDUPILOT" = true ]; then
     
     # Launch UGV SITL
     if [ "$LAUNCH_UGV" = true ]; then
-        echo -e "  Starting Rover SITL (Instance 1)..."
+        echo -e "  Starting Rover SITL (Instance 1) - Memory optimized..."
         cd "${ARDUPILOT_DIR}/Rover"
         
-        sim_vehicle.py -v Rover -I 1 --no-mavproxy -w &
+        # Same optimizations as UAV
+        "${ARDUPILOT_DIR}/Tools/autotest/sim_vehicle.py" -v Rover -I 1 --no-mavproxy --no-rebuild --speedup=1 -w &
         PIDS+=($!)
         echo -e "  ${GREEN}✓${NC} Rover SITL started (PID: ${PIDS[-1]})"
         sleep 5
@@ -271,7 +279,10 @@ if [ "$LAUNCH_UGV" = true ]; then
     echo -e "  ${GREEN}✓${NC} MAVROS UGV started (PID: ${PIDS[-1]})"
 fi
 
-sleep 2
+# Wait for MAVROS to connect to SITL and establish communication
+# SITL takes time to build and start, MAVROS needs time to connect
+echo -e "  Waiting for MAVROS to establish FCU connection..."
+sleep 10
 echo ""
 
 # Launch Clear-Run nodes

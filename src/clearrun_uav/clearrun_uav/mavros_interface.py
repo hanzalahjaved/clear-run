@@ -103,49 +103,49 @@ class MAVROSInterface(Node):
         # =====================================================================
         self.state_sub = self.create_subscription(
             State,
-            f'{self.ns}/mavros/state',
+            f'{self.ns}/state',
             self._state_callback,
             10
         )
         
         self.gps_sub = self.create_subscription(
             NavSatFix,
-            f'{self.ns}/mavros/global_position/global',
+            f'{self.ns}/global_position/global',
             self._gps_callback,
             10
         )
         
         self.local_pose_sub = self.create_subscription(
             PoseStamped,
-            f'{self.ns}/mavros/local_position/pose',
+            f'{self.ns}/local_position/pose',
             self._local_pose_callback,
             10
         )
         
         self.velocity_sub = self.create_subscription(
             TwistStamped,
-            f'{self.ns}/mavros/local_position/velocity_local',
+            f'{self.ns}/local_position/velocity_local',
             self._velocity_callback,
             10
         )
         
         self.imu_sub = self.create_subscription(
             Imu,
-            f'{self.ns}/mavros/imu/data',
+            f'{self.ns}/imu/data',
             self._imu_callback,
             10
         )
         
         self.battery_sub = self.create_subscription(
             BatteryState,
-            f'{self.ns}/mavros/battery',
+            f'{self.ns}/battery',
             self._battery_callback,
             10
         )
         
         self.home_sub = self.create_subscription(
             HomePosition,
-            f'{self.ns}/mavros/home_position/home',
+            f'{self.ns}/home_position/home',
             self._home_callback,
             10
         )
@@ -155,13 +155,13 @@ class MAVROSInterface(Node):
         # =====================================================================
         self.setpoint_position_pub = self.create_publisher(
             PoseStamped,
-            f'{self.ns}/mavros/setpoint_position/local',
+            f'{self.ns}/setpoint_position/local',
             10
         )
         
         self.setpoint_velocity_pub = self.create_publisher(
             TwistStamped,
-            f'{self.ns}/mavros/setpoint_velocity/cmd_vel',
+            f'{self.ns}/setpoint_velocity/cmd_vel',
             10
         )
         
@@ -170,43 +170,43 @@ class MAVROSInterface(Node):
         # =====================================================================
         self.arm_client = self.create_client(
             CommandBool, 
-            f'{self.ns}/mavros/cmd/arming',
+            f'{self.ns}/cmd/arming',
             callback_group=self.service_cb_group
         )
         
         self.set_mode_client = self.create_client(
             SetMode, 
-            f'{self.ns}/mavros/set_mode',
+            f'{self.ns}/set_mode',
             callback_group=self.service_cb_group
         )
         
         self.takeoff_client = self.create_client(
             CommandTOL, 
-            f'{self.ns}/mavros/cmd/takeoff',
+            f'{self.ns}/cmd/takeoff',
             callback_group=self.service_cb_group
         )
         
         self.land_client = self.create_client(
             CommandTOL, 
-            f'{self.ns}/mavros/cmd/land',
+            f'{self.ns}/cmd/land',
             callback_group=self.service_cb_group
         )
         
         self.command_client = self.create_client(
             CommandLong,
-            f'{self.ns}/mavros/cmd/command',
+            f'{self.ns}/cmd/command',
             callback_group=self.service_cb_group
         )
         
         self.waypoint_push_client = self.create_client(
             WaypointPush,
-            f'{self.ns}/mavros/mission/push',
+            f'{self.ns}/mission/push',
             callback_group=self.service_cb_group
         )
         
         self.waypoint_clear_client = self.create_client(
             WaypointClear,
-            f'{self.ns}/mavros/mission/clear',
+            f'{self.ns}/mission/clear',
             callback_group=self.service_cb_group
         )
         

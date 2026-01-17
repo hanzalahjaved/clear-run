@@ -14,7 +14,7 @@ Authors: Muhammad Hanzalah Javed, Aneeq
 
 import rclpy
 from rclpy.node import Node
-from rclpy.qos import QoSProfile, ReliabilityPolicy
+from rclpy.qos import QoSProfile, ReliabilityPolicy, DurabilityPolicy, HistoryPolicy
 
 from geometry_msgs.msg import Point, PoseStamped, TwistStamped
 from sensor_msgs.msg import NavSatFix
@@ -180,16 +180,24 @@ class VisualServoNode(Node):
         
         self.state_sub = self.create_subscription(
             State,
-            'mavros/state',
+            'state',
             self.state_callback,
             10
         )
         
+        # QoS for MAVROS sensor data topics (uses BEST_EFFORT reliability)
+        sensor_qos = QoSProfile(
+            reliability=ReliabilityPolicy.BEST_EFFORT,
+            durability=DurabilityPolicy.VOLATILE,
+            history=HistoryPolicy.KEEP_LAST,
+            depth=10
+        )
+        
         self.gps_sub = self.create_subscription(
             NavSatFix,
-            'mavros/global_position/global',
+            'global_position/global',
             self.gps_callback,
-            10
+            sensor_qos
         )
         
         # =====================================================================
@@ -198,7 +206,7 @@ class VisualServoNode(Node):
         # Velocity commands for position control
         self.vel_pub = self.create_publisher(
             TwistStamped,
-            'mavros/setpoint_velocity/cmd_vel',
+            'setpoint_velocity/cmd_vel',
             10
         )
         
@@ -219,8 +227,10 @@ class VisualServoNode(Node):
         # =====================================================================
         # Service Clients
         # =====================================================================
-        self.set_mode_client = self.create_client(SetMode, 'mavros/set_mode')
-        self.arm_client = self.create_client(CommandBool, 'mavros/cmd/arming')
+        # MAVROS in ROS 2 creates services at the namespace level
+        # When node is in /uav namespace, services are at /uav/set_mode, /uav/cmd/arming
+        self.set_mode_client = self.create_client(SetMode, 'set_mode')
+        self.arm_client = self.create_client(CommandBool, 'cmd/arming')
         
         # Don't block - services may take time to appear
         self.services_ready = False
